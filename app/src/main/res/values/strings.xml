@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SST</string>
+    <string name="title_activity_macco">macco</string>
+    <string name="action_settings">Settings</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".office.MunicipalAccountingOffice">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/office_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="150dp"
+                    android:text="MUNICIPAL ACCOUNTING OFFICE"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="LIST OF SERVICES"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/external_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="External Services" />
+
+                <TextView
+                    android:id="@+id/service_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Issuance of Withholding Tax Certificate (BIR Form 2307)" />
+
+                <TextView
+                    android:id="@+id/service_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/service_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements" />
+
+                <TextView
+                    android:id="@+id/service_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)" />
+
+                <TextView
+                    android:id="@+id/service_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)" />
+
+                <TextView
+                    android:id="@+id/internal_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:text="Internal Services" />
+
+                <TextView
+                    android:id="@+id/service_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Review of Liquidation Reports for Travel Cash Advances" />
+
+                <TextView
+                    android:id="@+id/service_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="⦿ Request for Certificate of Net Take Home Pay" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/header" />
+</androidx.constraintlayout.widget.ConstraintLayout>
