@@ -18,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/office_name"
@@ -45,48 +45,65 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
-                    android:text="External Services" />
+                    android:text="External Services"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/service_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Issuance of Withholding Tax Certificate (BIR Form 2307)" />
+                    android:layout_marginRight="16dp"
+                    android:onClick="accounting_service_1"
+                    android:text="⦿ Request for Issuance of Withholding Tax Certificate (BIR Form 2307)"
+                    android:textAlignment="viewStart" />
 
                 <TextView
                     android:id="@+id/service_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
                     android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances"
+                    android:textAlignment="viewStart"
                     android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/service_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements" />
+                    android:layout_marginRight="16dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements"
+                    android:textAlignment="viewStart" />
 
                 <TextView
                     android:id="@+id/service_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)" />
+                    android:layout_marginRight="16dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)"
+                    android:textAlignment="viewStart" />
 
                 <TextView
                     android:id="@+id/service_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)" />
+                    android:layout_marginRight="16dp"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)"
+                    android:textAlignment="viewStart" />
 
                 <TextView
                     android:id="@+id/internal_services"
@@ -94,23 +111,30 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="32dp"
-                    android:text="Internal Services" />
+                    android:text="Internal Services"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/service_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Review of Liquidation Reports for Travel Cash Advances" />
+                    android:layout_marginRight="16dp"
+                    android:text="⦿ Request for Review of Liquidation Reports for Travel Cash Advances"
+                    android:textAlignment="viewStart" />
 
                 <TextView
                     android:id="@+id/service_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="⦿ Request for Certificate of Net Take Home Pay" />
+                    android:layout_marginRight="16dp"
+                    android:text="⦿ Request for Certificate of Net Take Home Pay"
+                    android:textAlignment="viewStart" />
             </LinearLayout>
         </ScrollView>
 

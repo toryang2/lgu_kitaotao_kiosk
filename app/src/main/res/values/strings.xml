@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">SST</string>
     <string name="title_activity_macco">macco</string>
+    <string name="accounting_service_1">accounting_service_1</string>
+    <string name="accounting_service_2">accounting_service_2</string>
+    <string name="accounting_service_3">accounting_service_3</string>
+    <string name="accounting_service_4">accounting_service_4</string>
+    <string name="accounting_service_5">accounting_service_5</string>
+    <string name="accounting_service_6">accounting_service_6</string>
+    <string name="accounting_service_7">accounting_service_7</string>
     <string name="action_settings">Settings</string>
 </resources>
