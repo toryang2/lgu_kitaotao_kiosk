@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".services.accounting.accounting_service_4"
+            android:exported="false" />
+        <activity
             android:name=".services.accounting.accounting_service_3"
             android:exported="false" />
         <activity

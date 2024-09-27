@@ -52,58 +52,52 @@
                     android:id="@+id/service_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
+                    android:gravity="center"
                     android:onClick="accounting_service_1"
-                    android:text="⦿ Request for Issuance of Withholding Tax Certificate (BIR Form 2307)"
-                    android:textAlignment="viewStart" />
+                    android:text="⦿ Request for Issuance of Withholding Tax Certificate (BIR Form 2307)" />
 
                 <TextView
                     android:id="@+id/service_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp" />
+                    android:gravity="center"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances" />
 
                 <TextView
                     android:id="@+id/service_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements"
-                    android:textAlignment="viewStart" />
+                    android:gravity="center"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements" />
 
                 <TextView
                     android:id="@+id/service_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)"
-                    android:textAlignment="viewStart" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/service_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
-                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)"
-                    android:textAlignment="viewStart" />
+                    android:gravity="center"
+                    android:text="⦿ Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)" />
 
                 <TextView
                     android:id="@+id/internal_services"
@@ -122,19 +116,18 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
-                    android:text="⦿ Request for Review of Liquidation Reports for Travel Cash Advances"
-                    android:textAlignment="viewStart" />
+                    android:gravity="center"
+                    android:text="⦿ Request for Review of Liquidation Reports for Travel Cash Advances" />
 
                 <TextView
                     android:id="@+id/service_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
-                    android:text="⦿ Request for Certificate of Net Take Home Pay"
-                    android:textAlignment="viewStart" />
+                    android:gravity="center"
+                    android:text="⦿ Request for Certificate of Net Take Home Pay" />
             </LinearLayout>
         </ScrollView>
 

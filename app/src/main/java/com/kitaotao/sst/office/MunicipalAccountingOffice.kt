@@ -11,13 +11,14 @@ import com.kitaotao.sst.R
 import com.kitaotao.sst.services.accounting.accounting_service_1
 import com.kitaotao.sst.services.accounting.accounting_service_2
 import com.kitaotao.sst.services.accounting.accounting_service_3
+import com.kitaotao.sst.services.accounting.accounting_service_4
 
 
 class MunicipalAccountingOffice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_municipal_accounting_office)
+        setContentView(R.layout.office_municipal_accounting_office)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -36,6 +37,11 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         val accountingService3 = findViewById<TextView>(R.id.service_3)
         accountingService3.setOnClickListener{
             val intent = Intent(this, accounting_service_3::class.java)
+            startActivity(intent)
+        }
+        val accountingService4 = findViewById<TextView>(R.id.service_4)
+        accountingService4.setOnClickListener{
+            val intent = Intent(this, accounting_service_4::class.java)
             startActivity(intent)
         }
     }
