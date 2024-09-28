@@ -15,6 +15,8 @@ import com.kitaotao.sst.services.accounting.accounting_service_4
 
 
 class MunicipalAccountingOffice : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -44,5 +46,6 @@ class MunicipalAccountingOffice : AppCompatActivity() {
             val intent = Intent(this, accounting_service_4::class.java)
             startActivity(intent)
         }
+
     }
 }

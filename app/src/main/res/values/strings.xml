@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SST</string>
+    <string name="app_name">LGU Kitaotao</string>
     <string name="title_activity_macco">macco</string>
     <string name="accounting_service_1">accounting_service_1</string>
     <string name="accounting_service_2">accounting_service_2</string>
@@ -9,4 +9,6 @@
     <string name="accounting_service_6">accounting_service_6</string>
     <string name="accounting_service_7">accounting_service_7</string>
     <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
