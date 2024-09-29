@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -7,12 +10,52 @@ android {
     namespace = "com.kitaotao.sst"
     compileSdk = 34
 
+
+
+    var _versionCode = 0
+    var _major = 0
+    var _minor = 0
+    var _patch = 0
+
+    val versionPropsFile = file("version.properties")
+
+    if (versionPropsFile.canRead()) {
+        val versionProps = Properties().apply {
+            load(FileInputStream(versionPropsFile))
+        }
+
+        _patch = versionProps["PATCH"].toString().toInt() + 1
+        _major = versionProps["MAJOR"].toString().toInt()
+        _minor = versionProps["MINOR"].toString().toInt()
+        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
+
+        if (_patch == 100) {
+            _patch = 0
+            _minor += 1
+        }
+        if (_minor == 10) {
+            _minor = 0
+            _major += 1
+        }
+
+        versionProps["MAJOR"] = _major.toString()
+        versionProps["MINOR"] = _minor.toString()
+        versionProps["PATCH"] = _patch.toString()
+        versionProps["VERSION_CODE"] = _versionCode.toString()
+        versionProps.store(versionPropsFile.writer(), null)
+    } else {
+        throw GradleException("Could not read version.properties!")
+    }
+
+    val _versionName = "$_major.$_minor.$_patch($_versionCode)"
+
+
     defaultConfig {
         applicationId = "com.kitaotao.sst"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = _versionCode
+        versionName = _versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
