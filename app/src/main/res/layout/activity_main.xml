@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
-                    android:text="Local Economic Development and \nInvestment Promotion Office"
+                    android:text="Local Economic Development and Investment Promotion Office"
                     android:textAlignment="center" />
 
                 <TextView

@@ -21,9 +21,10 @@
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:srcCompat="@drawable/kitaotao_logo" />
+        app:srcCompat="@drawable/kitaotao" />
 
     <TextView
         android:id="@+id/textView4"
