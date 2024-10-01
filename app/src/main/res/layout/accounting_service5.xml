@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.accounting.accounting_service_4">
+    tools:context=".services.accounting.accounting_service_5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)"
+                            android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -307,7 +307,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.	Purchase Request"
+                            android:text="3.	Certified Copy of the page of the Approved Annual Procurement Plan (APP) or Supplemental APP where the Infrastructure Projects, subject for payment, is indicated"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -319,7 +319,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.	End User / Mayor’s Office"
+                            android:text="3.	Bids and Awards Committee (BAC)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -336,7 +336,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4.	Canvass for each Supplier"
+                            android:text="4.	Certified Copy of the submitted contract or Purchase Order stamped “Received” by COA"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -348,7 +348,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4.	Supplier / Bids and Awards Committee (BAC)"
+                            android:text="4.	Bids and Awards Committee (BAC)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -365,7 +365,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="5.	Quotation for each Supplier"
+                            android:text="5.	Letter Request for payment from Contractor"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -377,7 +377,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="5.	Supplier / Bids and Awards Committee (BAC)"
+                            android:text="5.	Contractor"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -394,7 +394,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="6.	PhilGEPS"
+                            android:text="6.	Irrevocable Standby Letter of Credit/Security Bond/Bank Guarantee (Advance payment for mobilization)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -406,7 +406,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="6.	Bids and Awards Committee (BAC)"
+                            android:text="6.	Contractor"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -423,7 +423,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="7.	Bids and Awards Committee (BAC) Resolution"
+                            android:text="7.	Notice of Award (Advance payment for mobilization)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -452,7 +452,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="8.	Notice of Award"
+                            android:text="8.	Notice to Proceed (Advance payment for mobilization)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -474,383 +474,6 @@
                         android:layout_height="match_parent" >
 
                         <TextView
-                            android:id="@+id/tableHeaderDesc22"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="9.	Notice to Proceed"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc23"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="9.	Bids and Awards Committee (BAC)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc24"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="10.	Purchase Order"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc25"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="10.	Bids and Awards Committee (BAC)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc26"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="11.	Official Receipt / Sales Invoice / Delivery Receipt / Charge Invoice"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc27"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="11.	Supplier"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc28"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="12.	Trip Ticket (Fuel)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc29"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc30"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="13.	Fuel Consumption Report (Fuel)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc31"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="End User / General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc32"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="14.	Withdrawal"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc33"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc34"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="15.	Waste Material Report "
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc35"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc36"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="16.	Property Acknowledgment Receipt (PAR) / Memorandum Receipt "
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc37"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc38"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="17.	Inspection and Acceptance Report"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc39"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="End User / General Services Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc40"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="18.	Job Order / Repair if applicable"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc41"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="End User / Supplier"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc42"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="19.	Training Design "
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc43"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc44"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="20.	Attendance"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc45"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc46"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="21.	Business Permit / Tax Clearance Certificate / BIR Certificate of Registration / Financial Statements / SEC Registration"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc47"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Suppliers "
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
                             android:id="@+id/tableHeaderDesc48"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -858,7 +481,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="Additional Requirement for Purchase of Construction/Repair materials of Infrastructure projects undertaken by the administration"
+                            android:text="Additional Requirements for Progress and Final Payment"
                             android:textAlignment="center"
                             android:textColor="#49454F"
                             android:textSize="14sp"
@@ -888,7 +511,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="•	Approved Program of Work"
+                            android:text="•	Statement of Work Accomplished (SWA)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -900,7 +523,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="Engineering Office"
+                            android:text="•	Engineering Office"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -917,7 +540,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="•	BAC Resolution"
+                            android:text="•	Progress Billing Statement"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -929,7 +552,384 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="Bids and Awards Committee (BAC)"
+                            android:text="•	Contractor"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc80"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Inspection Report by the Agency’s Authorized Engineer"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc81"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc78"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Result of Test Analysis, if applicable"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc79"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc102"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor’s Affidavit on payment of laborers and materials"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc103"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc82"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Pictures / Geotagged photos, before, during and after construction of items of work especially the embedded items"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc83"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor / Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc84"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Certificate of Percentage of Completion"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc85"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor / Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc86"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Statement of Time Elapsed"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc87"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc88"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	As-built plans (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc89"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor / Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc90"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Final SWA (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc91"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc94"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Warranty Security (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc95"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Contractor"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc96"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Certificate of Completion (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc97"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Mayor’s Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc98"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Copy of turn-over documents/transfer of project and facilities (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc99"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	End-User"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc100"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Certificate of Acceptance by the Agency (For Final Payment)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc101"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office / Mayor’s Office"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc92"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Photocopy of all previous vouchers"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc93"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="•	Engineering Office"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -946,7 +946,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="Additional Requirement for meals and snacks"
+                            android:text="Additional Requirements for Release of Retention Money"
                             android:textAlignment="center"
                             android:textColor="#49454F"
                             android:textSize="14sp"
@@ -976,7 +976,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="•	Training design/Project activity/design/Program of Work"
+                            android:text="•	Any security in the form of cash, bank guarantee, irrevocable standby letter of credit from a commercial bank, GSIS or surety bond callable on demand"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -988,7 +988,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="End User"
+                            android:text="•	Contractor"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -1005,7 +1005,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="•	Attendance"
+                            android:text="•	Certificate from the end user that the project is completed, inspected, and accepted"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -1017,6 +1017,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
+                            android:text="•	End-User"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -1033,7 +1034,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="•	Menu"
+                            android:text="•	Photocopy of all previous vouchers"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -1045,206 +1046,7 @@
                             android:background="@drawable/cell_shape_normal_checklist_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc62"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Additional Requirement for purchase of medicines"
-                            android:textAlignment="center"
-                            android:textColor="#49454F"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc63"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc64"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Valid Certificate of Registration (CPR) issued by the Food and Drug Administration (FDA)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc65"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Supplier"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc66"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Batch notification, Lot Release Certification from FDA or its equivalent, as required by FDA for specific drugs and medicines"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc67"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Supplier"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc68"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Valid License to Operate (LTO) issued by the FDA for Suppliers, Distributors and Traders"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc69"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc70"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Certificate of Accreditation from Department of Health (DOH)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc71"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc72"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Authority to Distribute duly sworn from DOH"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc73"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc74"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="•	Certificate that the medicines purchased are listed in the PNDF"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc75"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
+                            android:text="•	Engineering Office"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>

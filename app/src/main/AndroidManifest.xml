@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".services.accounting.accounting_service_5"
+            android:exported="false" />
+        <activity
             android:name=".services.accounting.accounting_service_4"
             android:exported="false" />
         <activity
@@ -26,7 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".office.MunicipalAccountingOffice"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

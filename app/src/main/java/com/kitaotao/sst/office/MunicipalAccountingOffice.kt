@@ -12,6 +12,7 @@ import com.kitaotao.sst.services.accounting.accounting_service_1
 import com.kitaotao.sst.services.accounting.accounting_service_2
 import com.kitaotao.sst.services.accounting.accounting_service_3
 import com.kitaotao.sst.services.accounting.accounting_service_4
+import com.kitaotao.sst.services.accounting.accounting_service_5
 
 
 class MunicipalAccountingOffice : AppCompatActivity() {
@@ -44,6 +45,12 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         val accountingService4 = findViewById<TextView>(R.id.service_4)
         accountingService4.setOnClickListener{
             val intent = Intent(this, accounting_service_4::class.java)
+            startActivity(intent)
+        }
+
+        val accountingService5 = findViewById<TextView>(R.id.service_5)
+        accountingService5.setOnClickListener {
+            val intent = Intent(this, accountingService5::class.java)
             startActivity(intent)
         }
 
