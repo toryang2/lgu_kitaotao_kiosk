@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.accounting.accounting_service_6">
+    tools:context=".services.administrator.administrator_service_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Request for Review of Liquidation Reports for Travel Cash Advances"
+                            android:text="Request Provision Over Meetings"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -48,7 +48,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="This service reviews and receives the liquidation reports submitted by employees with travel cash advances" />
+                            android:text="The Municipal Administrator’s shall take charge of the Office of the Administration and shall:\nAssist in the coordination and meetings of the work of all officials of the Local Government Unit, under the supervision, direction, and control of the mayor and for this purpose, he may convince the Chief of offices and other of the Local Government Unit. " />
                     </TableRow>
 
                     <TableRow
@@ -77,7 +77,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="Municipal Accounting Office (MACCO)"
+                            android:text="Municipal Administrator’s Office (MADO)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -108,7 +108,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="Complex"
+                            android:text="Simple"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -139,7 +139,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="G2G – Government to Government"
+                            android:text="G2G, G2C"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -170,7 +170,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="All employees of the LGU - Kitaotao"
+                            android:text="All Municipal Departments"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -218,12 +218,11 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="2.5"
                             android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center"
+                            android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="1 Original and 3 Photocopies of the following documents:"
+                            android:text="1.	Issuance of Memorandum Order addressed to the Municipal Administrator (1 original copy)"
                             android:textColor="#49454F"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textSize="14sp" />
 
                         <TextView
                             android:id="@+id/tableHeaderDesc6"
@@ -233,267 +232,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="1.	Liquidation Report"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc7"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="1.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc8"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="2.	Approved Certificate of Travel Completed"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc9"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="2.	Mayor’s Office / End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc14"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="3.	Approved Revised itinerary of travel, if the previously approved itinerary was not followed"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc15"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="3.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc16"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="4.	Copy of previously approved itinerary of travel"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc17"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="4.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc12"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="5.	Copy of office order and the supplemental Office Order or any proof supporting the change of schedule"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc13"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="5.	Mayor’s Office"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc10"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="6.	Certificate of appearance / attendance"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc11"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="6.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc18"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="7.	Official receipt (OR) in case of refund of excess cash advance"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc19"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="7.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc20"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="8.	Paper / electronic plane, boat or bus/train tickets, terminal fee receipts, paper/electronic boarding passes or a passenger manifest certified by the concerned airline or shipping company"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc21"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="8.	End User"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc76"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="9.	OR / eOR or CERR/Certification of Expenses not Requiring Receipts (for expenses amounting to P300 or less) or RER/Reimbursement Expense Receipt (for expenses amounting to more than P300 but not exceeding P1000), pursuant to COA Circular 2017-001, as amended by COA Circular 2021-001, or other amount that may be prescribed in the future."
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc77"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="9.	End User"
+                            android:text="Municipal Mayor’s Office (MMO)"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -581,7 +320,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Submit the liquidation reports and all the required supporting documents to the accounting unit"
+                            android:text="1.	Memorandum Order must be received through the MADO staff."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -593,7 +332,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1.	Review the completeness of documents"
+                            android:text="1.1.	Inform the Municipal Administrator "
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -617,7 +356,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="30 minutes per voucher"
+                            android:text="5 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -629,71 +368,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Administrative Aide II\nMunicipal Accounting Office "
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:id="@+id/tableClientSteps1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="1.2.	Receive the Liquidation Report and its supporting documents"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="None"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="5 minutes "
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible1"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="Administrative Aide II\nMunicipal Accounting Office "
+                            android:text="Admin Aide"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -710,7 +385,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	Accomplish the Client Satisfaction Service (CSS) Form and drop in the CSS drop box"
+                            android:text="2.	Inquire about the availability of the Municipal Administrator"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -722,7 +397,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.1.	Request the client to accomplish the Client Satisfaction Service (CSS) form"
+                            android:text="2.1.	The Municipal Administrator will preside the meeting. "
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -746,7 +421,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="5 minutes"
+                            android:text="45 minutes "
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -758,7 +433,72 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Administrative Aide I\nMunicipal Accounting Office "
+                            android:text="Municipal Administrator"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.	Accomplish the Client Satisfaction Service (CSS) Form and drop in the CSS drop box"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.1.	Request the client to accomplish the Client Satisfaction Service (CSS) form"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="20 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="Admin Aide"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -789,7 +529,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="40 minutes"
+                            android:text="1 hour 10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 

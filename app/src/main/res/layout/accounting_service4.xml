@@ -1644,7 +1644,8 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:paddingBottom="150dp">
 
                         <TextView
                             android:id="@+id/tableTotal"

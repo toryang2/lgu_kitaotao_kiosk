@@ -9,6 +9,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.office.MunicipalAccountingOffice
+import com.kitaotao.sst.office.MunicipalAdministratorOffice
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
@@ -31,9 +32,15 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
-        val macco_txt_button  = findViewById<TextView>(R.id.macco)
-        macco_txt_button.setOnClickListener {
+        val maccoservices  = findViewById<TextView>(R.id.macco)
+        maccoservices.setOnClickListener {
             val intent = Intent(this, MunicipalAccountingOffice::class.java)
+            startActivity(intent)
+        }
+
+        val adminstratorservice = findViewById<TextView>(R.id.administrator)
+        adminstratorservice.setOnClickListener {
+            val intent = Intent(this, MunicipalAdministratorOffice::class.java)
             startActivity(intent)
         }
     }
