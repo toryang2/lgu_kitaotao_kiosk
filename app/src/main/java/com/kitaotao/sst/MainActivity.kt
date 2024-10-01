@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.office.MunicipalAccountingOffice
 import com.kitaotao.sst.office.MunicipalAdministratorOffice
+import com.kitaotao.sst.office.MunicipalAgricultureOffice
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 
@@ -32,15 +33,21 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
-        val maccoservices  = findViewById<TextView>(R.id.macco)
-        maccoservices.setOnClickListener {
+        val maccoServices  = findViewById<TextView>(R.id.macco)
+        maccoServices.setOnClickListener {
             val intent = Intent(this, MunicipalAccountingOffice::class.java)
             startActivity(intent)
         }
 
-        val adminstratorservice = findViewById<TextView>(R.id.administrator)
-        adminstratorservice.setOnClickListener {
+        val adminstratorService = findViewById<TextView>(R.id.administrator)
+        adminstratorService.setOnClickListener {
             val intent = Intent(this, MunicipalAdministratorOffice::class.java)
+            startActivity(intent)
+        }
+
+        val agricultureService = findViewById<TextView>(R.id.agriculture)
+        agricultureService.setOnClickListener {
+            val intent = Intent(this, MunicipalAgricultureOffice::class.java)
             startActivity(intent)
         }
     }

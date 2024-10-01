@@ -13,6 +13,48 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".services.agriculture.agriculture_service_13"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_12"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_11"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_10"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_9"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_8"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_7"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_6"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.agriculture.agriculture_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".office.MunicipalAgricultureOffice"
+            android:exported="false" />
+        <activity
             android:name=".services.administrator.administrator_service_2"
             android:exported="false" />
         <activity
