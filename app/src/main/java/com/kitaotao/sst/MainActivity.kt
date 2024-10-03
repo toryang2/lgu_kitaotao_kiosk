@@ -1,6 +1,7 @@
 package com.kitaotao.sst
 
 import android.content.Intent
+import android.content.LocusId
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -33,22 +34,13 @@ class MainActivity : AppCompatActivity() {
             insets
 
         }
-        val maccoServices  = findViewById<TextView>(R.id.macco)
-        maccoServices.setOnClickListener {
-            val intent = Intent(this, MunicipalAccountingOffice::class.java)
-            startActivity(intent)
-        }
-
-        val adminstratorService = findViewById<TextView>(R.id.administrator)
-        adminstratorService.setOnClickListener {
-            val intent = Intent(this, MunicipalAdministratorOffice::class.java)
-            startActivity(intent)
-        }
-
-        val agricultureService = findViewById<TextView>(R.id.agriculture)
-        agricultureService.setOnClickListener {
-            val intent = Intent(this, MunicipalAgricultureOffice::class.java)
-            startActivity(intent)
+        setClickListener(R.id.macco, MunicipalAccountingOffice::class.java)
+        setClickListener(R.id.administrator, MunicipalAdministratorOffice::class.java)
+        setClickListener(R.id.agriculture, MunicipalAgricultureOffice::class.java)
+    }
+    private fun setClickListener(viewId: Int, activityClass: Class<*>){
+        findViewById<TextView>(viewId).setOnClickListener{
+            startActivity(Intent(this, activityClass))
         }
     }
 }
