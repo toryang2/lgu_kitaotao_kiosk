@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
-        app:srcCompat="@drawable/kitaotao" />
+        app:srcCompat="@mipmap/header_logo" />
 
     <TextView
         android:id="@+id/textView4"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="lgukitaotao@gmail.com"
+        android:text="kitaotaolgu@gmail.com"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
@@ -62,5 +62,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kitakitz_kitaotao" />
+        app:srcCompat="@mipmap/header_logo_2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

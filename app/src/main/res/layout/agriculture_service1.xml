@@ -13,7 +13,9 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@android:color/transparent"
+            android:scrollbarThumbHorizontal="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -216,7 +218,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_left"
+                            android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
                             android:text="Letter request"
@@ -228,7 +230,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_checklist_right"
+                            android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
                             android:textColor="#49454F"

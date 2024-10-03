@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.ir.backend.js.compile
+import org.jetbrains.kotlin.serialization.builtins.main
 import java.io.FileInputStream
 import java.util.Properties
 

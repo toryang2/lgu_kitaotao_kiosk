@@ -9,9 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.kitaotao.sst.office.MunicipalAccountingOffice
-import com.kitaotao.sst.office.MunicipalAdministratorOffice
-import com.kitaotao.sst.office.MunicipalAgricultureOffice
+import com.kitaotao.sst.office.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 

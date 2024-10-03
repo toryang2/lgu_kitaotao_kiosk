@@ -5,4 +5,5 @@
     <color name="pastel_blue">#3e4772</color>
     <color name="light_blue">#448AFF</color>
     <color name="fake_white">#fef7ff</color>
+    <color name="transparent">#00000000</color>
 </resources>

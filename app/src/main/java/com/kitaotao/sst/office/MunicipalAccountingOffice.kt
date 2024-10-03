@@ -8,13 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.accounting.accounting_service_1
-import com.kitaotao.sst.services.accounting.accounting_service_2
-import com.kitaotao.sst.services.accounting.accounting_service_3
-import com.kitaotao.sst.services.accounting.accounting_service_4
-import com.kitaotao.sst.services.accounting.accounting_service_5
-import com.kitaotao.sst.services.accounting.accounting_service_6
-import com.kitaotao.sst.services.accounting.accounting_service_7
+import com.kitaotao.sst.services.accounting.*
 
 
 class MunicipalAccountingOffice : AppCompatActivity() {
@@ -29,44 +23,17 @@ class MunicipalAccountingOffice : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val accountingService1 = findViewById<TextView>(R.id.service_1)
-        accountingService1.setOnClickListener{
-            val intent = Intent(this, accounting_service_1::class.java)
-            startActivity(intent)
+        setClickListener(R.id.service_1, accounting_service_1::class.java)
+        setClickListener(R.id.service_2, accounting_service_2::class.java)
+        setClickListener(R.id.service_3, accounting_service_3::class.java)
+        setClickListener(R.id.service_4, accounting_service_4::class.java)
+        setClickListener(R.id.service_5, accounting_service_5::class.java)
+        setClickListener(R.id.service_6, accounting_service_6::class.java)
+        setClickListener(R.id.service_7, accounting_service_7::class.java)
+    }
+    private fun setClickListener(viewId: Int, activityClass: Class<*>){
+        findViewById<TextView>(viewId).setOnClickListener{
+            startActivity(Intent(this, activityClass))
         }
-        val accountingService2 = findViewById<TextView>(R.id.service_2)
-        accountingService2.setOnClickListener{
-            val intent = Intent(this, accounting_service_2::class.java)
-            startActivity(intent)
-        }
-        val accountingService3 = findViewById<TextView>(R.id.service_3)
-        accountingService3.setOnClickListener{
-            val intent = Intent(this, accounting_service_3::class.java)
-            startActivity(intent)
-        }
-        val accountingService4 = findViewById<TextView>(R.id.service_4)
-        accountingService4.setOnClickListener{
-            val intent = Intent(this, accounting_service_4::class.java)
-            startActivity(intent)
-        }
-
-        val accountingService5 = findViewById<TextView>(R.id.service_5)
-        accountingService5.setOnClickListener {
-            val intent = Intent(this, accounting_service_5::class.java)
-            startActivity(intent)
-        }
-
-        val accountingService6 = findViewById<TextView>(R.id.service_6)
-        accountingService6.setOnClickListener {
-            val intent = Intent(this, accounting_service_6::class.java)
-            startActivity(intent)
-        }
-
-        val accountingService7 = findViewById<TextView>(R.id.service_7)
-        accountingService7.setOnClickListener {
-            val intent = Intent(this, accounting_service_7::class.java)
-            startActivity(intent)
-        }
-
     }
 }

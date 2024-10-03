@@ -8,8 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.administrator.administrator_service_1
-import com.kitaotao.sst.services.administrator.administrator_service_2
+import com.kitaotao.sst.services.administrator.*
 import org.w3c.dom.Text
 
 class MunicipalAdministratorOffice : AppCompatActivity() {
@@ -22,17 +21,12 @@ class MunicipalAdministratorOffice : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val administratorService1 = findViewById<TextView>(R.id.service_1)
-        administratorService1.setOnClickListener {
-            val intent = Intent(this, administrator_service_1::class.java)
-            startActivity(intent)
-        }
-
-        val administratorService2 = findViewById<TextView>(R.id.service_2)
-        administratorService2.setOnClickListener {
-            val intent = Intent(this, administrator_service_2::class.java)
-            startActivity(intent)
+        setClickListener(R.id.service_1, administrator_service_1::class.java)
+        setClickListener(R.id.service_2, administrator_service_2::class.java)
+    }
+    private fun setClickListener(viewId: Int, activityClass: Class<*>){
+        findViewById<TextView>(viewId).setOnClickListener{
+            startActivity(Intent(this, activityClass))
         }
     }
 }
