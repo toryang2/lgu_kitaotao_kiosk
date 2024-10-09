@@ -8,17 +8,63 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
-        android:background="@drawable/gradient"
+        android:layout_height="100dp"
+        android:background="@color/blue_2"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="-201dp" />
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/blue_1"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_2"
+        android:scaleX=".8"
+        android:scaleY=".8"
+        android:text="Back"
+        android:textColor="@color/white"
+        app:icon="@mipmap/back_button"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:strokeColor="#474141"
+        app:strokeWidth="1dp"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_2"
+        android:scaleX=".8"
+        android:scaleY=".8"
+        android:text="Home"
+        android:textColor="@color/white"
+        app:icon="@mipmap/home_button"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:strokeColor="#474141"
+        app:strokeWidth="1dp"
+        tools:visibility="visible" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
@@ -33,7 +79,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Local Government of Kitaotao"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,12 +102,12 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="144dp"
+        android:layout_height="144dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/header_logo_2" />
+        app:srcCompat="@mipmap/kitakitzlogo256" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
