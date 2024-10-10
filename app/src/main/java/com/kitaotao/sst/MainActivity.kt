@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Install the splash screen
-        val splashScreen = installSplashScreen()
+        //val splashScreen = installSplashScreen()
 
         // Call super before using any view in your activity
         super.onCreate(savedInstanceState)
@@ -48,12 +48,12 @@ class MainActivity : AppCompatActivity() {
         setClickListener(R.id.assessor, MunicipalAssessorsOffice::class.java)
 
         // Use coroutine to handle splash screen delay
-        CoroutineScope(Dispatchers.Main).launch {
-            delay(4000L)  // Delay for 4 seconds
+        //CoroutineScope(Dispatchers.Main).launch {
+        //    delay(4000L)  // Delay for 4 seconds
 
             // After the delay, dismiss the splash screen
-            splashScreen.setKeepOnScreenCondition { false }
-        }
+        // splashScreen.setKeepOnScreenCondition { false }
+        //}
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
