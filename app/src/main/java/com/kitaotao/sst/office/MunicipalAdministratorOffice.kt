@@ -12,11 +12,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.administrator.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import org.w3c.dom.Text
 
 class MunicipalAdministratorOffice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,26 +23,29 @@ class MunicipalAdministratorOffice : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Back Button
+
+        // Back Button implementation
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                finish()
+                finish() // Finish current activity when back is pressed
             }
         })
 
         val backButton: Button = findViewById(R.id.buttonBack)
         backButton.setOnClickListener {
-            finish()
-        }
-        //end of back button
-        val homeButton: Button = findViewById(R.id.buttonHome)
-        homeButton.setOnClickListener {
-            CoroutineScope(Dispatchers.Main).launch {
-                delay(2000L)
-            }
-            finish()
+            finish() // Finish current activity when back button is clicked
         }
 
+        // Home Button implementation
+        val homeButton: Button = findViewById(R.id.buttonHome)
+        homeButton.setOnClickListener {
+            // Start MainActivity directly without delay
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Optional: Finish this activity to remove it from the back stack
+        }
+
+        // Set click listeners for various services
         setClickListener(R.id.buttonBack, MainActivity::class.java)
         setClickListener(R.id.service_1, administrator_service_1::class.java)
         setClickListener(R.id.service_2, administrator_service_2::class.java)
