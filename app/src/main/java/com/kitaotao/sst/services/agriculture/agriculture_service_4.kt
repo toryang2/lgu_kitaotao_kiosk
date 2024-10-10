@@ -39,10 +39,10 @@ class agriculture_service_4 : AppCompatActivity() {
         //end of back button
         val homeButton: Button = findViewById(R.id.buttonHome)
         homeButton.setOnClickListener {
-            CoroutineScope(Dispatchers.Main).launch {
-                delay(2000L)
-            }
-            finish()
+            // Start MainActivity directly without delay
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Optional: Finish this activity to remove it from the back stack
         }
     }
 }

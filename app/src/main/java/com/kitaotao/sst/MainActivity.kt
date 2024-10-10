@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.delay
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Install the splash screen
@@ -45,10 +45,11 @@ class MainActivity : ComponentActivity() {
         setClickListener(R.id.macco, MunicipalAccountingOffice::class.java)
         setClickListener(R.id.administrator, MunicipalAdministratorOffice::class.java)
         setClickListener(R.id.agriculture, MunicipalAgricultureOffice::class.java)
+        setClickListener(R.id.assessor, MunicipalAssessorsOffice::class.java)
 
         // Use coroutine to handle splash screen delay
         CoroutineScope(Dispatchers.Main).launch {
-            delay(5000L)  // Delay for 5 seconds
+            delay(4000L)  // Delay for 4 seconds
 
             // After the delay, dismiss the splash screen
             splashScreen.setKeepOnScreenCondition { false }

@@ -10,10 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class accounting_service_4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,10 +35,10 @@ class accounting_service_4 : AppCompatActivity() {
         //end of back button
         val homeButton: Button = findViewById(R.id.buttonHome)
         homeButton.setOnClickListener {
-            CoroutineScope(Dispatchers.Main).launch {
-                delay(2000L)
-            }
-            finish()
+            // Start MainActivity directly without delay
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish() // Optional: Finish this activity to remove it from the back stack
         }
     }
 }

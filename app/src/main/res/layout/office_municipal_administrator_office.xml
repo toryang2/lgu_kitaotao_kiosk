@@ -63,20 +63,19 @@
 
                 <TextView
                     android:id="@+id/service_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:onClick="accounting_service_1"
                     android:text="⦿ Request of Technical Assistance at the Barangay Level" />
 
                 <TextView
                     android:id="@+id/service_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"

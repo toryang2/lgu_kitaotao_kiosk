@@ -54,159 +54,171 @@
 
                 <TextView
                     android:id="@+id/internal_services"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
                     android:text="Internal Services"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/service_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:onClick="accounting_service_1"
-                    android:text="⦿ Request for Project Validation, Monitoring and Evaluation" />
+                    android:text="Request for Project Validation, Monitoring and Evaluation" />
 
                 <TextView
                     android:id="@+id/internal.external_services"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
                     android:text="Internal/ External Services"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/service_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Animal Breeding Services" />
+                    android:text="Animal Breeding Services" />
 
                 <TextView
                     android:id="@+id/service_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Animal Health Management and Services" />
+                    android:text="Animal Health Management and Services" />
 
                 <TextView
                     android:id="@+id/service_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Application of Claim for Indemnity" />
+                    android:text="Application of Claim for Indemnity" />
 
                 <TextView
                     android:id="@+id/service_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Issuance of Certification – Endorsement" />
+                    android:text="Issuance of Certification – Endorsement" />
 
                 <TextView
                     android:id="@+id/service_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Issuance of Certification for Live Animals Intended for Travel and Slaughter" />
+                    android:text="Issuance of Certification for Live Animals Intended for Travel and Slaughter" />
 
                 <TextView
                     android:id="@+id/service_7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Resource Person Engagement Services" />
+                    android:text="Resource Person Engagement Services" />
 
                 <TextView
                     android:id="@+id/service_8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Request For Enrolment to Registry System for Basic Sectors in Agriculture (RSBSA)" />
+                    android:text="Request For Enrolment to Registry System for Basic Sectors in Agriculture (RSBSA)" />
 
                 <TextView
                     android:id="@+id/service_9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Request for Farm Inputs" />
+                    android:text="Request for Farm Inputs" />
 
                 <TextView
                     android:id="@+id/service_10"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Request for Crop and Livestock Insurance" />
+                    android:text="Request for Crop and Livestock Insurance" />
 
                 <TextView
                     android:id="@+id/service_11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Request for Soil Sampling" />
+                    android:text="Request for Soil Sampling" />
 
                 <TextView
                     android:id="@+id/service_12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="⦿ Request for Technical Assistance" />
+                    android:text="Request for Technical Assistance" />
 
                 <TextView
                     android:id="@+id/service_13"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:paddingBottom="150dp"
-                    android:text="⦿ Request for Tractor Services" />
+                    android:text="Request for Tractor Services" />
             </LinearLayout>
         </ScrollView>
 
