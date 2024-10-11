@@ -462,7 +462,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLAOO\n\nMunicipal Assessor's Office"
+                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\nMunicipal Assessor's Office"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -526,7 +526,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="LAOO\n\nMunicipal Assessor's Office"
+                            android:text="Local Assessment Operations Officer\n\nMunicipal Assessor's Office"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -654,7 +654,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="LAOO\n\nMunicipal Assessor's Office"
+                            android:text="Local Assessment Operations Officer\n\nMunicipal Assessor's Office"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
