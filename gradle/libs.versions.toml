@@ -12,6 +12,8 @@ constraintlayout = "2.1.4"
 legacySupportV4 = "1.0.0"
 lifecycleLivedataKtx = "2.8.6"
 lifecycleViewmodelKtx = "2.8.6"
+multiwaveheader = "1.0.0-andx"
+multiWaveHeaderVersion = "3.0.1"
 navigationFragmentKtx = "2.8.0"
 navigationUiKtx = "2.8.0"
 
@@ -29,6 +31,8 @@ androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecy
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+multi-wave-header = { module = "com.scwang.wave:multi-wave-header", version.ref = "multiWaveHeaderVersion" }
+multiwaveheader = { module = "com.scwang.wave:MultiWaveHeader", version.ref = "multiwaveheader" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
