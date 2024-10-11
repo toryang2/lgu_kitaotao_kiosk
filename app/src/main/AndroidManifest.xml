@@ -13,6 +13,42 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".services.assessor.assessor_service_13"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_12"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_11"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.Massessor_service_11"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_10"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_9"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_8"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_7"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_6"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.assessor.assessor_service_3"
+            android:exported="false" />
+        <activity
             android:name=".postScreen"
             android:exported="true"
             android:theme="@style/Theme.AnimatedSplash.MySplash">
@@ -108,7 +144,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

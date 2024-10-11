@@ -50,16 +50,6 @@ class MunicipalAssessorsOffice : AppCompatActivity() {
         setClickListener(R.id.service_1, assessor_service_1::class.java)
         setClickListener(R.id.service_2, assessor_service_2::class.java)
         setClickListener(R.id.service_3, assessor_service_3::class.java)
-        setClickListener(R.id.service_4, assessor_service_4::class.java)
-        setClickListener(R.id.service_5, assessor_service_5::class.java)
-        setClickListener(R.id.service_6, assessor_service_6::class.java)
-        setClickListener(R.id.service_7, assessor_service_7::class.java)
-        setClickListener(R.id.service_8, assessor_service_8::class.java)
-        setClickListener(R.id.service_9, assessor_service_9::class.java)
-        setClickListener(R.id.service_10, assessor_service_10::class.java)
-        setClickListener(R.id.service_11, assessor_service_11::class.java)
-        setClickListener(R.id.service_12, assessor_service_12::class.java)
-        setClickListener(R.id.service_13, assessor_service_13::class.java)
     }
     private fun setClickListener(viewId: Int, activityClass: Class<*>){
         findViewById<TextView>(viewId).setOnClickListener{
