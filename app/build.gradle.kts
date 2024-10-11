@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.ir.backend.js.compile
-import org.jetbrains.kotlin.serialization.builtins.main
 import java.io.FileInputStream
 import java.util.Properties
 
@@ -12,7 +10,7 @@ android {
     namespace = "com.kitaotao.sst"
     compileSdk = 34
 
-
+    // start
 
     var _versionCode = 0
     var _major = 0
