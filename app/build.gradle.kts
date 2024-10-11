@@ -100,4 +100,6 @@ dependencies {
 
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
+    implementation("com.airbnb.android:lottie:6.5.2")
+    implementation("io.github.sgpublic:MultiWaveHeader:1.0.2")
 }

@@ -14,9 +14,10 @@ import kotlinx.coroutines.runBlocking
 
 class postScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
         installSplashScreen().setKeepOnScreenCondition {
             runBlocking {
-                delay(3000L)
+                delay(2000L)
                 false
             }
         }
