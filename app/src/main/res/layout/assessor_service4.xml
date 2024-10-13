@@ -37,7 +37,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ocular Inspection Services for District 3 Barangays"
+                            android:text="Ocular Inspection Services for District 4 Barangays"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +50,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="To conduct ocular inspection of real properties located in barangays of District 3" />
+                            android:text="To conduct ocular inspection of real properties located in barangay in District 4" />
                     </TableRow>
 
                     <TableRow
@@ -450,7 +450,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="4 hours"
+                            android:text="5 hours"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -514,7 +514,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="5 hours"
+                            android:text="6 hours"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -879,7 +879,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="12 hours and 20 minutes"
+                            android:text="14 hours and 20 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 

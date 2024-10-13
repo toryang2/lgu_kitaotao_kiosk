@@ -81,6 +81,12 @@ android {
     }
 }
 
+allprojects{
+    repositories {
+
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)

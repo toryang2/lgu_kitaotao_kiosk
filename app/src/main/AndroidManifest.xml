@@ -22,9 +22,6 @@
             android:name=".services.assessor.assessor_service_11"
             android:exported="false" />
         <activity
-            android:name=".services.assessor.Massessor_service_11"
-            android:exported="false" />
-        <activity
             android:name=".services.assessor.assessor_service_10"
             android:exported="false" />
         <activity
