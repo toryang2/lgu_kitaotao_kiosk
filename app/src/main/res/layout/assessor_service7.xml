@@ -37,7 +37,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ocular Inspection Services for District 3 Barangays"
+                            android:text="Request for Certification and Plain Copy of Real Property  "
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +50,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="To conduct ocular inspection of real properties located in barangays of District 3" />
+                            android:text=" To issue certified/plain/photocopy of assessment documents. " />
                     </TableRow>
 
                     <TableRow
@@ -110,7 +110,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="Complex"
+                            android:text="@string/classSimple"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -250,7 +250,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	Payment OR of Fees"
+                            android:text="2.	Payment OR of Fee &amp; Charges"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -350,7 +350,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Accompanies the Assessment Team during ocular inspection and submits the accomplished Sworn Statement."
+                            android:text="1.	Accomplishes Request Form and submits the required documents. "
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -362,7 +362,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1.	Notifies the client about the schedule the ocular inspection."
+                            android:text="1.	Provides Request Form and evaluates the required documents according to the Checklist of Requirements."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -398,7 +398,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2n3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -415,6 +415,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
+                            android:text="-	If the evaluated documents are incomplete, asks for the Checklist of Requirements Form and secures the lacking documents."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -426,7 +427,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.2.	Travel towards the location of the property &amp; conduct actual survey on the property requested for ocular inspection. Give the sworn statement."
+                            android:text="1.1.	If the submitted documents are lacking, return the submitted documents. Advises client to secure the required documents and give a copy of the Checklist Form. End of Service"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -450,7 +451,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="4 hours"
+                            android:text="10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -462,7 +463,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2n3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -479,6 +480,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
+                            android:text="-	If the required documents are complete, Pays the fees to the Treasurer’s Office &amp; submits the Official Receipt of payment to the Assessor Office"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -490,7 +492,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.3.	Retrieve and review the Sworn Statement &amp; travel back to office station."
+                            android:text="1.2.	If the required documents are complete, Instructs the client to pay the corresponding fees to the Treasurer’s Office:"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -514,7 +516,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="5 hours"
+                            android:text="10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -526,7 +528,199 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2n3"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps35"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="- Certification"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="- Certification"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|right|top"
+                            android:padding="5sp"
+                            android:text="₱300.00"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="Situational"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="RCC/MT"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps50"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="-	Sketch Plan"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction51"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="-	Sketch Plan"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees51"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|right|top"
+                            android:padding="5sp"
+                            android:text="₱350.00"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime51"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible51"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="Municipal Treasurer's Office"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps51"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="-	Plain Copy"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction52"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="-	Plain Copy"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees52"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|right|top"
+                            android:padding="5sp"
+                            android:text="₱30.00"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime52"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible52"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -554,7 +748,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.1.	Encodes the Inspection Report"
+                            android:text="2.1.	Retrieves the OR of payment:"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -578,7 +772,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="1 hour &amp; 30 minutes"
+                            android:text="5 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -590,7 +784,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/laoo3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -618,7 +812,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.2.	Checks data entries and prints the Inspection Report"
+                            android:text="2.2.	Encodes and prints Certification"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -654,7 +848,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Local Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/laoo"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -682,7 +876,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.3.	Verifies &amp; signs the Inspection Report"
+                            android:text="2.3.	Signs the document"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -706,7 +900,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="30 minutes"
+                            android:text="10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -718,7 +912,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Municipal Assessor\n\nMunicipal Assessor's Office"
+                            android:text="@string/mAssessor"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -735,7 +929,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.	Receives the assessment documents."
+                            android:text="3.	Receives the documents."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -747,7 +941,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.1.	Records documents in the logbook. Issues the Inspection Report to the client."
+                            android:text="3.1.	Records documents in the logbook. Issues the documents to the client."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -771,7 +965,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="20 minutes"
+                            android:text="10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -783,7 +977,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -848,7 +1042,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assement Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -879,7 +1073,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="12 hours and 20 minutes"
+                            android:text="1 hour and 45 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
