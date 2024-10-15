@@ -27,7 +27,25 @@
     <string name="rccnMt">Revenue Collection Clerk/\nMunicipal Treasurer\n\nMunicipal Treasurer\s Office</string>
     <string name="mto">Municipal Treasurer\s Office</string>
 
+    <!-- Budget -->
+    <string name="titleMBO">MUNICIPAL BUDGET OFFICE</string>
+    <string name="bo1">Budget Officer - I</string>
+    <string name="aa2nbo1">Administrative Aide II\nBudget Officer - I</string>
+    <string name="bo1aa">Budget Office - I\nAdministrative Aide</string>
+    <string name="mbofficer">Municipal Budget Officer</string>
+    <string name="mbo">Municipal Budget Office</string>
+
+    <!-- BPLO -->
+    <string name="titleBPLO">MUNICIPAL BUSINESS PROCESSING AND LICENSING OFFICE</string>
+    <string name="bplo">Business Permit and Licensing Office</string>
+    <string name="bploaa1">Administrative Aide - I\n\nBusiness Processing and Licensing Office</string>
+    <string name="mtoCollectorRCC2">MTO Collector\s\n\nRevenue Collection\s Clerk - II</string>
+
+    <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
     <string name="classHighlyTechnical">Highly Technical</string>
+    <string name="adminAide">Administrative Aide</string>
+    <string name="adminAide2">Administrative Aide - II</string>
+    <string name="externalService">External Services</string>
 </resources>
