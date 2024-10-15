@@ -75,7 +75,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/munBudget"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -83,7 +83,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/bplo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"

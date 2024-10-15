@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".office.MunicipalAdministratorOffice">
+    tools:context=".office.MunicipalBusinessProcessingAndLicensingOffice">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="MUNICIPAL ADMINISTRATOR OFFICE"
+            android:gravity="center"
+            android:text="@string/titleBPLO"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,12 +54,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/external_services"
+                    android:id="@+id/internal_services"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:text="External Services"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/externalService"
                     android:textStyle="bold" />
 
                 <TextView
@@ -70,7 +71,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request of Technical Assistance at the Barangay Level" />
+                    android:text="Issuance of New Business Permit" />
 
                 <TextView
                     android:id="@+id/service_2"
@@ -81,7 +82,40 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request Provision Over Meetings" />
+                    android:text="Issuance of Renewal Business Permit " />
+
+                <TextView
+                    android:id="@+id/service_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Certification of Business Cessation" />
+
+                <TextView
+                    android:id="@+id/service_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Data Information " />
+
+                <TextView
+                    android:id="@+id/service_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request for Verification of Business Registration" />
 
             </LinearLayout>
         </ScrollView>
