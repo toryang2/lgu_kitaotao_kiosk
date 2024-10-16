@@ -25,6 +25,7 @@
     <string name="AC1n3nRcc">Assessment Clerk - I\nAssessment Clerk - III\n\nMunicipal Assessor\s Office\n\nRevenue Collection Clerk\nMunicipal Treasurer\n\nMunicipal Treasurer\s Office</string>
     <string name="tmAide">Tax Mapping Aide\n\nMunicipal Assessor\s Office</string>
     <string name="rccnMt">Revenue Collection Clerk/\nMunicipal Treasurer\n\nMunicipal Treasurer\s Office</string>
+    <string name="rcc">Revenue Collection Clerk\n\nMunicipal Treasurer\s Office</string>
     <string name="mto">Municipal Treasurer\s Office</string>
 
     <!-- Budget -->
@@ -41,6 +42,20 @@
     <string name="bploaa1">Administrative Aide - I\n\nBusiness Processing and Licensing Office</string>
     <string name="mtoCollectorRCC2">MTO Collector\s\n\nRevenue Collection\s Clerk - II</string>
 
+    <!-- CivilRegistry -->
+    <string name="titleCivil">MUNICIPAL CIVIL REGISTRY OFFICE</string>
+    <string name="civilRegistry">Municipal Civil Registry Office</string>
+    <string name="aa1orRoMcr">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
+    <string name="mcRegistrarOrRo">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
+    <string name="aa1aa1mcro">Administrative Aide - I\nMunicipal Civil Registry \n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="ro1naa1">Registration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="mcrnAa1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="mcrOr">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr</string>
+    <string name="aa1mcr">Administrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="anynewspper">Any Local Newspaper/ Publication</string>
+    <string name="mcr">Municipal Civil Registrar\nMunicipal Civil Registry Office</string>
+    <string name="mhonRcc">Municipal Health Officer\nMunicipal Health Office\n\nRevenue Collection Clerk\nMunicipal Treasurer\s Office</string>
+    
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
@@ -48,4 +63,10 @@
     <string name="adminAide">Administrative Aide</string>
     <string name="adminAide2">Administrative Aide - II</string>
     <string name="externalService">External Services</string>
+    <string name="g2c">G2C - Government to Citizen</string>
+    <string name="g2g">G2G - Government to Government</string>
+    <string name="g2b">G2B - Government to Business</string>
+    <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
+
+
 </resources>
