@@ -59,7 +59,19 @@
     <string name="aa1nro1nmcr">Administrative Aide - I\nMunicipal Health Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nMunicipal Civil Registrar\nMunicipal Civil Registry Office</string>
     <string name="rccnro1naa1">Revenue Collection Clerk\nMunicipal Treasurer\s Office\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
     <string name="mcrnaa1nro1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Office - I\nMunicipal Civil Registry Office</string>
-    
+
+    <!-- MDRRMO -->
+    <string name="titleMDRRMO">MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE</string>
+    <string name="mdrrmo">Municipal Disaster Risk Reduction and Management Office (MDRRMO)</string>
+    <string name="ldrrmo1orldrrmo3">LDRRMO I – Operations &amp; Warning\n\nor the\n\nLDRRMO III – Research &amp; Planning</string>
+    <string name="ldrrmo3nmdrrmOfficer">LDRRMO III – Research &amp; Planning\nand the\nMDRRM Officer</string>
+    <string name="ldrrmo3RP">LDRRMO III – Research &amp; Planning</string>
+    <string name="ldrrmo1">LDRRMO I – Operations &amp; Warning</string>
+    <string name="ldrrmo1AT">LDRRMO I – Administration &amp; Training</string>
+    <string name="emergencyResponseTeam">MDRRMO Emergency Response Team\n(Refer to the shifting schedule)</string>
+    <string name="mdrrmOfficer">MDRRM Officer</string>
+    <string name="mdrrmPersonnel">MDRRMO Personnel on Duty\n(Refer to the shifting schedule)</string>
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
@@ -70,7 +82,9 @@
     <string name="g2c">G2C - Government to Citizen</string>
     <string name="g2g">G2G - Government to Government</string>
     <string name="g2b">G2B - Government to Business</string>
+    <string name="g2gng2c">G2G - Government to Government\nG2C - Government to Citizen</string>
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
+    <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
 
 
 </resources>
