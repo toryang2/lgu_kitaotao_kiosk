@@ -681,7 +681,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1. Let the petitioner comply requirements for Correction of Sex1.Let the petitioner comply requirements for Correction of Month &amp; Date of Birth"
+                            android:text="1.1. Let the petitioner comply requirements for Correction of Sex. Let the petitioner comply requirements for Correction of Month &amp; Date of Birth"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
