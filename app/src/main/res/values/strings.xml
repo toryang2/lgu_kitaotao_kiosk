@@ -49,12 +49,16 @@
     <string name="mcRegistrarOrRo">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
     <string name="aa1aa1mcro">Administrative Aide - I\nMunicipal Civil Registry \n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
     <string name="ro1naa1">Registration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="aa1nro1">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
     <string name="mcrnAa1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
     <string name="mcrOr">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr</string>
     <string name="aa1mcr">Administrative Aide - I\nMunicipal Civil Registry Office</string>
     <string name="anynewspper">Any Local Newspaper/ Publication</string>
     <string name="mcr">Municipal Civil Registrar\nMunicipal Civil Registry Office</string>
     <string name="mhonRcc">Municipal Health Officer\nMunicipal Health Office\n\nRevenue Collection Clerk\nMunicipal Treasurer\s Office</string>
+    <string name="aa1nro1nmcr">Administrative Aide - I\nMunicipal Health Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nMunicipal Civil Registrar\nMunicipal Civil Registry Office</string>
+    <string name="rccnro1naa1">Revenue Collection Clerk\nMunicipal Treasurer\s Office\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="mcrnaa1nro1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Office - I\nMunicipal Civil Registry Office</string>
     
     <!-- Global-->
     <string name="classSimple">Simple</string>
