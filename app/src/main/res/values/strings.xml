@@ -72,6 +72,18 @@
     <string name="mdrrmOfficer">MDRRM Officer</string>
     <string name="mdrrmPersonnel">MDRRMO Personnel on Duty\n(Refer to the shifting schedule)</string>
 
+    <!-- ENGINEERING -->
+    <string name="titleEngineering">MUNICIPAL ENGINEERING OFFICE</string>
+    <string name="engineeringOffice">Municipal Engineering Office</string>
+    <string name="engineeringAide">Engineering Aide\nMunicipal Engineering Office</string>
+    <string name="municipalEngineer">Municipal Engineer\nMunicipal Engineering Office</string>
+
+    <!-- FIRE -->
+    <string name="fireOfficer1">Fire Officer - I\nBureau of Fire Protection</string>
+
+    <!-- MPDO -->
+    <string name="zoningOfficer">Zoning Officer\nMunicipal Planning and Development Office</string>
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
