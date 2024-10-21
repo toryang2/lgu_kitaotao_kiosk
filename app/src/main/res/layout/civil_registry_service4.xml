@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.civilRegistry.civilRegistry_service_4">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Petition for Correction of Clerical/ Typographical Error in the Certificate of Live Birth (COLB), Certificate of Marriage (COM), and Certificate of Death (COD) for R.A. 9048 Services"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Filing of petition for persons who have errors in their birth, death &amp; marriage certificate." />
+                            android:text="Filing of petition for persons who have errors in their birth, death &amp; marriage certificate."
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -212,7 +215,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc"
@@ -241,7 +244,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc272"
@@ -270,7 +273,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc274"
@@ -299,7 +302,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc280"
@@ -328,7 +331,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc298"
@@ -357,7 +360,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc314"
@@ -386,7 +389,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc316"
@@ -415,7 +418,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc318"
@@ -444,7 +447,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc320"
@@ -473,7 +476,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc322"
@@ -502,7 +505,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc324"
@@ -531,7 +534,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc326"
@@ -762,7 +765,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps96"
@@ -826,7 +829,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps23"
@@ -891,7 +894,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps99"
@@ -955,7 +958,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps84"
@@ -1020,7 +1023,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps95"
@@ -1127,7 +1130,7 @@
                     <TableRow
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingBottom="150dp" >
+                        android:paddingBottom="150dp">
 
                         <TextView
                             android:id="@+id/tableTextFooter"

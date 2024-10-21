@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.mdrrmo.external.mdrrmo_ex_service_1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Request for Incident Report Certification"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="The certification is issued to certain individuals/residents/organizations in a community or in barangays under the Area of Responsibility (AOR) of the locality, wherein human physical, properties, belongings, etc., has been damaged by any natural (i.e., landslide, flash flood, earthquake, etc.) or human-induced hazards (i.e., fire-arm conflict, etc.)." />
+                            android:text="The certification is issued to certain individuals/residents/organizations in a community or in barangays under the Area of Responsibility (AOR) of the locality, wherein human physical, properties, belongings, etc., has been damaged by any natural (i.e., landslide, flash flood, earthquake, etc.) or human-induced hazards (i.e., fire-arm conflict, etc.)."
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -211,7 +214,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc"
@@ -242,7 +245,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc272"
@@ -271,7 +274,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc274"
@@ -302,7 +305,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc280"
@@ -331,7 +334,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc384"
@@ -560,7 +563,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps23"
@@ -624,7 +627,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps84"
@@ -689,7 +692,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps97"

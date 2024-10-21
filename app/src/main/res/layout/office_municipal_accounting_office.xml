@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".office.MunicipalAccountingOffice">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +20,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:text="MUNICIPAL ACCOUNTING OFFICE"
+            android:textColor="#49454F"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/office_name"
@@ -60,6 +63,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:text="External Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -71,7 +75,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Issuance of Withholding Tax Certificate (BIR Form 2307)" />
+                    android:text="Request for Issuance of Withholding Tax Certificate (BIR Form 2307)"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_2"
@@ -82,7 +87,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances" />
+                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents for Travel Cash Advances"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_3"
@@ -93,7 +99,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements" />
+                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents for Travel Reimbursements"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_4"
@@ -104,7 +111,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)" />
+                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Goods)"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_5"
@@ -115,7 +123,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)" />
+                    android:text="Request for Review of Disbursement Vouchers and Supporting Documents with Bidding (Infrastructure Projects)"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/internal_services"
@@ -127,6 +136,7 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:text="Internal Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -138,7 +148,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Review of Liquidation Reports for Travel Cash Advances" />
+                    android:text="Request for Review of Liquidation Reports for Travel Cash Advances"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_7"
@@ -149,7 +160,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Certificate of Net Take Home Pay" />
+                    android:text="Request for Certificate of Net Take Home Pay"
+                    android:textColor="#49454F" />
             </LinearLayout>
         </ScrollView>
 

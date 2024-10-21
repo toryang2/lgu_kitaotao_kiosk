@@ -13,6 +13,51 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".office.MunicipalGeneralServiceOffice"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_ex_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_ex_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_7"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_6"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_int_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.generalService.gso_ex_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".office.MENRO"
+            android:exported="false" />
+        <activity
+            android:name=".services.menro.menro_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.menro.menro_ex_service_1"
+            android:exported="false" />
+        <activity
             android:name=".office.MunicipalEngineeringOffice"
             android:exported="false" />
         <activity
@@ -83,9 +128,6 @@
             android:exported="false" />
         <activity
             android:name=".office.MunicipalBusinessProcessingAndLicensingOffice"
-            android:exported="false" />
-        <activity
-            android:name=".services.bplo.bplo_service_6"
             android:exported="false" />
         <activity
             android:name=".services.bplo.bplo_service_5"

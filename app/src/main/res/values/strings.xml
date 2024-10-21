@@ -11,21 +11,22 @@
     <string name="action_settings">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="laoo">Local Assessment Operations Officer\n\nMunicipal Assessor\s Office</string>
-    <string name="laoo1">Local Assessment Operations Officer - I\n\nMunicipal Assessor\s Office</string>
-    <string name="laoo2">Local Assessment Operations Officer - II\n\nMunicipal Assessor\s Office</string>
-    <string name="laoo3">Local Assessment Operations Officer - III\n\nMunicipal Assessor\s Office</string>
-    <string name="mAssessor">Municipal Assessor\n\nMunicipal Assessor\s Office</string>
-    <string name="AC">Assessment Clerk\n\nMunicipal Assessor\s Office</string>
-    <string name="AC1">Assessment Clerk - I\n\nMunicipal Assessor\s Office</string>
-    <string name="AC2">Assessment Clerk - II\n\nMunicipal Assessor\s Office</string>
-    <string name="AC3">Assessment Clerk - III\n\nMunicipal Assessor\s Office</string>
-    <string name="AC2n3">Assessment Clerk - II\nAssessment Clerk - III\n\nMunicipal Assessor\s Office</string>
-    <string name="AC1n3">Assessment Clerk - I\nAssessment Clerk - III\n\nMunicipal Assessor\s Office</string>
-    <string name="AC1n3nRcc">Assessment Clerk - I\nAssessment Clerk - III\n\nMunicipal Assessor\s Office\n\nRevenue Collection Clerk\nMunicipal Treasurer\n\nMunicipal Treasurer\s Office</string>
-    <string name="tmAide">Tax Mapping Aide\n\nMunicipal Assessor\s Office</string>
-    <string name="rccnMt">Revenue Collection Clerk/\nMunicipal Treasurer\n\nMunicipal Treasurer\s Office</string>
-    <string name="rcc">Revenue Collection Clerk\n\nMunicipal Treasurer\s Office</string>
+    <string name="tmanACnLaoo">Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="laoo">Local Assessment Operations Officer\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="laoo1">Local Assessment Operations Officer - I\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="laoo2">Local Assessment Operations Officer - II\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="laoo3">Local Assessment Operations Officer - III\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="mAssessor">Municipal Assessor\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC">Assessment Clerk\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC1">Assessment Clerk - I\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC2">Assessment Clerk - II\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC3">Assessment Clerk - III\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC2n3">Assessment Clerk - II\nAssessment Clerk - III\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC1n3">Assessment Clerk - I\nAssessment Clerk - III\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="AC1n3nRcc">Assessment Clerk - I\nAssessment Clerk - III\n\n"<b>"Municipal Assessor\s Office"</b>"\n\nRevenue Collection Clerk\nMunicipal Treasurer\n\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="tmAide">Tax Mapping Aide\n\n"<b>"Municipal Assessor\s Office"</b>"</string>
+    <string name="rccnMt">Revenue Collection Clerk/\nMunicipal Treasurer\n\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="rcc">Revenue Collection Clerk\n\n"<b>"Municipal Treasurer\s Office"</b>"</string>
     <string name="mto">Municipal Treasurer\s Office</string>
 
     <!-- Budget -->
@@ -39,26 +40,26 @@
     <!-- BPLO -->
     <string name="titleBPLO">MUNICIPAL BUSINESS PROCESSING AND LICENSING OFFICE</string>
     <string name="bplo">Business Permit and Licensing Office</string>
-    <string name="bploaa1">Administrative Aide - I\n\nBusiness Processing and Licensing Office</string>
+    <string name="bploaa1">Administrative Aide - I\n\n"<b>"Business Processing and Licensing Office"</b>"</string>
     <string name="mtoCollectorRCC2">MTO Collector\s\n\nRevenue Collection\s Clerk - II</string>
 
     <!-- CivilRegistry -->
     <string name="titleCivil">MUNICIPAL CIVIL REGISTRY OFFICE</string>
     <string name="civilRegistry">Municipal Civil Registry Office</string>
-    <string name="aa1orRoMcr">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
-    <string name="mcRegistrarOrRo">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
-    <string name="aa1aa1mcro">Administrative Aide - I\nMunicipal Civil Registry \n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
-    <string name="ro1naa1">Registration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
-    <string name="aa1nro1">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office</string>
-    <string name="mcrnAa1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="aa1orRoMcr">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="mcRegistrarOrRo">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="aa1aa1mcro">Administrative Aide - I\nMunicipal Civil Registry \n\nOr\n\nAdministrative Aide - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="ro1naa1">Registration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="aa1nro1">Administrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Officer - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="mcrnAa1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
     <string name="mcrOr">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr</string>
-    <string name="aa1mcr">Administrative Aide - I\nMunicipal Civil Registry Office</string>
+    <string name="aa1mcr">Administrative Aide - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
     <string name="anynewspper">Any Local Newspaper/ Publication</string>
-    <string name="mcr">Municipal Civil Registrar\nMunicipal Civil Registry Office</string>
-    <string name="mhonRcc">Municipal Health Officer\nMunicipal Health Office\n\nRevenue Collection Clerk\nMunicipal Treasurer\s Office</string>
-    <string name="aa1nro1nmcr">Administrative Aide - I\nMunicipal Health Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nMunicipal Civil Registrar\nMunicipal Civil Registry Office</string>
-    <string name="rccnro1naa1">Revenue Collection Clerk\nMunicipal Treasurer\s Office\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office</string>
-    <string name="mcrnaa1nro1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Office - I\nMunicipal Civil Registry Office</string>
+    <string name="mcr">Municipal Civil Registrar\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="mhonRcc">Municipal Health Officer\nMunicipal Health Office\n\nRevenue Collection Clerk\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="aa1nro1nmcr">Administrative Aide - I\nMunicipal Health Office\n\nOr\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nMunicipal Civil Registrar\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="rccnro1naa1">Revenue Collection Clerk\nMunicipal Treasurer\s Office\n\nRegistration Officer - I\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
+    <string name="mcrnaa1nro1">Municipal Civil Registrar\nMunicipal Civil Registry Office\n\nOr\n\nAdministrative Aide - I\nMunicipal Civil Registry Office\n\nOr\n\nRegistration Office - I\n"<b>"Municipal Civil Registry Office"</b>"</string>
 
     <!-- MDRRMO -->
     <string name="titleMDRRMO">MUNICIPAL DISASTER RISK REDUCTION MANAGEMENT OFFICE</string>
@@ -75,14 +76,33 @@
     <!-- ENGINEERING -->
     <string name="titleEngineering">MUNICIPAL ENGINEERING OFFICE</string>
     <string name="engineeringOffice">Municipal Engineering Office</string>
-    <string name="engineeringAide">Engineering Aide\nMunicipal Engineering Office</string>
-    <string name="municipalEngineer">Municipal Engineer\nMunicipal Engineering Office</string>
+    <string name="engineeringAide">Engineering Aide\n"<b>"Municipal Engineering Office"</b>"</string>
+    <string name="municipalEngineer">Municipal Engineer\n"<b>"Municipal Engineering Office"</b>"</string>
 
     <!-- FIRE -->
-    <string name="fireOfficer1">Fire Officer - I\nBureau of Fire Protection</string>
+    <string name="fireOfficer1">Fire Officer - I\n"<b>"Bureau of Fire Protection"</b>"</string>
 
     <!-- MPDO -->
-    <string name="zoningOfficer">Zoning Officer\nMunicipal Planning and Development Office</string>
+    <string name="zoningOfficer">Zoning Officer\n"<b>"Municipal Planning and Development Office"</b>"</string>
+
+    <!-- MENRO -->
+    <string name="titleMenro">MUNICIPAL ENVIRONMENT AND NATURAL RESOURCES OFFICE</string>
+    <string name="menro">Municipal Environment and Natural Resources Office</string>
+    <string name="menroAide">Administrative Aide\n"<b>"Municipal Environment and Natural Resources Office"</b>"</string>
+    <string name="case2menro">"<b>"CASE 2. HAS EXISTING ENVIRONMENTAL VIOLATION "</b>"(If there is an existing environmental violation, present the official receipt)</string>
+    <string name="garbageWasteCollecter">Garbage/ Waste Collector\n"<b>"Municipal Environment and Natural Resources Office"</b>"</string>
+    <string name="rcc2naa1">Revenue Collection Clerk II/ Administrative Aide - I\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+
+    <!-- GSO -->
+    <string name="titleGeneralServices">MUNICIPAL GENERAL SERVICES OFFICE</string>
+    <string name="gso">Municipal General Services Office</string>
+    <string name="oicMGSO">Office in Charge\n"<b>"Municipal General Services Office"</b>"</string>
+    <string name="gsoSeeTableBelow">"<b>"See table below"</b>"\n(NOTE: For multi-story structures rates can be categorized based on floor location as in ground floor, corner, etc.)</string>
+    <string name="gsoReference">"<i>"Reference: Ordinance Number 07 (15th SB) series of 2022 cont’d. Page 76"</i>"</string>
+    <string name="oicnMechaninc">Officer in Charge/ Municipal Mechanic\n"<b>"Municipal General Services Office"</b>"</string>
+    <string name="mboB">"<b>"Municipal Budget Office"</b>"</string>
+    <string name="mtoB">"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="mmoB">"<b>"Municipal Mayor\s Office"</b>"</string>
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
@@ -97,6 +117,7 @@
     <string name="g2gng2c">G2G - Government to Government\nG2C - Government to Citizen</string>
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
     <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
+    <string name="municipalMech">Municipal Mechanic</string>
 
 
 </resources>

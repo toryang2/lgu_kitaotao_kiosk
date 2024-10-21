@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".office.MunicipalAgricultureOffice">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +19,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:text="MUNICIPAL AGRICULTURE OFFICE"
+            android:textColor="#49454F"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/office_name"
@@ -41,11 +44,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="190dp"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,6 +65,7 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:text="Internal Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -73,7 +77,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Project Validation, Monitoring and Evaluation" />
+                    android:text="Request for Project Validation, Monitoring and Evaluation"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/internal.external_services"
@@ -85,6 +90,7 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:text="Internal/ External Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -96,7 +102,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Animal Breeding Services" />
+                    android:text="Animal Breeding Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_3"
@@ -107,7 +114,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Animal Health Management and Services" />
+                    android:text="Animal Health Management and Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_4"
@@ -118,7 +126,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Application of Claim for Indemnity" />
+                    android:text="Application of Claim for Indemnity"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_5"
@@ -129,7 +138,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Certification – Endorsement" />
+                    android:text="Issuance of Certification – Endorsement"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_6"
@@ -140,7 +150,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Certification for Live Animals Intended for Travel and Slaughter" />
+                    android:text="Issuance of Certification for Live Animals Intended for Travel and Slaughter"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_7"
@@ -151,7 +162,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Resource Person Engagement Services" />
+                    android:text="Resource Person Engagement Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_8"
@@ -162,7 +174,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request For Enrolment to Registry System for Basic Sectors in Agriculture (RSBSA)" />
+                    android:text="Request For Enrolment to Registry System for Basic Sectors in Agriculture (RSBSA)"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_9"
@@ -173,7 +186,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Farm Inputs" />
+                    android:text="Request for Farm Inputs"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_10"
@@ -184,7 +198,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Crop and Livestock Insurance" />
+                    android:text="Request for Crop and Livestock Insurance"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_11"
@@ -195,7 +210,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Soil Sampling" />
+                    android:text="Request for Soil Sampling"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_12"
@@ -206,7 +222,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Technical Assistance" />
+                    android:text="Request for Technical Assistance"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_13"
@@ -218,7 +235,8 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:paddingBottom="150dp"
-                    android:text="Request for Tractor Services" />
+                    android:text="Request for Tractor Services"
+                    android:textColor="#49454F" />
             </LinearLayout>
         </ScrollView>
 

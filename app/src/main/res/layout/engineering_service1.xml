@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.engineering.engineering_service_1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Issuance of Detailed Engineering Design and Program of Works"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="This service provides the detailed engineering design preparation including the estimates of construction materials involved with the corresponding labor cost and all other expenditures." />
+                            android:text="This service provides the detailed engineering design preparation including the estimates of construction materials involved with the corresponding labor cost and all other expenditures."
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -211,7 +214,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc"
@@ -239,7 +242,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc272"
@@ -270,7 +273,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc274"
@@ -302,7 +305,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc280"
@@ -334,7 +337,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc386"
@@ -362,7 +365,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc388"
@@ -393,7 +396,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc390"
@@ -425,7 +428,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc392"
@@ -593,7 +596,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps119"
@@ -657,7 +660,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps120"
@@ -786,7 +789,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps23"

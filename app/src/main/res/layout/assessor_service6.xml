@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.assessor.assessor_service_6">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Request to Cancel the Real Property Tax Declaration"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="To cancel the Tax Declaration in cases of abolishment of property, duplication of assessment, finality of judgment or transfer of ownership." />
+                            android:text="To cancel the Tax Declaration in cases of abolishment of property, duplication of assessment, finality of judgment or transfer of ownership."
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -211,7 +214,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc"
@@ -240,7 +243,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc108"
@@ -269,7 +272,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc164"
@@ -298,7 +301,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc166"
@@ -327,7 +330,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc168"
@@ -356,7 +359,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc170"
@@ -385,7 +388,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc172"
@@ -414,7 +417,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc174"
@@ -572,14 +575,14 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk - I/\nAssessment Clerk - III\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC1n3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps34"
@@ -637,14 +640,14 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk - I/\nAssessment Clerk - III\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC1n3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps39"
@@ -702,7 +705,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk - II/\nAssessment Clerk - III\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC2n3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -770,7 +773,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps20"
@@ -827,14 +830,14 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\n\nMunicipal Assessor's Office"
+                            android:text="@string/tmAide"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps40"
@@ -898,7 +901,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps47"
@@ -962,7 +965,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps48"
@@ -1026,7 +1029,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps49"
@@ -1090,7 +1093,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps38"
@@ -1154,7 +1157,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps25"
@@ -1219,7 +1222,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps23"
