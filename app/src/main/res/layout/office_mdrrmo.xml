@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".office.MDRRMO">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +21,7 @@
             android:layout_marginTop="150dp"
             android:text="@string/titleMDRRMO"
             android:textAlignment="center"
+            android:textColor="#49454F"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/office_name"
@@ -61,6 +64,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="35dp"
                     android:text="External Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -72,7 +76,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Incident Report Certification" />
+                    android:text="Request for Incident Report Certification"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/internal.external_services"
@@ -84,6 +89,7 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:text="Internal/ External Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -95,7 +101,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Emergency Response Services" />
+                    android:text="Emergency Response Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/inEx_service_2"
@@ -106,7 +113,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for DRRM-Relevant Trainings and Seminars" />
+                    android:text="Request for DRRM-Relevant Trainings and Seminars"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/inEx_service_3"
@@ -117,7 +125,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for DRRM-Related Information Materials" />
+                    android:text="Request for DRRM-Related Information Materials"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/inEx_service_4"
@@ -128,7 +137,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Provision of Readily Available Information Materials Services" />
+                    android:text="Provision of Readily Available Information Materials Services"
+                    android:textColor="#49454F" />
             </LinearLayout>
         </ScrollView>
 

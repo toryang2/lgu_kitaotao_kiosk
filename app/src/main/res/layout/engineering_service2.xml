@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.engineering.engineering_service_2"
     tools:viewBindingIgnore="true">
 
@@ -39,6 +40,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Issuance of Building Permit"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -51,7 +53,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="No person, firm or corporation, including any agency or instrumentality of the government shall erect, construct, alter, repair, convert or demolish any building or structure or cause the same to be done without first obtaining a building permit therefor from the Building Official assigned in the place where the subject building is located or the building work is to be done." />
+                            android:text="No person, firm or corporation, including any agency or instrumentality of the government shall erect, construct, alter, repair, convert or demolish any building or structure or cause the same to be done without first obtaining a building permit therefor from the Building Official assigned in the place where the subject building is located or the building work is to be done."
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow

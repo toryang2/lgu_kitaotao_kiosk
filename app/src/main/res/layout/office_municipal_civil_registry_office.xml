@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".office.MunicipalCivilRegistryOffice">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +20,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
             android:text="@string/titleCivil"
+            android:textColor="#49454F"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/office_name"
@@ -60,6 +63,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:text="Internal/ External Services"
+                    android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
@@ -71,7 +75,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Application for Marriage License" />
+                    android:text="Application for Marriage License"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_2"
@@ -82,7 +87,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Acknowledgement/ Admission of Paternity Services" />
+                    android:text="Acknowledgement/ Admission of Paternity Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_3"
@@ -93,7 +99,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Legitimation Services" />
+                    android:text="Legitimation Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_4"
@@ -104,7 +111,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Petition for Correction of Clerical/ Typographical Error in the Certificate of Live Birth (COLB), Certificate of Marriage (COM), and Certificate of Death (COD) for R.A. 9048 Services " />
+                    android:text="Petition for Correction of Clerical/ Typographical Error in the Certificate of Live Birth (COLB), Certificate of Marriage (COM), and Certificate of Death (COD) for R.A. 9048 Services "
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_5"
@@ -115,7 +123,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Petition for Change of First Name Services" />
+                    android:text="Petition for Change of First Name Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_6"
@@ -126,7 +135,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Petition for Correction of Sex per R.A. 10172 Services" />
+                    android:text="Petition for Correction of Sex per R.A. 10172 Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_7"
@@ -137,7 +147,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Petition for Correction of Month &amp; Date of Birth Per R.A. 10172 Services" />
+                    android:text="Petition for Correction of Month &amp; Date of Birth Per R.A. 10172 Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_8"
@@ -148,7 +159,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Certificate of Death Services" />
+                    android:text="Certificate of Death Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_9"
@@ -159,7 +171,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Certificate of Marriage Services" />
+                    android:text="Certificate of Marriage Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_10"
@@ -170,7 +183,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Certificate of Live Birth Services" />
+                    android:text="Certificate of Live Birth Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_11"
@@ -181,7 +195,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Certificate of Live Birth for Out-Of Town Services" />
+                    android:text="Certificate of Live Birth for Out-Of Town Services"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_12"
@@ -192,7 +207,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Certification (Certificate of Live Birth, Certificate of Marriage &amp; Certificate of Death)" />
+                    android:text="Request for Certification (Certificate of Live Birth, Certificate of Marriage &amp; Certificate of Death)"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_13"
@@ -204,7 +220,8 @@
                     android:layout_marginRight="16dp"
                     android:gravity="center"
                     android:paddingBottom="150dp"
-                    android:text="Request for Security Paper (Certificate of Live Birth, Certificate of Marriage, Certificate of Death &amp; Certificate of No Marriage)" />
+                    android:text="Request for Security Paper (Certificate of Live Birth, Certificate of Marriage, Certificate of Death &amp; Certificate of No Marriage)"
+                    android:textColor="#49454F" />
 
             </LinearLayout>
         </ScrollView>

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,6 +22,7 @@
             android:layout_marginTop="143dp"
             android:text="OFFICES"
             android:textAlignment="center"
+            android:textColor="#49454F"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,11 +33,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="182dp"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent"
             android:visibility="visible"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            app:layout_wrapBehaviorInParent="horizontal_only"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            app:layout_wrapBehaviorInParent="horizontal_only">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,7 +50,8 @@
                     android:layout_height="wrap_content"
                     android:onClick="accounting"
                     android:text="Municipal Accounting Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/administrator"
@@ -56,7 +59,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Administrator Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/agriculture"
@@ -64,7 +68,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Agriculture Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/assessor"
@@ -72,7 +77,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Assessor's Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/munBudget"
@@ -80,7 +86,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Budget Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/bplo"
@@ -88,7 +95,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Business Processing and Licensing Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/civilRegistry"
@@ -96,7 +104,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Civil Registry Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/mdrrmo"
@@ -104,7 +113,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Disaster Risk Reduction Management Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/engineering"
@@ -112,23 +122,26 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Engineering Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/menro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Environmental and Natural Resources"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/gso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal General Services Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView15"
@@ -136,7 +149,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Health Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView16"
@@ -144,7 +158,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Human Resource Management Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView17"
@@ -152,7 +167,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Mayor's Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -160,7 +176,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Bids and Awards Committee"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView19"
@@ -168,7 +185,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Indigineous People Mandatory Representative"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView20"
@@ -176,7 +194,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Kitaotao Water System Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView22"
@@ -184,7 +203,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Local Economic Development and Investment Promotion Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView23"
@@ -192,7 +212,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Local Youth Development Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView24"
@@ -200,7 +221,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Tourism Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView25"
@@ -208,7 +230,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Person With Disability Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView26"
@@ -216,7 +239,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Public Employment Services Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView27"
@@ -224,7 +248,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Office of the Senior Citizen's Affairs"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView28"
@@ -232,7 +257,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Planning and Development Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView29"
@@ -240,7 +266,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Population Development Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView30"
@@ -248,7 +275,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Sangguniang Bayan Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView31"
@@ -256,7 +284,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:text="Municipal Social Welfare and Development Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/textView32"
@@ -265,7 +294,8 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginBottom="64dp"
                     android:text="Municipal Treasurer's Office"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
 
             </LinearLayout>
         </ScrollView>

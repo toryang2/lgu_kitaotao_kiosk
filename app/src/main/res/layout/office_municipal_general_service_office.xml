@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fake_white"
+    tools:context=".office.MunicipalGeneralServiceOffice">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/office_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:text="@string/titleGeneralServices"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/office_name"
+            app:layout_constraintStart_toStartOf="@+id/office_name"
+            app:layout_constraintTop_toBottomOf="@+id/office_name" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="190dp"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/external_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="External Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ex_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Application for Rental of Heavy Equipment"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/internal_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:text="External Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/int_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Clearance (Retirement/Resigned)"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request for Disposal of Properties"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request of Preventive Maintenance Service (Heavy Equipment)"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request of Preventive Maintenance Service (Light Vehicle)"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request of Repair for Major and Minor of Heavy Equipment"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request of Repair Major and Minor of Light Vehicle"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_service_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Renewal of GSIS Insurance for All Moving and Fixed Assets Services"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_ex_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:text="Internal /External Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/int_ex_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuances of Fuel Withdrawal Slip"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_ex_service_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Burial Area Services"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/int_ex_service_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:paddingBottom="150dp"
+                    android:text="Grass Cutting Services"
+                    android:textColor="#49454F" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/header" />
+</androidx.constraintlayout.widget.ConstraintLayout>

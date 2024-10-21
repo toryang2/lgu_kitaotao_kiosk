@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".postScreen">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -17,8 +18,9 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:rotationX="180"
         android:rotationY="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

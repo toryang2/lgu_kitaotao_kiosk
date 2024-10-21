@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.assessor.assessor_service_4">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Ocular Inspection Services for District 4 Barangays"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="To conduct ocular inspection of real properties located in barangay in District 4" />
+                            android:text="To conduct ocular inspection of real properties located in barangay in District 4"
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -211,7 +214,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc"
@@ -240,7 +243,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableHeaderDesc108"
@@ -398,14 +401,14 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps34"
@@ -462,14 +465,14 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/tmanACnLaoo"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps39"
@@ -526,7 +529,7 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Taxmapping Aide\nAssessment Clerk\nand\nLocal Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/tmanACnLaoo"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -590,14 +593,14 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps20"
@@ -654,14 +657,14 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Local Assessment Operations Officer\n\nMunicipal Assessor's Office"
+                            android:text="@string/laoo"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps40"
@@ -718,14 +721,14 @@
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Municipal Assessor\n\nMunicipal Assessor's Office"
+                            android:text="@string/mAssessor"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps25"
@@ -783,14 +786,14 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assessment Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps23"
@@ -848,7 +851,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="Assement Clerk\n\nMunicipal Assessor's Office"
+                            android:text="@string/AC"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>

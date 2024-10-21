@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fake_white"
     tools:context=".services.administrator.administrator_service_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +15,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbarThumbVertical="@android:color/transparent"
-            android:scrollbarThumbHorizontal="@android:color/transparent">
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,6 +39,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Request Provision Over Meetings"
+                            android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
                     </TableRow>
@@ -50,7 +52,8 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="The Municipal Administrator’s shall take charge of the Office of the Administration and shall:\nAssist in the coordination and meetings of the work of all officials of the Local Government Unit, under the supervision, direction, and control of the mayor and for this purpose, he may convince the Chief of offices and other of the Local Government Unit. " />
+                            android:text="The Municipal Administrator’s shall take charge of the Office of the Administration and shall:\nAssist in the coordination and meetings of the work of all officials of the Local Government Unit, under the supervision, direction, and control of the mayor and for this purpose, he may convince the Chief of offices and other of the Local Government Unit. "
+                            android:textColor="#49454F" />
                     </TableRow>
 
                     <TableRow
@@ -442,7 +445,7 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="match_parent">
 
                         <TextView
                             android:id="@+id/tableClientSteps9"
