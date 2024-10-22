@@ -104,6 +104,25 @@
     <string name="mtoB">"<b>"Municipal Treasurer\s Office"</b>"</string>
     <string name="mmoB">"<b>"Municipal Mayor\s Office"</b>"</string>
 
+    <!-- MHO -->
+    <string name="titleMHO">MUNICIPAL HEALTH OFFICE</string>
+    <string name="mho">Municipal Health Office</string>
+    <string name="midwife">Midwife\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="meddocmidwifenurse">Medical Doctor/Midwife/Nurses\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="midwifenursepharma">Midwife/Nurses/Pharmacist\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="rhmidwife">Rural Health Midwife\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="rhmidwifeRcc2AA1">Rural Health Midwife\n"<b>"Municipal Health Office"</b>"\n\nRevenue Collection Clerk II\nAdministrative Aide I\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="phnurseMedt">Public Health Nurse/ MedTech\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="pharma">Pharmacist\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="siRcc2AA1">Sanitary Inspector\n"<b>"Municipal Health Office"</b>"\n\nRevenue Collection Clerk II\nAdministrative Aide I\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="medT">MedTech\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="mhoMM">Municipal Health Office\n\nMunicipal Mayor</string>
+    <string name="medDoc">Medical Doctor\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="aaMHO">Administrative Aide\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="rcc2aa1mho">Revenue Collection Clerk II\nAdministrative Aide I\n\n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="doctorMHO">Doctor\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="dentistMHO">Dentist\n\n"<b>"Municipal Health Office"</b>"</string>
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>

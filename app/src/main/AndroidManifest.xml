@@ -13,6 +13,57 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".office.MunicipalHealthOffice"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_16"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_15"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_14"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_13"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_12"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_11"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_10"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_9"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_8"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_7"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_6"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.mho.mho_service_1"
+            android:exported="false" />
+        <activity
             android:name=".office.MunicipalGeneralServiceOffice"
             android:exported="false" />
         <activity
