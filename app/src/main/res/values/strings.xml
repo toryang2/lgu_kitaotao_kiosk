@@ -122,6 +122,14 @@
     <string name="rcc2aa1mho">Revenue Collection Clerk II\nAdministrative Aide I\n\n"<b>"Municipal Treasurer\s Office"</b>"</string>
     <string name="doctorMHO">Doctor\n\n"<b>"Municipal Health Office"</b>"</string>
     <string name="dentistMHO">Dentist\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="sanitaryInsp">Sanitary Inspector\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="ruralSanitary">Rural Sanitation Inspector\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="munSanitaryInsp">Municipal Sanitary Inspector\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="DocmunSanitaryInsp">Doctor,\nMunicipal Sanitary Inspector\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="medTAA">MedTech,\nAdministrative Aide\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="ruralHM">Rural Health Midwife\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="dentistDoctor">Dentist\n"<b>"Municipal Health Office"</b>"\n\nDoctor\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="dentistAA">Dentist,\nAdministrative Aide\n\n"<b>"Municipal Health Office"</b>"</string>
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
