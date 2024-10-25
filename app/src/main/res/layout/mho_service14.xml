@@ -381,7 +381,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1. Register at logbook and state request"
+                            android:text="1. Register at Receiving Section Sign in the Client Log Book in the triage/OPD"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -393,7 +393,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1. Assist in logging at record book and issue Order of payment"
+                            android:text="1.1. Triage/OPD – Quick assessment / registration"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -417,7 +417,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="10 minutes"
+                            android:text="2 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -429,7 +429,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/munSanitaryInsp"
+                            android:text="@string/nMidwife"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -446,7 +446,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2. Pay the required fees at the Municipal Treasury Office"
+                            android:text="2. Submit self for admission"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -458,7 +458,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.1. Check the Official Receipt"
+                            android:text="2.1. Admit client (Profile, Vital Signs, History of illness)"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -470,7 +470,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="₱220.00\n(sanitary Permit/ Inspection Certificate)\n\n₱300.00\n(Sanitation Inspection Fee)\n(Based on Local Revenue Code Ord.No.7 S. 2022 Chap.4, Art. C.Sec.5C.01)"
+                            android:text="None"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -482,7 +482,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="15 minutes"
+                            android:text="5-10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -494,7 +494,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/munSanitaryInsp"
+                            android:text="@string/nMidwife"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -511,7 +511,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3. Submit the required documents"
+                            android:text="3. Proceed to the Consultation Room\n\n-Refer to lab as needed"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -523,7 +523,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.1. Check the Accuracy and completeness of requirements"
+                            android:text="3.1. Preparation of chart, physician notes, appointment and order form\n\n3.1. Assessment / examine the patient\n\n3.2. Prescribe request ancillary procedures, laboratory exams\n\n3.3. Counselling based on current needs / HL IEC"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -547,7 +547,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="15 minutes"
+                            android:text="10-30 minutes\n\nNote: Longer if first visit, shorter if follow-ups"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -559,7 +559,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/munSanitaryInsp"
+                            android:text="@string/mdNursesMidw"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -576,7 +576,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4. Wait for release of Sanitary Permit"
+                            android:text="4. Proceed to the Pharmacy as needed"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -588,7 +588,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4.1. Conduct site visit/inspection/validation as needed (optional)"
+                            android:text="4.1. Dispense medicine, IEC on dosage, route and intake of medicines, IEC on Healthy Lifestyle services, Remind follow-up"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -612,6 +612,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
+                            android:text="8-10 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -623,71 +624,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/munSanitaryInsp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps214"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="5. Claim Sanitary Permit"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction197"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="5.1. Issue the Sanitary Permit to the client"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees197"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="None"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime197"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible209"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/DocmunSanitaryInsp"
+                            android:text="@string/pharmaNurseMw"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -704,7 +641,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="6. Accomplished the Client Satisfaction Measurement/Client Satisfaction Survey (CSM/CSS)"
+                            android:text="5. Accomplished the Client Satisfaction Measurement/Client Satisfaction Survey (CSM/CSS)"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -716,7 +653,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="6.1. Request the client to accomplished the Client Satisfaction Measurement/Client Satisfaction Survey (CSM/CSS)\n\n6.2. Instruct the client to drop the accomplished Forms in the designated drop box"
+                            android:text="5.1. Request the client to accomplished the Client Satisfaction Measurement/Client Satisfaction Survey (CSM/CSS)\n\n5.2. Instruct the client to drop the accomplished Forms in the designated drop box"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -752,7 +689,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/ruralSanitary"
+                            android:text="@string/dentistAA"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -783,7 +720,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="45 minutes"
+                            android:text="25-50 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
