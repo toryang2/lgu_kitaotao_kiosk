@@ -130,6 +130,10 @@
     <string name="ruralHM">Rural Health Midwife\n\n"<b>"Municipal Health Office"</b>"</string>
     <string name="dentistDoctor">Dentist\n"<b>"Municipal Health Office"</b>"\n\nDoctor\n\n"<b>"Municipal Health Office"</b>"</string>
     <string name="dentistAA">Dentist,\nAdministrative Aide\n\n"<b>"Municipal Health Office"</b>"</string>
+    <string name="nMidwife">Nurses and Midwives</string>
+    <string name="mdNursesMidw">Medical Doctors, Nurses and Midwives</string>
+    <string name="pharmaNurseMw">Pharmacist, Nurses and Midwives</string>
+    <string name="midwifepharma">Midwife\nPharmacist</string>
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
