@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="32dp"
-                    android:text="External Services"
+                    android:text="Internal Services"
                     android:textColor="#49454F"
                     android:textStyle="bold" />
 
