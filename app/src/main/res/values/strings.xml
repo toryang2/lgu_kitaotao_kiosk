@@ -135,6 +135,71 @@
     <string name="pharmaNurseMw">Pharmacist, Nurses and Midwives</string>
     <string name="midwifepharma">Midwife\nPharmacist</string>
 
+    <!-- HRMO -->
+    <string name="titleHRMO">HUMAN RESOURCE MANAGEMENT OFFICE</string>
+    <string name="hrmo">Human Resource Management Office</string>
+    <string name="hrmoAide">Administrative Aide - I\n\n"<b>"Human Resource Management Office"</b>"</string>
+    <string name="sickLeave">"<b>"Sick Leave"</b>"\n* Medical Certificate (3 copies)</string>
+    <string name="maternityLeave">"<b>"Maternity Leave/Paternity Leave"</b>"\n* Medical Certificate (3 copies)\n* Birth Certificate of the Child  (3 copies)</string>
+    <string name="soloParentLeave">"<b>"Solo Parent Leave"</b>"\n* Photocopy of the Solo Parent’s ID (3 copies)</string>
+    <string name="tenDayVAWC">"<b>"Ten-day (VAWC) Leave under RA9262"</b>"
+\n* Barangay Protection order (BPO) (3 copies)
+\n* Temporary/Permanent Protection Order from the court. (3 copies)
+\n* If protection order is not yet issued; a certification shall be sufficient.
+\n* In the absence of BPO/TPO/PPO/Certification, a police report specifying all pertinent details and medical certification may be considered.(3 copies)</string>
+    <string name="rehabLeave">"<b>"Rehabilitation Leave"</b>"
+\n* Police Report (3 copies)
+\n* Medical Certificate stating the need for rest, recuperation and rehabilitation (3 copies)</string>
+    <string name="specialLeave">"<b>"Special Leave Benefit for Women"</b>"
+\n* Medical Certificate (3 copies)
+\n* Clinical Summary reflecting the gynecological disorder (surgery needed) (3 copies)
+\n* Histopathological Report, the Operative Technique, duration of surgery including operative period (period of confinement around surgery) and estimated period of recuperation. (3 copies)</string>
+    <string name="specialEmergency">"<b>"Special Emergency (Calamity) Leave"</b>"
+\n* Records and other proof as may be necessary to validate residency of employee. (3 copies)</string>
+    <string name="monetizationOfLeaveCredits">"<b>"Monetization of Leave Credits"</b>"
+\n* Letter of request addressed to Head of Agency stating the valid and justifiable reasons. (3 copies)</string>
+    <string name="terminalLeave">"<b>"Terminal Leave"</b>"
+\n* Proof of employee’s resignation or retirement or separation from service. (3 copies)</string>
+    <string name="adoptionLeave">"<b>"Adoption Leave"</b>"
+\n* Authentic copy of the Pre-Adoptive Placement Authority (3 copies)</string>
+    
+    <string name="hrmo2">Human Resource Management Officer - II
+        \n\n"<b>"Human Resource Management Office"</b>"</string>
+    <string name="hrmo2mmo">Human Resource Management Officer - II
+        \n"<b>"Human Resource Management Office"</b>"
+    \n\nMunicipal Mayor
+    \n"<b>"Municipal Mayor\s Office"</b>"</string>
+    <string name="mgdh1hrmo2">MGDH - I\n(HRMO)
+\n\nHuman Resource Management Officer - II
+        \n"<b>"Human Resource Management Office"</b>"</string>
+    <string name="municipalMayor">Municipal Mayor
+        \n\n"<b>"Municipal Mayor\s Office"</b>"</string>
+    <string name="budgetOfficer1">Budget Officer - I
+    \nMunicipal Budget Officer
+    \n\n"<b>"Municipal Budget Office"</b>"</string>
+    <string name="aa3MaMacco">Administrative Aide - III
+        \n\nMunicipal Accountant
+        \n"<b>"Municipal Accounting Office"</b>"</string>
+    <string name="mtMmo">Municipal Treasurer
+        \n"<b>"Municipal Treasurer\s Office"</b>"
+    \n\nMunicipal Mayor
+    \n"<b>"Municipal Mayor\s Office"</b>"</string>
+    <string name="mgdh1mm">MGDH - I\n(HRMO)
+\n\nMunicipal Mayor
+        \n"<b>"Municipal Mayor\s Office"</b>"</string>
+    <string name="mgdh1">MGDH - I\n(HRMO)
+        \n\n"<b>"Human Resource Management Officer"</b>"</string>
+    <string name="mbofficer2">Municipal Budget Officer
+        \n\n"<b>"Municipal Budget Office"</b>"</string>
+    
+    <!-- MTO -->
+    <string name="aaMTO">Administrative Aide
+    \n"<b>"Municipal Treasurer\s Office"</b>"</string>
+    <string name="rcc2">Revenue Collection Clerk II
+    \n"<b>"Municipal Treasurer\s Office"</b>"</string>
+
+
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
