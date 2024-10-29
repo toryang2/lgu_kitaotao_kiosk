@@ -197,6 +197,7 @@
     \n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
     <string name="rcc2">Revenue Collection Clerk II
     \n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
+    <string name="mtoSec">MTO\nSecretariat</string>
 
     <!-- Mayors -->
     <string name="titleMayors">MUNICIPAL MAYOR"'"S OFFICE</string>
@@ -205,6 +206,23 @@
 \n\n"<b>"Municipal Mayor"'"s Office"</b>"</string>
     <string name="minute5uponreceipt">5 minutes\n\n"<i>"* Upon receipt of billing statement"</i>"</string>
     <string name="rcc2aa1mto">Revenue Collection Clerk II\nAdministrative Aide I\n\n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
+
+    <!-- BAC -->
+    <string name="titleBAC">BIDS AND AWARDS COMMITTEE OFFICE</string>
+    <string name="bac">Bids and Awards Committee Office</string>
+    <string name="bacSec">BAC Secretariat</string>
+    <string name="bacSecn">Secretariat</string>
+    <string name="COA">COA</string>
+    <string name="bacSecTWG">BAC Secretariat and TWG</string>
+    <string name="bacMembers">BAC Members</string>
+    <string name="bacMemberHope">BAC Members / HOPE</string>
+    <string name="bacMemberTWGSec">BAC Member\nTWG\nSecretariat</string>
+    <string name="hope">Head of the Procuring entity\n"<b>"(HOPE)"</b>"</string>
+    <string name="HOPE">HOPE</string>
+    <string name="bacEndUser">End User</string>
+    <string name="mGubaton">Marvin Gubaton</string>
+    <string name="mGubatonSec">Marvin Gubaton\nBAC Secretariat</string>
+    <string name="procurement1.3">1.3. All procurement shall be done through "<b>"competitive bidding"</b>", except as provided in Rule XVI of IRR RA 9184.</string>
 
 
     <!-- Global-->
@@ -218,6 +236,7 @@
     <string name="g2g">G2G - Government to Government</string>
     <string name="g2b">G2B - Government to Business</string>
     <string name="g2gng2c">G2G - Government to Government\nG2C - Government to Citizen</string>
+    <string name="g2gng2b">G2G - Government to Government\nG2B - Government to Business</string>
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
     <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
     <string name="municipalMech">Municipal Mechanic</string>
