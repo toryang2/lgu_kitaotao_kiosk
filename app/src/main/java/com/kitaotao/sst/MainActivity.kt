@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         setClickListener(R.id.hrmo, HumanResourceManagementOffice::class.java)
         setClickListener(R.id.mmo, MunicipalMayorOffice::class.java)
         setClickListener(R.id.bac, BidsAndAwardsCommittee::class.java)
+        setClickListener(R.id.ipmr, IPMR::class.java)
 
 
         // Use coroutine to handle splash screen delay
