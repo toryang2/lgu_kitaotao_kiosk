@@ -225,6 +225,11 @@
     <string name="procurement1.3">1.3. All procurement shall be done through "<b>"competitive bidding"</b>", except as provided in Rule XVI of IRR RA 9184.</string>
 
 
+    <!-- IPMR -->
+    <string name="titleIPMR">INDIGENOUS PEOPLE MANDATORY REPRESENTATIVE</string>
+    <string name="ipmr">Indigenous People Mandatory Representative</string>
+    <string name="ipmrB">"<b>"Indigenous People Manadatory Representative"</b>"</string>
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
