@@ -13,6 +13,18 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".office.KitaotaoWaterSystem"
+            android:exported="false" />
+        <activity
+            android:name=".services.kitaotaoWater.internal.water_in_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.kitaotaoWater.internal.water_in_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.kitaotaoWater.external.water_ex_service_1"
+            android:exported="false" />
+        <activity
             android:name=".services.ipmr.ipmr_service_5"
             android:exported="false" />
         <activity

@@ -195,6 +195,8 @@
     <!-- MTO -->
     <string name="aaMTO">Administrative Aide
     \n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
+    <string name="aa1MTO">Administrative Aide - I
+    \n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
     <string name="rcc2">Revenue Collection Clerk II
     \n"<b>"Municipal Treasurer"'"s Office"</b>"</string>
     <string name="mtoSec">MTO\nSecretariat</string>
@@ -229,6 +231,14 @@
     <string name="titleIPMR">INDIGENOUS PEOPLE MANDATORY REPRESENTATIVE</string>
     <string name="ipmr">Indigenous People Mandatory Representative</string>
     <string name="ipmrB">"<b>"Indigenous People Manadatory Representative"</b>"</string>
+
+    <!-- Water -->
+    <string name="titleWATER">KITAOTAO WATER SYSTEM OFFICE</string>
+    <string name="water">Kitaotao Water System Office</string>
+    <string name="waterB">"<b>"Kitaotao Water System Office"</b>"</string>
+    <string name="kwsoMaintenanceHeadPlumbingElec">"<b>"KWSO"</b>"\nMaintenance Head\nPlumbing/ Electrician</string>
+    <string name="kwsoAdminAide1">Administrative Aide - I\n"<b>"Kitaotao Water System Office"</b>"</string>
+    <string name="kwsops2oic">PS - II/ KWS OIC\n"<b>"Kitaotao Water System Office"</b>"</string>
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
