@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".office.KitaotaoWaterSystem">
+    tools:context=".office.LIGA">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="@string/titleWATER"
+            android:text="@string/titleLIGA"
             android:textAlignment="center"
             android:textColor="#49454F"
             android:textSize="20sp"
@@ -57,17 +57,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/external_services"
+                    android:id="@+id/in_ex_services"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="35dp"
-                    android:text="External Services"
+                    android:text="Internal/ External Services"
                     android:textColor="#49454F"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/ex_service_1"
+                    android:id="@+id/service_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -75,44 +75,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Water Installation"
-                    android:textColor="#49454F" />
-
-                <TextView
-                    android:id="@+id/internal_services"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:text="Internal Services"
-                    android:textColor="#49454F"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/in_service_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:text="Application for Membership"
-                    android:textColor="#49454F" />
-
-                <TextView
-                    android:id="@+id/in_service_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:text="Request for Billing Statement"
+                    android:text="Request of Certified Copies of Liga Documents"
                     android:textColor="#49454F" />
 
             </LinearLayout>

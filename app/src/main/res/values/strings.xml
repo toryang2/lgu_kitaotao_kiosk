@@ -240,6 +240,17 @@
     <string name="kwsoAdminAide1">Administrative Aide - I\n"<b>"Kitaotao Water System Office"</b>"</string>
     <string name="kwsops2oic">PS - II/ KWS OIC\n"<b>"Kitaotao Water System Office"</b>"</string>
 
+    <!-- LIGA -->
+    <string name="titleLIGA">LIGA NG BARANGAY</string>
+    <string name="liga">LIGA Office</string>
+    <string name="ligaB">"<b>"LIGA ng Barangay"</b>"</string>
+    <string name="ligaPres">LIGA President</string>
+
+    <!-- LEDIPO -->
+    <string name="titleLEDIPO">LOCAL ECONOMIC DEVELOPMENT AND INVESTMENT PROMOTION OFFICE</string>
+    <string name="ledipo">Local Economic Development and Investment Promotion Office</string>
+    <string name="ledipoB">"<b>"Local Economic Development and Investment Promotion Office"</b>"</string>
+
     <!-- Global-->
     <string name="classSimple">Simple</string>
     <string name="classComplex">Complex</string>
@@ -254,6 +265,7 @@
     <string name="g2gng2b">G2G - Government to Government\nG2B - Government to Business</string>
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
     <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
+    <string name="g2gng2bng2c">G2G - Government to Government\nG2B - Government to Business\nG2C - Government to Citizen</string>
     <string name="municipalMech">Municipal Mechanic</string>
 
 

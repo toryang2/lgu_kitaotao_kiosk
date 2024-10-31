@@ -198,7 +198,16 @@
                     android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/textView22"
+                    android:id="@+id/liga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="LIGA ng Barangay"
+                    android:textAlignment="center"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/ledipo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
