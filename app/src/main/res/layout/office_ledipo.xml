@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".office.KitaotaoWaterSystem">
+    tools:context=".office.LEDIPO">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="@string/titleWATER"
+            android:text="@string/titleLEDIPO"
             android:textAlignment="center"
             android:textColor="#49454F"
             android:textSize="20sp"
@@ -75,7 +75,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request for Water Installation"
+                    android:text="Issuance of Barangay Economic Data"
                     android:textColor="#49454F" />
 
                 <TextView
@@ -100,19 +100,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Application for Membership"
-                    android:textColor="#49454F" />
-
-                <TextView
-                    android:id="@+id/in_service_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:text="Request for Billing Statement"
+                    android:text="Request for Access to Trainings, Seminars and Livelihood Services"
                     android:textColor="#49454F" />
 
             </LinearLayout>
