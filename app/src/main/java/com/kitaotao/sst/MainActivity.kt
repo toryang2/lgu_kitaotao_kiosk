@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val aboutButton: Button = findViewById(R.id.buttonAbout)
+        aboutButton.setOnClickListener {
+            val intent = Intent(this, about::class.java)
+            startActivity(intent)
+        }
+
         // Hide back and home buttons initially
         listOf(R.id.buttonBack, R.id.buttonHome).forEach {
             findViewById<Button>(it).visibility = View.GONE
