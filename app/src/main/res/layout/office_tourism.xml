@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".office.TOURISM">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/office_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:text="@string/titleTOURISM"
+            android:textAlignment="center"
+            android:textColor="#49454F"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="LIST OF SERVICES"
+            android:textColor="#49454F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/office_name"
+            app:layout_constraintStart_toStartOf="@+id/office_name"
+            app:layout_constraintTop_toBottomOf="@+id/office_name" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="190dp"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/internal_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:text="Internal Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request of Tourism Statistics Data"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/in_ex_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:text="Internal/ External Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_ex_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Tourism Assistance"
+                    android:textColor="#49454F" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

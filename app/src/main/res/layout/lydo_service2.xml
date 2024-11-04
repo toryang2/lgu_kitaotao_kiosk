@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".services.lydo.lydo_service_2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="150dp">
+
+                        <TextView
+                            android:id="@+id/titleTextService3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Request for Local Registration and Verification on Youth and Youth-Serving Organizations"
+                            android:textColor="#49454F"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/titleService1Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="The Local Registration and Verification on Youth and Youth-Serving Organizations is a type of service under the Local Youth Development Office anchored to the Youth Organization Registration Program of National Youth Commission. This service is made to acknowledge, recognize and ensure the participation of the youth in the community, especially to the 10 pillars of youth participation."
+                            android:textColor="#49454F" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Office or Division:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/lydo"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Classification:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/classComplex"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Type of Transaction:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/g2c"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Who may avail:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="All Kitaotao Youth &amp; Youth-Serving Organizations"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="CHECKLIST OF REQUIREMENTS"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_header_right"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="WHERE TO SECURE"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Registration Form"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Client"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc578"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Directory of Officers/Adviser"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc579"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Client"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc580"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3. List of Members in Good Standing"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc581"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3. Client"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc582"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4. Constitution and By-Laws"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc583"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4. Client"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc584"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="5. Endorsement Letter"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc585"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="5. Sangguniang Kabataan Chairman/Adviser"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="CLIENT STEPS"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="AGENCY ACTIONS"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="FEES TO BE PAID"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="PROCESSING TIME"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="PERSON RESPONSIBLE"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Submit the complete requirements for evaluation and validation."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.1. Receive and review the requirements if complete."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="3 days"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide1"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps310"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction293"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.2. If qualified, prepare Certificate of Registration and Verification and inform the client for all the benefits a YO or YSO will get, it’s functions and responsibilities, once registered."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees289"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime289"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible290"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide1"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps312"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction295"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.3. LYDO will sign the certificate."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees290"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime290"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible291"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide1"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps313"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction296"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.4. LYDO Staff will send the certificate to MMO for LCE’s signature."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees291"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime291"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible292"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps315"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction297"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.5. Back to LYDO for record keeping."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees292"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime292"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible293"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Issuance of signed certificate"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="left|top"
+                            android:padding="5sp"
+                            android:text="2.1. Photo opportunity for accomplishment report and social media posting. LYDO will issue the signed certificate of registration and verification."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="30 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide1"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps316"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction298"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.2. LYDO will issue the signed certificate of registration and verification"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees293"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime293"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible294"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps309"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3. Accomplish the client satisfaction survey (CSM/CSS)."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction292"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.1. Request the client to Accomplish the client satisfaction measurement/Client satisfaction survey online."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees288"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime288"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="10 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible289"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="150dp">
+
+                        <TextView
+                            android:id="@+id/tableTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_left_bottom"
+                            android:gravity="center|right"
+                            android:padding="5sp"
+                            android:text="TOTAL:"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableTotalTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_bottom"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="3 days &amp; 40 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableTotalBlank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_bottom"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/header" />
+</androidx.constraintlayout.widget.ConstraintLayout>
