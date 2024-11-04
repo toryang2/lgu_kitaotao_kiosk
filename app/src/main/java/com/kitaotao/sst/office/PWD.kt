@@ -11,13 +11,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.tourism.*
+import com.kitaotao.sst.services.pwd.*
 
-class TOURISM : AppCompatActivity() {
+class PWD : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.office_tourism)
+        setContentView(R.layout.office_pwd)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -46,8 +46,7 @@ class TOURISM : AppCompatActivity() {
         }
 
         // Set click listeners for various services
-        setClickListener(R.id.in_service_1, tourism_in_service_1::class.java)
-        setClickListener(R.id.in_ex_service_1, tourism_in_ex_service_1::class.java)
+        setClickListener(R.id.in_ex_service_1, pwd_service_1::class.java)
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {

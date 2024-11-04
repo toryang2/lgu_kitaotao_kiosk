@@ -266,6 +266,12 @@
     <string name="service2step1tourism">1. Visit our Facebook page at "<font fgcolor='#234788'><u><a href='https://www.facebook.com/kitakitzkitaotao'>"https://www.facebook.com/kitakitzkitaotao"</a></u></font>" or email us at "<font fgcolor='#234788'><a href='mailto:kitakitz.kitaotao@gmail.com'>"kitakitz.kitaotao@gmail.com"</a></font>" or call us through "<font fgcolor='#234788'><a href='tel:+639538533754'>"+639538533754"</a></font>" for any tourism-related inquiries and fill out the client request form.</string>
     <string name="tourismAdminAide1">Administrative Aide I\n"<b>"Municipal Tourism Office"</b>"</string>
 
+    <!-- PWD -->
+    <string name="titlePWD">PERSON WITH DISABILITY AFFAIRS OFFICE</string>
+    <string name="pwd">Person with Disability Affairs Office</string>
+    <string name="pwdB">"<b>"Person with Disability Affairs Office"</b>"</string>
+    <string name="pdaomswdo">PDAO\n\nMSWDO</string>
+
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
