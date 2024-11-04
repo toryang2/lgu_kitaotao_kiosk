@@ -61,6 +61,8 @@ class MainActivity : AppCompatActivity() {
         setClickListener(R.id.waterSystem, KitaotaoWaterSystem::class.java)
         setClickListener(R.id.liga, LIGA::class.java)
         setClickListener(R.id.ledipo, LEDIPO::class.java)
+        setClickListener(R.id.lydo, LYDO::class.java)
+        setClickListener(R.id.tourism, TOURISM::class.java)
 
 
         // Use coroutine to handle splash screen delay
