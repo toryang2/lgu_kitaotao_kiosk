@@ -1,4 +1,4 @@
-package com.kitaotao.sst.services.toursim
+package com.kitaotao.sst.services.tourism
 
 import android.content.Intent
 import android.os.Bundle
