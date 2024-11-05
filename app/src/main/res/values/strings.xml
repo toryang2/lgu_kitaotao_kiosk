@@ -272,6 +272,32 @@
     <string name="pwdB">"<b>"Person with Disability Affairs Office"</b>"</string>
     <string name="pdaomswdo">PDAO\n\nMSWDO</string>
 
+    <!-- PESO -->
+    <string name="titlePESO">PUBLIC EMPLOYMENT SERVICES OFFICE</string>
+    <string name="peso">Public Employment Services Office</string>
+    <string name="pesoB">"<b>"Public Employment Services Office"</b>"</string>
+    <string name="laborEO2peso">Labor Employment Officer - II\n\n"<b>"Public Employment Services Office"</b>"</string>
+    <string name="pesoManager">PESO Manager\n\n"<b>"Public Employment Services Office"</b>"</string>
+
+    <!-- SENIOR -->
+    <string name="titleSENIOR">OFFICE OF THE SENIOR CITIZEN\'S AFFAIRS</string>
+    <string name="senior">Office of the Senior Citizen\'s Affairs</string>
+    <string name="seniorB">"<b>"Office of the Senior Citizen\'s Affairs"</b>"</string>
+    <string name="oscaHeadStaff">OSCA Head\nand\nOCSA Staff</string>
+
+    <!-- MPDO -->
+    <string name="titleMPDO">MUNICIPAL PLANNING AND DEVELOPMENT OFFICE</string>
+    <string name="mpdo">Municipal Planning and Development Office</string>
+    <string name="mpdoB">"<b>"Municipal Planning and Development Office"</b>"</string>
+    <string name="pdo1_2AA1">PDO II/ PDO I/\nAdministrative Aide I</string>
+    <string name="mpdcpdo1_2AA1">MPDC/\nPDO II/ PDO I/\nAdministrative Aide I</string>
+    <string name="mpdostring1.6">1.6. Issue recommendation for final review and approval
+        \n\n"<i>"**For non-conforming issues, endorse to the Sangguniang Bayan or Local Zoning Board of Appeal for appropriate action and notify the client on the development of the transaction"</i>"</string>
+    <string name="minute3uponreceipt">3 minutes
+        \n\n"<i>"(Upon receipt of billing statement)"</i>"</string>
+    <string name="secretarytosb">"<i>"Secretary to the Sangguniang Bayan"</i>"</string>
+    <string name="mpdcoordinatorPDO2">Municipal Planning and Development Coordinator/\nPDO II</string>
+
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
@@ -289,6 +315,7 @@
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
     <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
     <string name="g2gng2bng2c">G2G - Government to Government\nG2B - Government to Business\nG2C - Government to Citizen</string>
+    <string name="g2bng2cng2g">G2B - Government to Business\nG2C – Government to Client\nG2G – Government to Government</string>
     <string name="municipalMech">Municipal Mechanic</string>
 
 

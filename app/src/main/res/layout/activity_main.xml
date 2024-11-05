@@ -243,7 +243,7 @@
                     android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/textView26"
+                    android:id="@+id/peso"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
@@ -252,7 +252,7 @@
                     android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/senior"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"

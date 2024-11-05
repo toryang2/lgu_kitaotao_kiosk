@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".office.MunicipalMayorOffice">
+    tools:context=".office.MPDO">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="@string/titleMayors"
+            android:gravity="center"
+            android:text="@string/titleMPDO"
             android:textColor="#49454F"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -65,7 +66,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/service_1"
+                    android:id="@+id/ex_service_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -73,11 +74,11 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Mayor’s Clearance"
+                    android:text="Issuance of Development Permit (DP)"
                     android:textColor="#49454F" />
 
                 <TextView
-                    android:id="@+id/service_2"
+                    android:id="@+id/ex_service_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -85,7 +86,77 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Mayor’s Permit"
+                    android:text="Issuance of Preliminary Subdivision Development Permit (PSDP)"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/ex_service_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Zoning Locational Clearance with Inspection"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/ex_service_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Zoning Locational Clearance Without Inspection"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/ex_service_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Zoning Certificate"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/in_ex_services"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:text="External Services"
+                    android:textColor="#49454F"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/in_ex_service_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Request for Copy of Local Development Plans"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/in_ex_service_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Municipal Statistical Data/Information and Geographic Information System Services"
                     android:textColor="#49454F" />
 
             </LinearLayout>
