@@ -70,6 +70,8 @@ class MainActivity : AppCompatActivity() {
         setClickListener(R.id.lydo, LYDO::class.java)
         setClickListener(R.id.tourism, TOURISM::class.java)
         setClickListener(R.id.pwd, PWD::class.java)
+        setClickListener(R.id.peso, PESO::class.java)
+        setClickListener(R.id.senior, SENIOR::class.java)
 
 
         // Use coroutine to handle splash screen delay

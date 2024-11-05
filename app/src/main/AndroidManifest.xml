@@ -13,6 +13,39 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".office.MPDO"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_in_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_in_ex_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_ex_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_ex_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_ex_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.mpdo.mpdo_ex_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".office.SENIOR"
+            android:exported="false" />
+        <activity
+            android:name=".services.senior.senior_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".office.PESO"
+            android:exported="false" />
+        <activity
             android:name=".about"
             android:exported="false" />
         <activity
