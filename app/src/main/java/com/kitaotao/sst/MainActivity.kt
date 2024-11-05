@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         setClickListener(R.id.pwd, PWD::class.java)
         setClickListener(R.id.peso, PESO::class.java)
         setClickListener(R.id.senior, SENIOR::class.java)
+        setClickListener(R.id.mpdo, MPDO::class.java)
 
 
         // Use coroutine to handle splash screen delay
