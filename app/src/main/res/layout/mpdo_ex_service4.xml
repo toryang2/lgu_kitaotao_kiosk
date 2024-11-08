@@ -7,4 +7,2714 @@
     android:layout_height="match_parent"
     tools:context=".services.mpdo.mpdo_ex_service_4">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="150dp">
+
+                        <TextView
+                            android:id="@+id/titleTextService3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Issuance of Zoning Locational Clearance Without Inspection"
+                            android:textColor="#49454F"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/titleService1Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="This service caters Locational Clearance for building/electrical/business permit that does not involve site inspection of the area. Any owner or developer undertaking the construction of a new building or applying for expansion, renovation, or alteration must obtain a Locational/Zoning Clearance for locally significant projects when applying for a building permit. It is imperative that this clearance is secured prior to commencing construction to ensure compliance with the approved Comprehensive Land Use Plan (CLUP) and Zoning Ordinance of the municipality."
+                            android:textColor="#49454F" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Office or Division:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/mpdo"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Classification:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/classComplex"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Type of Transaction:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="@string/g2cng2g"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Who may avail:"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="All persons and Government Institutions who intend to construct a Building and other related infrastructure"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_header_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="CHECKLIST OF REQUIREMENTS"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_header_right"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="WHERE TO SECURE"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Common Requirements:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|center"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc640"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Application Form (1 Original and Notarized Copy)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc641"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="MPDO"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc642"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Checklist of Requirements"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc643"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="MPDO"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc644"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Situational Requirements:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc645"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|center"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc646"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Case 1: Locational Clearance for Business Permit:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc647"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|center"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc648"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.	Authorization (if applicant is not the owner)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc649"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot/Building Owner"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc650"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.	A copy of approved Building and Electrical Permit"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc651"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot/Building Owner"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc652"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Case 2: Locational Clearance for Building Permit:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc653"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|center"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc654"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Barangay Certification"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc655"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Concerned Barangay"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc656"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Authorization (if application is not the owner)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc657"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot/Building Owner"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc658"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3. 1-Copy Building Plan"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc659"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot/Building Owner"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc670"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="a. Building Plans, Elevation and Details"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc671"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="One set, design plans specification signed and sealed by: Architect/Civil Engineer, in case of architectural/ civil/structural documents"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc672"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="b. Bill of Materials and Estimates of the Building"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc673"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Professional Electrical Engineer, in case of electrical documents"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc674"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="c. Electrical Plan"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc675"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc676"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="d. Electrical Bill of Materials and Estimates"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc677"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc678"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="e. Plumbing Plan"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc679"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Master Plumber, in case of plumbing documents"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc680"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="f. Plumbing Bill of Materials"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc681"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc660"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4. Approved Lot Plan (optional)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc661"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Bureau of Lands"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc662"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="5. 1-Copy of Tax Declaration/Land Title/COLO/COLA"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc663"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Municipal Assessor’s Office/ Bureau of Lands"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc664"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="6. Deed of Sale or Authorization (if applicant is not the owner of lot)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc665"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot Owner/Applicant"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc668"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="7. Certification/Clearance from DPWH (if the proposed project site is along the National Highway/Road)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc669"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="DPWH"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc684"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Case 3: Locational Clearance for Electrical Permit:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc685"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|center"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc686"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Barangay Certification"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc687"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Barangay Concerned"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc688"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Authorization (if the applicant is not the owner)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc689"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Lot Owner"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc690"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.	1-Copy Electrical Plan"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc691"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="One set, design plans specification signed and sealed by: Professional Electrical Engineer"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc700"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="a. Electrical Plan"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc701"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc702"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="b. Electrical Bill of Materials and Cost Estimates"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc703"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc692"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4. 1-Copy Tax Declaration/Land Title/COLO/COLA"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc693"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Municipal Assessor’s Office/Bureau of Lands of Owner/Applicant"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc694"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="5. Deed of Sale or Authorization (if applicant is not the owner of lot)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc695"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc698"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="6. Certification/Clearance from DPWH (if the proposed project site is along the National Highway/Road)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc699"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Department of Public Works and Highways (DPWH)"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="5">
+
+                        <TextView
+                            android:id="@+id/tableHeader7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="CLIENT STEPS"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="AGENCY ACTIONS"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader9"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="FEES TO BE PAID"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader10"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="PROCESSING TIME"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableHeader11"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="PERSON RESPONSIBLE"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1. Submit the duly filled-up application forms w/ complete requirements."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.1. Receive and record the application forms"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="5 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/mpdcpdo2_"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps322"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction304"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.2. Evaluate/ Assess of the complied documents."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees299"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime299"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="20 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible300"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/mpdcpdo2_"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps343"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction325"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.3. Check the submitted documents"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees320"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime320"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="20 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible321"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/mpdcpdo2_"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps345"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction327"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.4. Issuance of the Order of Payment for zoning fees."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees322"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="(See table below)"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime322"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/minute3uponreceipt"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible323"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo2"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps346"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction328"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.5. Give the Order of Payment to the Client"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees323"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime323"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="2 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible324"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo2"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2. Payment of the fees at the Municipal Treasurer’s Office."
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="left|top"
+                            android:padding="5sp"
+                            android:text="2.1. Checks receipt"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="5 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible84"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/rcc"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps380"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction362"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.2. Preparation of the Zoning Locational Clearance"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees329"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime329"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="1 hour"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible330"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo2"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps381"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction363"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.3. Act on Zoning Locational Clearance by the Zoning Administrator"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees330"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime330"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="10 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible331"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/mpdc"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps382"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction364"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.4.	Issuance of the approved Zoning Locational Clearance/ Issuance of Disapproval"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees331"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime331"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="10 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible332"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo2"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps309"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3. Received the Locational Clearance"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction292"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.1. Release &amp; logbook the clearance and get a copy for file in the office"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees288"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime288"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="5 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible289"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo1_2AA"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps347"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4. Accomplish the Client Satisfaction Survey (CSS) and drop in the Feedback Box"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction329"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="4.1. Request the client to accomplish the Client Satisfaction Survey (CSS) Form"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees324"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime324"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="10 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible325"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/pdo1_2AA1"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="64dp">
+
+                        <TextView
+                            android:id="@+id/tableTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/cell_shape_normal_left_bottom"
+                            android:gravity="center|right"
+                            android:padding="5sp"
+                            android:text="TOTAL:"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tableTotalTime"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_bottom"
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:text="2 hours and 30 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableTotalBlank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_bottom"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableTotal12"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center|left"
+                            android:padding="5sp"
+                            android:text="Housing and Land Use Regulatory Board 2013 Schedule of Fees"
+                            android:textColor="#49454F"
+                            android:textSize="12sp"
+                            android:textStyle="italic" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps352"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="A. Single residential structure attached or detached"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction334"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps353"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. ₱100,000 and below"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction335"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱288"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps354"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over ₱100,000 to ₱200,000"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction336"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱576"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps355"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="3. Over ₱200,000"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction337"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱720 + ( 1/10 of 1% in excess of ₱200,000 )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps356"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="B. Apartments/ Townhouses"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction338"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps357"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. ₱500,000 and below"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction339"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱1,440"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps358"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over ₱500,000 to 2 million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction340"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱2,160"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps359"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="3. Over 2 million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction341"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱3,600 + ( 1/10 of 1% of cost in excess of 2 million regardless of the number of floors )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps360"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="C. Dormitories"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction342"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps361"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. ₱2 Million and below"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction343"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱3,600"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps362"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over 2 million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction344"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱3,600 + ( 1/10 of 1% of cost in excess of 2 million regardless of the number of floors )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps363"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="D. Institutional"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction345"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps364"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Project cost of which is:"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction346"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps365"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. Below ₱2 Million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction347"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱2,880"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps366"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over 2 million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction348"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱2,880 + ( 1/10 of 1% of cost in excess of 2 million )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps367"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="E. Commercial, Industrial and Agro-Industrial Project Cost of which is:"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction349"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps368"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. Below ₱100,000"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction350"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱1,440"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps369"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over ₱100,000- ₱500,000"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction351"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱2,160"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps370"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="3. Over ₱500,000"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction352"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱2,880"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps371"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="4. Over ₱1 Million - ₱2 Million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction353"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱4,320"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps372"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="5. Over ₱2 Million "
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction354"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱7,200 + ( 1/10 of 1% of cost in excess of 2 million )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps373"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="F. Special Uses/Special Projects"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction355"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps374"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="(Gasoline Station, Cell Sites, Slaughter House, Treatment Plants, etc.)"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction356"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps375"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="1. Below ₱2 Million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction357"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱7,200 + ( 1/10 of 1% of cost in excess of 2 million )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="150dp">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps376"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_bottom"
+                            android:gravity="top|left"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="2. Over ₱2 Million"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction358"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right_bottom"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="₱7,200 + ( 1/10 of 1% of cost in excess of 2 million )"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/header" />
 </androidx.constraintlayout.widget.ConstraintLayout>

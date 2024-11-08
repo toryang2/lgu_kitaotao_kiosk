@@ -297,6 +297,19 @@
         \n\n"<i>"(Upon receipt of billing statement)"</i>"</string>
     <string name="secretarytosb">"<i>"Secretary to the Sangguniang Bayan"</i>"</string>
     <string name="mpdcoordinatorPDO2">Municipal Planning and Development Coordinator/\nPDO II</string>
+    <string name="dm3psdaa1mpdo">Draftsman III/\nPlanning Staff-Designate/\nAdministrative Aide I</string>
+    <string name="pdo1_2AA3">PDO I/ PDO II/\nAdministrative Aide III</string>
+    <string name="pdo1_2AA3aa">PDO I/ PDO II/\nAdministrative Aide III\nAdministrative Aide</string>
+    <string name="mpdostring1.6service2">1.6. Endorse for final review and approval\n\n"<i>"(Note: For non- conforming issues, endorse to the Local Zoning Board of Appeal or the Sangguniang Bayan for appropriate action and notify the client on the development of the transaction)"</i>"</string>
+    <string name="mpdcpdo2">Municipal Planning and Development Coordinator/\nPDO II</string>
+    <string name="rcc3">Revenue Collection Clerk - III</string>
+    <string name="mpdcpdo2_">MPDC/ PDO II</string>
+    <string name="mpdcpdo2aa">MPDC/ PDO II/\nAdministrative Aide</string>
+    <string name="pdo2">PDO II</string>
+    <string name="mpdc">MPDC</string>
+    <string name="pdo1_2AA">PDO II/ PDO I/\nAdministrative Aide</string>
+    <string name="pdo2mpdc">PDO II/ MPDC</string>
+    <string name="lcro1">LCRO I</string>
 
 
     <!-- Global-->
@@ -313,6 +326,7 @@
     <string name="g2gng2c">G2G - Government to Government\nG2C - Government to Citizen</string>
     <string name="g2gng2b">G2G - Government to Government\nG2B - Government to Business</string>
     <string name="g2cng2g">G2C - Government to Citizen\nG2G - Government to Government</string>
+    <string name="g2cng2b">G2C - Government to Citizen\nG2B - Government to Business Entity</string>
     <string name="g2cng2bng2g">G2C - Government to Citizen\nG2B - Government to Business\nG2G - Government to Government</string>
     <string name="g2gng2bng2c">G2G - Government to Government\nG2B - Government to Business\nG2C - Government to Citizen</string>
     <string name="g2bng2cng2g">G2B - Government to Business\nG2C – Government to Client\nG2G – Government to Government</string>
