@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".office.TOURISM">
+    tools:context=".office.POPDEV">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="150dp"
-            android:text="@string/titleTOURISM"
+            android:text="@string/titlePOPDEV"
             android:textAlignment="center"
             android:textColor="#49454F"
             android:textSize="20sp"
@@ -57,7 +57,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/internal_services"
+                    android:id="@+id/external_services"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -67,7 +67,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/in_service_1"
+                    android:id="@+id/ex_service_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -75,7 +75,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Request of Tourism Statistics Data"
+                    android:text="Pre Marriage-Orientation and Counseling (PMOC) Services"
                     android:textColor="#49454F" />
 
                 <TextView
@@ -97,7 +97,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Tourism Assistance"
+                    android:text="Request for POPDEV Demographic Data / Information"
                     android:textColor="#49454F" />
 
             </LinearLayout>

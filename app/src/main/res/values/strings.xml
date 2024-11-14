@@ -309,8 +309,35 @@
     <string name="mpdc">MPDC</string>
     <string name="pdo1_2AA">PDO II/ PDO I/\nAdministrative Aide</string>
     <string name="pdo2mpdc">PDO II/ MPDC</string>
-    <string name="lcro1">LCRO I</string>
+    <string name="case1intExService1">"<b>"Case 1:"</b>" If a soft copy is requested:</string>
+    <string name="case2intExService1">"<b>"Case 2:"</b>" If document/s are to be photocopied:</string>
+    <string name="case3intExService1">"<b>"Case 3:"</b>" If physical document/s are to be borrowed:</string>
+    <string name="pdoAA">PDO/ Administrative Aide</string>
+    <string name="lcro1">LCRO - I</string>
 
+    <!-- POPDEV -->
+    <string name="titlePOPDEV">POPULATION DEVELOPMENT OFFICE</string>
+    <string name="popdevMMO">MMO - Municipal Population Development Office</string>
+    <string name="popdev">Population Development Office</string>
+    <string name="popdevB">"<b>"Population Development Office"</b>"</string>
+    <string name="popdevService1string">Presidential Decree 965 -issued on July 20, 1976 Section 3. Applicants for marriage license shall, upon filing an application therefore, be "<b>"obliged"</b>" to receive instructions and information on family planning and responsible parenthood from the Family Planning Office. It is also mandated in the RA 10354 RPRH Law.</string>
+    <string name="adminAidePOPDEV">Administrative Aide\n"<b>"POPDEV"</b>"</string>
+    <string name="popdevService1clientstepsString2">2. The applicant contracting parties will accomplish the "<b>"Marriage Expectation Inventory Form (MEIF);"</b>"</string>
+    <string name="popdevService1clientstepsString4">4. Return to attend PMO Session.
+        \n\n"<b>"Case 1:"</b>" Regular PMO Session every 1st Thursday of the Month
+        \n\n"<b>"Case 2:"</b>" Special PMO Session (Anytime)</string>
+    <string name="PMCTeam1swo3phnro1mapnp">"<b>"PMC Team"</b>"
+        \nPopulation Program Officer - Team Leader
+        \nSWOIII
+        \nPHN
+        \nRO I
+        \nMA
+        \nPNP</string>
+    <string name="PMCTeam1swo3phnro1">Population Program Officer - Team Leader
+        \nSWOIII
+        \nPHN
+        \nRO I</string>
+    
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
