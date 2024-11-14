@@ -337,7 +337,23 @@
         \nSWOIII
         \nPHN
         \nRO I</string>
-    
+
+    <!-- SBO -->
+    <string name="titleSBO">SANGGUNIANG BAYAN OFFICE</string>
+    <string name="sbo">Sangguniang Bayan Office</string>
+    <string name="sboB">"<b>"Sangguniang Bayan Office"</b>"</string>
+    <string name="g2gg2cv2">G2G – Government to Government Agency, Government Officials and Employees
+        \nG2C – Government to Citizens</string>
+    <string name="sbosecretaryoraa">Secretary to the Sanggunian
+        \n"<b>"Sangguniang Bayan Office"</b>"
+        \n\nor
+        \n\nAdministrative Aide I
+        \n"<b>"Sangguniang Bayan Office"</b>"</string>
+    <string name="aa3sbo">Administrative Aide - III
+        \n"<b>"Sangguniang Bayan Office"</b>"</string>
+    <string name="aa1sbo">Administrative Aide - I
+        \n"<b>"Sangguniang Bayan Office"</b>"</string>
+
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
