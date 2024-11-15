@@ -354,6 +354,17 @@
     <string name="aa1sbo">Administrative Aide - I
         \n"<b>"Sangguniang Bayan Office"</b>"</string>
 
+    <!-- MSWDO -->
+    <string name="titleMSWDO">MUNICIPAL SOCIAL WELFARE AND DEVELOPMENT OFFICE</string>
+    <string name="mswdo">Municipal Social Welfare and Development Office</string>
+    <string name="mswdoB">"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="g2Client">Government ot Client</string>
+    <string name="swaMswdo">SWA\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo1Mswdo">SWO - I\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo1_3Mswdo">SWO - I, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo1_2_3Mswdo">SWO - I,SWO - II, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo3Mswdo">SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+
 
     <!-- Global-->
     <string name="classSimple">Simple</string>
