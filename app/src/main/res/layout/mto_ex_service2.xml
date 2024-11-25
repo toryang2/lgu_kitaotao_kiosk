@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.mswdo.mswdo_service_8">
+    tools:context=".services.treasurer.external.mto_ex_service_2">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Assistance to Women in Especially Difficult Circumstances (WEDC)"
+                            android:text="Issuance of Certificate of Ownership of Large Cattle"
                             android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -51,7 +51,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Assistance/services provided to women in especially difficult circumstances who needs immediate response on cases of violence and abuse, and ensures immediate access to appropriate services and provides solutions of their problems."
+                            android:text="A certificate which will be issue to the Business Entity/Contractor who have transaction to supply and deliver goods or services to the Municipality."
                             android:textColor="#49454F" />
                     </TableRow>
 
@@ -81,7 +81,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="@string/mswdo"
+                            android:text="@string/treasurer"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -112,7 +112,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="@string/classComplex"
+                            android:text="@string/classSimple"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -143,7 +143,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="@string/g2Client"
+                            android:text="@string/g2cng2b"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -174,7 +174,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="Women victim-survivor of violence and abuse"
+                            android:text="Business Tax payer/Supplier/Contractor"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -213,6 +213,34 @@
 
                     <TableRow
                         android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc766"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="Any of the following:"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc767"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <TextView
@@ -220,10 +248,10 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left"
+                            android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1. Medical certificate (1 photocopy)"
+                            android:text="1. Presentation of 2307 BIR Form"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -232,126 +260,10 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Rural Health Unit of the area or any nearest government hospital"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc752"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="2. Police Blotter (1 photocopy)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc753"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
                             android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="Kitaotao PNP - WCPD Officer"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc754"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="3. Affidavit of Complaint (1 set photocopy)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc755"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Subscribed by Municipal Mayor or Prosecutor’s Office, Malaybalay City"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc756"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="4. Social Case Study Report (1 set original copy)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc757"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Municipal Social Welfare &amp; Development Office\nDepEd (Elementary or high school)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc764"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="5. Birth Certificate (1 photocopy)"
-                            android:textColor="#49454F"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/tableHeaderDesc765"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="Municipal Civil Registrar Office\nMunicipal Social Welfare &amp; Development Office"
+                            android:text="Municipal Accounting Office"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -429,68 +341,6 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps415"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:text="ASSISTANCE TO WOMEN ABUSED VICTIM-SURVIVOR"
-                            android:textColor="#49454F"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction395"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees362"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime362"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible363"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <TextView
@@ -501,7 +351,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1. Requests for immediate assistance"
+                            android:text="1. Submit the request for the issuance of Certificate"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -513,7 +363,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1. Secure victim’s safety by temporary safekeeping and protection at Kitaotao Children and Women Center"
+                            android:text="1.1. Receive client’s request"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -537,7 +387,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="20 minutes"
+                            android:text="1 minute"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -549,7 +399,71 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
+                            android:text="@string/adminAide3"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps461"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction441"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="1.2. Examine the record"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees408"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime408"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="5 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible409"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/adminAide3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -566,7 +480,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2. Answers queries"
+                            android:text="2. Waiting for the release of certificate"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -578,7 +492,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.1. Conducts interview and assessment of needs with Multi-Disciplinary Team (MDT)"
+                            android:text="2.1. Issue Certificate of Business Tax Withheld"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -602,7 +516,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="2 hours"
+                            android:text="4 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -614,7 +528,71 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
+                            android:text="@string/adminAide3"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:id="@+id/tableClientSteps462"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction442"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.2. Approve of the Certificate"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees409"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime409"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="1 minute"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible410"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/municipalTreasurer"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -631,7 +609,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3. Presents medical certificate"
+                            android:text="3. Receives the Certificate of Business Tax Withheld"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -643,7 +621,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="left|top"
                             android:padding="5sp"
-                            android:text="3.1. Gets copy of Medical Certificate"
+                            android:text="3.1. Release the client’s copy of the Certificate of Business Tax Withheld"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -667,7 +645,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="5 minutes"
+                            android:text="1 minute"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -679,384 +657,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps455"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction435"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="Prepares the following documents:"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees402"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime402"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible403"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps456"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction436"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="3.2. General Intake Sheet"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees403"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime403"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="25 minutes"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible404"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps457"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction437"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="3.3. Intervention Plan"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees404"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime404"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="20 minutes"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible405"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps458"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction438"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="3.4. Progress Report"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees405"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime405"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="10 minutes"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible406"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps459"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction439"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="3.5. Social Case Study Report"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees406"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime406"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="4 hours"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible407"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableClientSteps460"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="top|left"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableAgencyAction440"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="left|top"
-                            android:padding="5sp"
-                            android:text="3.6. Facilitates temporary safekeeping and protection of victim-survivor at KCWC or government institution"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableFees407"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="None"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableProcTime407"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="30 minutes"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableResponsible408"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
+                            android:text="@string/adminAide3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -1073,7 +674,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4. Fill-out feedback form of CSM"
+                            android:text="4. Accomplish the Client Satisfaction Survey (CSS) and drop it in the Feedback Box"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -1085,7 +686,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="4.1. Receives feedback Form"
+                            android:text="4. Request the client to accomplish the Client Satisfaction Survey (CSS)"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -1121,7 +722,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/swo2_3Mswdo"
+                            android:text="@string/adminAide3"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -1152,7 +753,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="7 hours and 50 minutes"
+                            android:text="22 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 

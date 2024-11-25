@@ -958,7 +958,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="None for New Applicant &amp; Renewal"
+                            android:text="None for New Applicant &amp; Renewal\n------------------\n₱ 50.00\nRe-issuance Tax Code 2022"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -970,7 +970,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="4 hours and 6 minutes"
+                            android:text="4 hours and 6 minutes\n------------------\n2 hours &amp; 5 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -980,58 +980,6 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="@drawable/cell_shape_normal_right"
-                            android:gravity="center|top"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <TextView
-                            android:id="@+id/tableTotal14"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:background="@drawable/cell_shape_normal_left_notop"
-                            android:gravity="center|right"
-                            android:padding="5sp"
-                            android:textColor="#49454F"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/tableTotal16"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="₱ 50.00\nRe-issuance Tax Code 2022"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableTotalTime14"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_left"
-                            android:gravity="center"
-                            android:padding="5sp"
-                            android:text="2 hours &amp; 5 minutes"
-                            android:textColor="#49454F"
-                            android:textSize="12sp" />
-
-                        <TextView
-                            android:id="@+id/tableTotalBlank13"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/cell_shape_normal_right_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
                             android:textColor="#49454F"
