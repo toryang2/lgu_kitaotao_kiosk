@@ -362,8 +362,19 @@
     <string name="swaMswdo">SWA\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
     <string name="swo1Mswdo">SWO - I\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
     <string name="swo1_3Mswdo">SWO - I, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
-    <string name="swo1_2_3Mswdo">SWO - I,SWO - II, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo1_2_3Mswdo">SWO - I, SWO - II, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
     <string name="swo3Mswdo">SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="mswdoAdminAide4">Administrative Aide - IV\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo2_3Mswdo">SWO - II, SWO - III\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo2Mswdo">SWO - II\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+    <string name="swo1_2Mswdo">SWO - I, SWO - II\n"<b>"Municipal Social Welfare and Development Office"</b>"</string>
+
+    <!-- TREASURER -->
+    <string name="titleTREASURER">MUNICIPAL TREASURER\'S OFFICE</string>
+    <string name="treasurer">Municipal Treasurer\'s Office</string>
+    <string name="treasurerB">"<b>"Municipal Treasurer\'s Office"</b>"</string>
+    <string name="municipalTreasurer">Municipal Treasurer</string>
+
 
 
     <!-- Global-->
@@ -373,6 +384,7 @@
     <string name="adminAide">Administrative Aide</string>
     <string name="adminAide1">Administrative Aide - I</string>
     <string name="adminAide2">Administrative Aide - II</string>
+    <string name="adminAide3">Administrative Aide - III</string>
     <string name="externalService">External Services</string>
     <string name="g2c">G2C - Government to Citizen</string>
     <string name="g2g">G2G - Government to Government</string>

@@ -13,6 +13,45 @@
         android:theme="@style/Theme.SST"
         tools:targetApi="31">
         <activity
+            android:name=".office.TREASURER"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.internal_external.mto_in_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.internal_external.mto_in_ex_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.internal.mto_in_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.internal.mto_in_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.internal.mto_in_service_1"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_7"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_6"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_5"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_4"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_3"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_2"
+            android:exported="false" />
+        <activity
+            android:name=".services.treasurer.external.mto_ex_service_1"
+            android:exported="false" />
+        <activity
             android:name=".office.MSWDO"
             android:exported="false" />
         <activity
