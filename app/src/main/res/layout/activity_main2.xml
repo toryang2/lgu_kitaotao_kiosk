@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="-128dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbHorizontal="@android:color/transparent"
+            android:scrollbarThumbVertical="@android:color/transparent"
+            app:layout_wrapBehaviorInParent="horizontal_only">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/macco"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal\nAccounting\nOffice"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/administrator"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:maxWidth="@dimen/mtrl_btn_max_width"
+                        android:maxLines="5"
+                        android:text="Municipal Administrator Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F"
+                        app:iconPadding="@dimen/m3_extended_fab_icon_padding"
+                        app:iconSize="@dimen/m3_comp_extended_fab_primary_icon_size"
+                        app:iconTint="@color/m3_fab_efab_foreground_color_selector" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/agriculture"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Agriculture Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/assessor"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Assessor's Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/munBudget"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Budget Office\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/bplo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Business Processing and Licensing Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/civilRegistry"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Civil Registry Office\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/mdrrmo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Disaster Risk Reduction Management Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/engineering"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Engineering Office\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/menro"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Environmental and Natural Resources"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/gso"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal General Services Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/mho"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Health Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/hrmo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Human Resource Management Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/mmo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Mayor's Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bac"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Bids and Awards Committee\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/ipmr"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Indigineous People Mandatory Representative"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/waterSystem"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Kitaotao Water System Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/liga"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="LIGA ng Barangay\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ledipo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Local Economic Development and Investment Promotion Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/lydo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="\nLocal Youth Development Office\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/tourism"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Tourism Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/pwd"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Person With Disability Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/peso"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Public Employment Services Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/senior"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Office of the Senior Citizen's Affairs"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/mpdo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Planning and Development Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/popdev"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Population Development\nOffice"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sbo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Sangguniang Bayan Office\n"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+
+                    <Button
+                        android:id="@+id/mswdo"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_margin="16dp"
+                        android:maxLines="5"
+                        android:text="Municipal Social Welfare and Development Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/treasurer"
+                        style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Secondary"
+                        android:layout_width="164dp"
+                        android:layout_height="164dp"
+                        android:layout_marginLeft="114dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="114dp"
+                        android:layout_marginBottom="150dp"
+                        android:maxLines="5"
+                        android:text="Municipal Treasurer's Office"
+                        android:textAlignment="center"
+                        android:textColor="#49454F" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/Button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="143dp"
+            android:background="#FFFFFF"
+            android:text="OFFICES"
+            android:textAlignment="center"
+            android:textColor="#49454F"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/header" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
