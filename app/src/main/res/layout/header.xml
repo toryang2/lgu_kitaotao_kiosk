@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="86dp"
         android:background="@color/blue_2"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -19,15 +19,15 @@
         <!-- Use a Relative Layout or ConstraintLayout to organize content -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_height="wrap_content">
+            android:layout_marginEnd="16dp">
 
             <!-- Left Image -->
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="86dp"
-                android:layout_height="86dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:layout_marginStart="128dp"
                 android:contentDescription="Header Logo"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -39,13 +39,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintStart_toEndOf="@id/imageView"
-                app:layout_constraintEnd_toStartOf="@id/imageView3"
-                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginHorizontal="8dp">
+                app:layout_constraintEnd_toStartOf="@id/imageView3"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/textView1"
@@ -80,12 +80,12 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_height="86dp"
+                android:layout_marginEnd="128dp"
                 android:contentDescription="KitaKitz Logo"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginEnd="128dp"
                 app:srcCompat="@mipmap/kitakitzlogo512" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -117,10 +117,8 @@
                 android:textColor="@color/white"
                 app:icon="@mipmap/back_button"
                 app:iconTint="@color/white"
-                app:strokeColor="#474141"
-                app:strokeWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- Home Button -->
@@ -128,17 +126,14 @@
                 android:id="@+id/buttonHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:backgroundTint="@color/blue_2"
                 android:text="Home"
                 android:textColor="@color/white"
                 app:icon="@mipmap/home_button"
                 app:iconTint="@color/white"
-                app:strokeColor="#474141"
-                app:strokeWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/buttonBack"
-                app:layout_constraintStart_toEndOf="@+id/buttonAbout"
+                app:layout_constraintEnd_toStartOf="@+id/buttonAbout"
+                app:layout_constraintStart_toEndOf="@+id/buttonBack"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <!-- About Button -->
@@ -151,10 +146,8 @@
                 android:textColor="@color/white"
                 app:icon="@mipmap/about_button"
                 app:iconTint="@color/white"
-                app:strokeColor="#474141"
-                app:strokeWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.appcompat.widget.Toolbar>

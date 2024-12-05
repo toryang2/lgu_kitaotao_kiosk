@@ -38,23 +38,23 @@ class MainActivity : AppCompatActivity() {
 
         // Sample data for the grid items, now including target activities
         val items = listOf(
-            GridItem("Municipal Accounting Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalAccountingOffice::class.java),
+            GridItem("Municipal Accounting Office", getDrawable(R.drawable.macco256)!!, MunicipalAccountingOffice::class.java),
             GridItem("Municipal Administrator Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalAdministratorOffice::class.java),
             GridItem("Municipal Agriculture Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalAgricultureOffice::class.java),
             GridItem("Municipal Assessor's Office", getDrawable(R.drawable.assessor256)!!, MunicipalAssessorsOffice::class.java),
             GridItem("Municipal Budget Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBudgetOffice::class.java),
             GridItem("Municipal Business Processing and Licensing Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBusinessProcessingAndLicensingOffice::class.java),
             GridItem("Municipal Civil Registry Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalCivilRegistryOffice::class.java),
-            GridItem("Municipal Disaster Risk Reduction Management Office", getDrawable(R.drawable.postscreenlogo256)!!, MDRRMO::class.java),
+            GridItem("Municipal Disaster Risk Reduction Management Office", getDrawable(R.drawable.mdrrmc256)!!, MDRRMO::class.java),
             GridItem("Municipal Engineering Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalEngineeringOffice::class.java),
             GridItem("Municipal Environmental and Natural Resources Office", getDrawable(R.drawable.postscreenlogo256)!!, MENRO::class.java),
-            GridItem("Municipal General Services Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalGeneralServiceOffice::class.java),
-            GridItem("Municipal Health Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalHealthOffice::class.java),
+            GridItem("Municipal General Services Office", getDrawable(R.drawable.gso256)!!, MunicipalGeneralServiceOffice::class.java),
+            GridItem("Municipal Health Office", getDrawable(R.drawable.mho256)!!, MunicipalHealthOffice::class.java),
             GridItem("Human Resource Management Office", getDrawable(R.drawable.postscreenlogo256)!!, HumanResourceManagementOffice::class.java),
             GridItem("Municipal Mayor's Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalMayorOffice::class.java),
             GridItem("Bids and Awards Committee", getDrawable(R.drawable.postscreenlogo256)!!, BidsAndAwardsCommittee::class.java),
             GridItem("Indigineous People Mandatory Representative", getDrawable(R.drawable.postscreenlogo256)!!, IPMR::class.java),
-            GridItem("Kitaotao Water System Office", getDrawable(R.drawable.postscreenlogo256)!!, KitaotaoWaterSystem::class.java),
+            GridItem("Kitaotao Water System Office", getDrawable(R.drawable.watersystem256)!!, KitaotaoWaterSystem::class.java),
             GridItem("LIGA ng Barangay", getDrawable(R.drawable.postscreenlogo256)!!, LIGA::class.java),
             GridItem("Local Economic Development and Investment Promotion Office", getDrawable(R.drawable.ledipo256)!!, LEDIPO::class.java),
             GridItem("Local Youth Development Office", getDrawable(R.drawable.postscreenlogo256)!!, LYDO::class.java),
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("Population Development Office", getDrawable(R.drawable.postscreenlogo256)!!, POPDEV::class.java),
             GridItem("Sangguniang Bayan Office", getDrawable(R.drawable.postscreenlogo256)!!, SBO::class.java),
             GridItem("Municipal Social Welfare and Development Office", getDrawable(R.drawable.postscreenlogo256)!!, MSWDO::class.java),
-            GridItem("Municipal Treasurer's Office", getDrawable(R.drawable.postscreenlogo256)!!, TREASURER::class.java)
+            GridItem("Municipal Treasurer's Office", getDrawable(R.drawable.treasury256)!!, TREASURER::class.java)
         )
 
         // Set up the grid layout manager and adapter
