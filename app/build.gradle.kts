@@ -32,7 +32,7 @@ android {
         _patch = versionProps["PATCH"].toString().toInt() + 1
         _major = versionProps["MAJOR"].toString().toInt()
         _minor = versionProps["MINOR"].toString().toInt()
-        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
+        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 3
 
         if (_patch == 100) {
             _patch = 0
@@ -52,7 +52,7 @@ android {
         throw GradleException("Could not read version.properties!")
     }
 
-    val _versionName = "$_major.$_minor.$_patch($_versionCode)"
+    val _versionName = "$_major.$_minor.$_patch:$_versionCode"
 
 
     defaultConfig {
@@ -63,6 +63,9 @@ android {
         versionName = _versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "VERSION_NAME", "\"$_versionName\"")
+        buildConfigField("int", "VERSION_CODE", _versionCode.toString())
     }
 
     buildTypes {
@@ -83,6 +86,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -117,5 +121,6 @@ dependencies {
     implementation("io.github.sgpublic:MultiWaveHeader:1.0.2")
 
     implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
     kapt("com.github.bumptech.glide:compiler:4.15.1")
 }

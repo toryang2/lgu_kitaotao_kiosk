@@ -1,7 +1,5 @@
 package com.kitaotao.sst
 
-import android.app.admin.DevicePolicyManager
-import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -58,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("LIGA ng Barangay", getDrawable(R.drawable.postscreenlogo256)!!, LIGA::class.java),
             GridItem("Local Economic Development and Investment Promotion Office", getDrawable(R.drawable.ledipo256)!!, LEDIPO::class.java),
             GridItem("Local Youth Development Office", getDrawable(R.drawable.postscreenlogo256)!!, LYDO::class.java),
-            GridItem("Municipal Tourism Office", getDrawable(R.drawable.postscreenlogo256)!!, TOURISM::class.java),
+            GridItem("Municipal Tourism Office", getDrawable(R.drawable.tourism256)!!, TOURISM::class.java),
             GridItem("Person With Disability Office", getDrawable(R.drawable.postscreenlogo256)!!, PWD::class.java),
             GridItem("Public Employment Services Office", getDrawable(R.drawable.postscreenlogo256)!!, PESO::class.java),
             GridItem("Office of the Senior Citizen's Affairs", getDrawable(R.drawable.postscreenlogo256)!!, SENIOR::class.java),
@@ -78,6 +76,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         val aboutButton: Button = findViewById(R.id.buttonAbout)
+
+        aboutButton.visibility = View.VISIBLE
+
         aboutButton.setOnClickListener {
             val intent = Intent(this, about::class.java)
             startActivity(intent)
@@ -128,7 +129,6 @@ class MainActivity : AppCompatActivity() {
     private fun showAdminPasswordDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_password, null)
         val passwordEditText: EditText = dialogView.findViewById(R.id.passwordEditText)
-        val buttonChangePassword: Button = dialogView.findViewById(R.id.buttonChangePassword)
 
         // Create and show the dialog
         val dialog = AlertDialog.Builder(this)
@@ -173,110 +173,9 @@ class MainActivity : AppCompatActivity() {
                 false
             }
         }
-
-        // Set an onClickListener for the Change Password button
-        buttonChangePassword.setOnClickListener {
-            dialog.dismiss() // Close the current dialog to open the change password dialog
-            showChangePasswordDialog() // Trigger the change password dialog
-        }
-
         dialog.show()
     }
 
-
-    private fun showChangePasswordDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_change_password, null)
-        val oldPasswordEditText: EditText = dialogView.findViewById(R.id.editTextOldPassword)
-        val newPasswordEditText: EditText = dialogView.findViewById(R.id.editTextNewPassword)
-        val confirmPasswordEditText: EditText = dialogView.findViewById(R.id.editTextConfirmNewPassword)
-        val buttonResetPassword: Button = dialogView.findViewById(R.id.buttonResetPassword) // Reset button
-
-        val changePasswordDialog = AlertDialog.Builder(this)
-            .setTitle("Change Password")
-            .setView(dialogView)
-            .setPositiveButton("OK", null) // Set to null to prevent automatic dismissal
-            .setNegativeButton("Cancel", null)
-            .create()
-
-        // Set the action for the OK button manually to handle password change
-        changePasswordDialog.setOnShowListener {
-            val positiveButton = changePasswordDialog.getButton(AlertDialog.BUTTON_POSITIVE)
-            val negativeButton = changePasswordDialog.getButton(AlertDialog.BUTTON_NEGATIVE)
-
-            // Set the text color for OK and Cancel buttons
-            val color = Color.parseColor("#49454F")
-            positiveButton.setTextColor(color)
-            negativeButton.setTextColor(color)
-
-            // Handle OK button click
-            positiveButton.setOnClickListener {
-                val enteredOldPassword = oldPasswordEditText.text.toString()
-                val enteredNewPassword = newPasswordEditText.text.toString()
-                val enteredConfirmPassword = confirmPasswordEditText.text.toString()
-                val storedPassword = readPassword() // Retrieve stored password
-
-                // Verify old password
-                if (enteredOldPassword != storedPassword) {
-                    Toast.makeText(this, "Incorrect old password", Toast.LENGTH_SHORT).show()
-                    return@setOnClickListener
-                }
-
-                // Check if new password matches the confirmation
-                if (enteredNewPassword != enteredConfirmPassword) {
-                    Toast.makeText(this, "New passwords do not match", Toast.LENGTH_SHORT).show()
-                    return@setOnClickListener
-                }
-
-                // Save the new password
-                saveNewPassword(enteredNewPassword)
-                Toast.makeText(this, "Password changed successfully", Toast.LENGTH_SHORT).show()
-                changePasswordDialog.dismiss() // Close the change password dialog
-            }
-
-            // Handle Reset Password button click
-            buttonResetPassword.setOnClickListener {
-                resetPassword() // Call reset password functionality
-                changePasswordDialog.dismiss() // Dismiss the dialog after reset
-            }
-        }
-
-        // Handle Enter key press to trigger the OK button click only when Confirm Password is focused
-        confirmPasswordEditText.setOnEditorActionListener { _, actionId, _ ->
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                // When "Enter" is pressed, trigger the OK button click
-                val positiveButton = changePasswordDialog.getButton(AlertDialog.BUTTON_POSITIVE)
-                positiveButton.performClick()
-                true // Indicate that the action was handled
-            } else {
-                false
-            }
-        }
-
-        changePasswordDialog.show()
-    }
-
-
-    private fun resetPassword() {
-        try {
-            // Set the password to a master password (this will overwrite the existing one)
-            val masterPassword = "adminkitaotao"
-            saveNewPassword(masterPassword)
-            Toast.makeText(this, "Password has been reset to the master password", Toast.LENGTH_SHORT).show()
-        } catch (e: FileNotFoundException) {
-            // Handle the case where the password file doesn't exist (if the file is missing)
-            Toast.makeText(this, "Password file not found. Master reset applied.", Toast.LENGTH_SHORT).show()
-            val masterPassword = "adminkitaotao"
-            saveNewPassword(masterPassword)  // Write the new master password to the file
-        }
-    }
-
-
-    // Save the new password as plain text
-    private fun saveNewPassword(newPassword: String) {
-        openFileOutput("admin_password.txt", Context.MODE_PRIVATE).use {
-            it.write(newPassword.toByteArray())
-        }
-    }
 
     // Read the password from the file
     private fun readPassword(): String {

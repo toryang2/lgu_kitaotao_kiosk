@@ -30,6 +30,10 @@ class postScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_post_screen)
 
+
+        val versionTextView: TextView = findViewById(R.id.versionTextView)
+        versionTextView.text = "v${BuildConfig.VERSION_NAME}"
+
         val devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         val componentName = ComponentName(this, MyDeviceAdminReceiver::class.java)
 
@@ -61,4 +65,5 @@ class postScreen : AppCompatActivity() {
             Toast.makeText(this@postScreen, "Action not allowed!", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

@@ -143,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/blue_2"
                 android:text="About"
+                android:visibility="invisible"
                 android:textColor="@color/white"
                 app:icon="@mipmap/about_button"
                 app:iconTint="@color/white"
