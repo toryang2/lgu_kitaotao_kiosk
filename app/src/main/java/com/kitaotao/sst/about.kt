@@ -28,7 +28,7 @@ class about : AppCompatActivity() {
         })
 
         val aboutButton: Button = findViewById(R.id.buttonAbout)
-        aboutButton.visibility = View.GONE
+        aboutButton.visibility = View.INVISIBLE
         //end of back button
 
         val backButton: Button = findViewById(R.id.buttonBack)
