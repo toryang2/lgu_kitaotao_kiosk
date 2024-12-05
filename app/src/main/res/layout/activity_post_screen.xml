@@ -33,7 +33,7 @@
         android:layout_width="192dp"
         android:layout_height="192dp"
         android:layout_marginStart="110dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="109dp"
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/postscreenlogo192dp" />
+        app:srcCompat="@drawable/postscreenlogo256" />
 
     <TextView
         android:id="@+id/title"
@@ -84,7 +84,7 @@
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="128dp"
         android:fontFamily="@font/alexandria"
         android:shadowColor="#000000"
 
