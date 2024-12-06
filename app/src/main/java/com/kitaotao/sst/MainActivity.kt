@@ -320,15 +320,15 @@ class MainActivity : AppCompatActivity() {
                                 runOnUiThread {
                                     progressBar.progress = progress
                                     percentageText.text = "$progress%"
+
+                                    // If progress is 100%, dismiss the dialog
+                                    if (progress == 100) {
+                                        progressDialog.dismiss()  // Dismiss the dialog
+                                        installApk(file)  // Proceed with the APK installation
+                                    }
                                 }
                             }
                         }
-                    }
-
-                    // After download, dismiss the progress dialog and install the APK
-                    runOnUiThread {
-                        progressDialog.dismiss()
-                        installApk(file)
                     }
                 }
             }
