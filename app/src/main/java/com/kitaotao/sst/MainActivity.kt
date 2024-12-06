@@ -1,28 +1,52 @@
 package com.kitaotao.sst
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.provider.DocumentsContract
 import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kitaotao.sst.office.*
+import com.kitaotao.sst.model.Release
+import com.kitaotao.sst.network.GitHubService
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import java.io.File
 import java.io.FileNotFoundException
+import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Check for updates asynchronously when the app starts
+        CoroutineScope(Dispatchers.Main).launch {
+            checkForUpdates()
+        }
 
         // Set up RecyclerView
         setupRecyclerView()
@@ -42,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("Municipal Assessor's Office", getDrawable(R.drawable.assessor256)!!, MunicipalAssessorsOffice::class.java),
             GridItem("Municipal Budget Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBudgetOffice::class.java),
             GridItem("Municipal Business Processing and Licensing Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBusinessProcessingAndLicensingOffice::class.java),
-            GridItem("Municipal Civil Registry Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalCivilRegistryOffice::class.java),
+            GridItem("Municipal Civil Registry Office", getDrawable(R.drawable.mcro256)!!, MunicipalCivilRegistryOffice::class.java),
             GridItem("Municipal Disaster Risk Reduction Management Office", getDrawable(R.drawable.mdrrmc256)!!, MDRRMO::class.java),
             GridItem("Municipal Engineering Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalEngineeringOffice::class.java),
             GridItem("Municipal Environmental and Natural Resources Office", getDrawable(R.drawable.postscreenlogo256)!!, MENRO::class.java),
@@ -67,11 +91,9 @@ class MainActivity : AppCompatActivity() {
             GridItem("Municipal Treasurer's Office", getDrawable(R.drawable.treasury256)!!, TREASURER::class.java)
         )
 
-        // Set up the grid layout manager and adapter
         val layoutManager = GridLayoutManager(this, 10)
         recyclerView.layoutManager = layoutManager
 
-        // Set the adapter with context passed for item click handling
         val adapter = CardAdapter(items, this)
         recyclerView.adapter = adapter
 
@@ -101,28 +123,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleBackPress() {
-        // This will intercept back button presses and prevent the default behavior
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                // Prevent back press and show a message
                 Toast.makeText(this@MainActivity, "Action not allowed!", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        // Intercept Home button press (KEYCODE_HOME)
-        if (keyCode == KeyEvent.KEYCODE_HOME) {
+        if (keyCode == KeyEvent.KEYCODE_HOME || keyCode == KeyEvent.KEYCODE_APP_SWITCH) {
             showAdminPasswordDialog()
-            return true  // Consume the event
+            return true
         }
-
-        // Intercept Overview button press (KEYCODE_APP_SWITCH)
-        if (keyCode == KeyEvent.KEYCODE_APP_SWITCH) {
-            showAdminPasswordDialog()
-            return true  // Consume the event
-        }
-
         return super.onKeyDown(keyCode, event)
     }
 
@@ -176,8 +188,6 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-
-    // Read the password from the file
     private fun readPassword(): String {
         return try {
             openFileInput("admin_password.txt").bufferedReader().use {
@@ -188,14 +198,155 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
-    // Exit Kiosk Mode and stop the lock task
     private fun exitKioskMode() {
         stopLockTask()
 
         Toast.makeText(this, "Exited Kiosk Mode", Toast.LENGTH_SHORT).show()
 
         finishAffinity()
+    }
+
+    private fun lockTaskOffWhenUpdate() {
+        stopLockTask()
+    }
+
+    suspend fun checkForUpdates() {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://api.github.com/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val service = retrofit.create(GitHubService::class.java)
+
+        try {
+            val release = service.getLatestRelease("toryang2", "lgu_kitaotao_kiosk")
+            val latestVersion = release.tag_name.trimStart('v') // Remove 'v' from version
+            val currentVersion = BuildConfig.VERSION_NAME.split(":")[0] // Only take the part before the colon
+
+            // Compare the versions to check if the GitHub version is newer
+            if (isUpdateRequired(latestVersion, currentVersion)) {
+                showUpdateDialog(latestVersion, release.assets[0].browser_download_url)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    fun isUpdateRequired(latestVersion: String, currentVersion: String): Boolean {
+        // Split the version strings into individual components (major, minor, patch)
+        val latestVersionParts = latestVersion.split(".").map { it.toInt() }
+        val currentVersionParts = currentVersion.split(".").map { it.toInt() }
+
+        // Compare major, minor, and patch versions
+        for (i in 0 until 3) {
+            if (latestVersionParts[i] > currentVersionParts[i]) {
+                return true // GitHub version is higher
+            } else if (latestVersionParts[i] < currentVersionParts[i]) {
+                return false // Installed version is higher
+            }
+        }
+        return false // Versions are equal
+    }
+
+    fun showUpdateDialog(version: String, url: String) {
+        AlertDialog.Builder(this)
+            .setTitle("Update Available")
+            .setMessage("Version $version is available. Would you like to download it?")
+            .setPositiveButton("Yes") { _, _ ->
+                // Show progress dialog
+                showProgressDialog()
+
+                // Download the APK
+                lockTaskOffWhenUpdate()
+                downloadApk(url)
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+
+    private lateinit var progressBar: ProgressBar
+    private lateinit var percentageText: TextView
+    private lateinit var progressDialog: AlertDialog
+
+    // Call this method to show the progress dialog with a progress bar
+    private fun showProgressDialog() {
+        val builder = AlertDialog.Builder(this)
+        val view = layoutInflater.inflate(R.layout.progress_dialog_layout, null)
+
+        progressBar = view.findViewById(R.id.progressBar)
+        percentageText = view.findViewById(R.id.percentageText)
+
+        builder.setView(view)
+            .setCancelable(false) // To make sure the dialog can't be dismissed manually
+        progressDialog = builder.create()
+
+        progressDialog.show()
+    }
+
+    // Update the progress bar during the download
+    private fun downloadApk(url: String) {
+        val client = OkHttpClient()
+        val request = Request.Builder().url(url).build()
+
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    val file = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "downloadedfile.apk")
+
+                    val totalSize = response.body?.contentLength() ?: 0
+                    var downloadedSize: Long = 0
+
+                    // Show the progress dialog
+                    runOnUiThread {
+                        showProgressDialog()
+                    }
+
+                    // Copy inputStream to outputStream and update progress
+                    response.body?.byteStream()?.use { inputStream ->
+                        file.outputStream().use { outputStream ->
+                            val buffer = ByteArray(1024)
+                            var bytesRead: Int
+
+                            while (inputStream.read(buffer).also { bytesRead = it } != -1) {
+                                outputStream.write(buffer, 0, bytesRead)
+                                downloadedSize += bytesRead
+                                val progress = (downloadedSize * 100 / totalSize).toInt()
+
+                                // Update progress bar and percentage text on the UI thread
+                                runOnUiThread {
+                                    progressBar.progress = progress
+                                    percentageText.text = "$progress%"
+                                }
+                            }
+                        }
+                    }
+
+                    // After download, dismiss the progress dialog and install the APK
+                    runOnUiThread {
+                        progressDialog.dismiss()
+                        installApk(file)
+                    }
+                }
+            }
+        })
+    }
+
+    private fun installApk(file: File) {
+        // Install the APK after download
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = FileProvider.getUriForFile(
+                this@MainActivity,
+                "${packageName}.provider", // Provider authority
+                file
+            )
+            flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+        }
+
+        // Start the installation intent
+        startActivity(intent)
     }
 }
