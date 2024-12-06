@@ -2,6 +2,7 @@ import java.io.FileInputStream
 import java.util.Properties
 import com.google.gson.Gson
 import org.gradle.api.file.Directory
+import java.io.File
 
 plugins {
     alias(libs.plugins.android.application)
@@ -96,45 +97,43 @@ data class VersionJson(
     val releaseUrl: String
 )
 
-// Task to generate version.json
+// Use layout.buildDirectory to access the build directory and set the path for version.json
+val releaseDirPath = File(projectDir, "appVersion")
+
 tasks.register("generateVersionJson") {
-    // Define the output directory for the release APK
-    val releaseOutputDir = layout.buildDirectory.dir("outputs/apk").get().asFile
-
-    // Define the version.json file path
-    val versionJsonFile = File(releaseOutputDir, "version.json")
-
-    // Mark version.json as an output file to prevent deletion
-    outputs.file(versionJsonFile)
-
     doLast {
-        // Ensure the directory exists
-        if (!releaseOutputDir.exists()) {
-            releaseOutputDir.mkdirs()
+        // Ensure the release directory exists
+        if (!releaseDirPath.exists()) {
+            releaseDirPath.mkdirs()
         }
 
-        // Create the version.json content
+        // Define the version.json file path
+        val versionJsonFile = File(releaseDirPath, "version.json")
+
         val versionJson = VersionJson(
             versionCode = _versionCode,
             versionName = "$_major.$_minor.$_patch",
             releaseUrl = "https://github.com/yourusername/yourrepository/releases/latest"
         )
 
-        // Write the JSON content to the file
         versionJsonFile.writeText(Gson().toJson(versionJson))
         println("Generated version.json at ${versionJsonFile.path}")
     }
 }
 
-// Attach the task to the assembleRelease task
+// Attach to build task
+tasks.named("build") {
+    dependsOn("generateVersionJson")
+}
+
+// Optionally attach to assembleRelease if it exists
 tasks.matching { it.name == "assembleRelease" }.configureEach {
     dependsOn("generateVersionJson")
 }
 
-
 allprojects {
     repositories {
-
+        // Your repositories here
     }
 }
 
@@ -150,8 +149,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.leanback)
     implementation(libs.glide)
-    //implementation(libs.androidx.preference)
-    //implementation(libs.androidx.gridlayout)
+    // More dependencies...
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -164,4 +162,8 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.15.1")
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
     kapt("com.github.bumptech.glide:compiler:4.15.1")
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.10.0")
 }
