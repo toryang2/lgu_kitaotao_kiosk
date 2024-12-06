@@ -96,6 +96,13 @@ allprojects{
     }
 }
 
+// You don't normally need the `java` block here for JDK version if you're using Java 8, but if you're using JDK 11, add this.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
