@@ -3,14 +3,20 @@ package com.kitaotao.sst
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.provider.DocumentsContract
+import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewGroup
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -99,6 +105,7 @@ class MainActivity : AppCompatActivity() {
 
         val aboutButton: Button = findViewById(R.id.buttonAbout)
 
+        aboutButton.text = "Settings"
         aboutButton.visibility = View.VISIBLE
 
         aboutButton.setOnClickListener {
@@ -249,7 +256,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showUpdateDialog(version: String, url: String) {
-        AlertDialog.Builder(this)
+        val dialog = AlertDialog.Builder(this)
             .setTitle("Update Available")
             .setMessage("Version $version is available. Would you like to download it?")
             .setPositiveButton("Yes") { _, _ ->
@@ -262,25 +269,40 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton("No", null)
             .show()
+
+        val color = Color.parseColor("#49454F") // Your desired color for the button text
+
+        // Change the text color of the positive button ("OK") ("No")
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(color)
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(color)
     }
 
     private lateinit var progressBar: ProgressBar
     private lateinit var percentageText: TextView
     private lateinit var progressDialog: AlertDialog
+    private lateinit var downloadText: TextView
 
     // Call this method to show the progress dialog with a progress bar
     private fun showProgressDialog() {
-        val builder = AlertDialog.Builder(this)
+        // Check if the dialog is already visible
+        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+            return // Don't create a new dialog if one is already showing
+        }
+
+        val builder = AlertDialog.Builder(this, R.style.SemiTransparentDialog)
         val view = layoutInflater.inflate(R.layout.progress_dialog_layout, null)
 
         progressBar = view.findViewById(R.id.progressBar)
         percentageText = view.findViewById(R.id.percentageText)
+        downloadText = view.findViewById(R.id.dowloading)
+
 
         builder.setView(view)
-            .setCancelable(false) // To make sure the dialog can't be dismissed manually
+            .setCancelable(false) // Prevent manual dismissal
         progressDialog = builder.create()
 
         progressDialog.show()
+
     }
 
     // Update the progress bar during the download
@@ -291,6 +313,12 @@ class MainActivity : AppCompatActivity() {
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 e.printStackTrace()
+                // Handle error on the UI thread if needed
+                runOnUiThread {
+                    if (::progressDialog.isInitialized && progressDialog.isShowing) {
+                        progressDialog.dismiss()
+                    }
+                }
             }
 
             override fun onResponse(call: Call, response: Response) {
@@ -305,7 +333,6 @@ class MainActivity : AppCompatActivity() {
                         showProgressDialog()
                     }
 
-                    // Copy inputStream to outputStream and update progress
                     response.body?.byteStream()?.use { inputStream ->
                         file.outputStream().use { outputStream ->
                             val buffer = ByteArray(1024)
@@ -318,16 +345,31 @@ class MainActivity : AppCompatActivity() {
 
                                 // Update progress bar and percentage text on the UI thread
                                 runOnUiThread {
-                                    progressBar.progress = progress
-                                    percentageText.text = "$progress%"
-
-                                    // If progress is 100%, dismiss the dialog
-                                    if (progress == 100) {
-                                        progressDialog.dismiss()  // Dismiss the dialog
-                                        installApk(file)  // Proceed with the APK installation
+                                    if (progress <= 100) {
+                                        progressBar.progress = progress
+                                        percentageText.text = "$progress%"
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    // Once download is complete, dismiss the dialog
+                    runOnUiThread {
+                        progressBar.visibility = View.GONE
+                        percentageText.visibility = View.GONE
+
+                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+                            progressDialog.dismiss()
+                        }
+
+                        installApk(file) // Proceed with APK installation
+                    }
+                } else {
+                    // Handle unsuccessful response
+                    runOnUiThread {
+                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+                            progressDialog.dismiss()
                         }
                     }
                 }

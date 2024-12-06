@@ -1,25 +1,35 @@
 <!-- res/layout/progress_dialog_layout.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="20dp"
-    android:gravity="center"
-    android:background="@android:color/transparent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/dowloading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Downloading"
+        android:textColor="#EBEBEB"
+        android:textSize="16sp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="false"
-        android:progress="0"
-        android:max="100" />
+        android:indeterminateTint="#EBEBEB"
+        android:max="100"
+        android:progress="0" />
 
     <TextView
         android:id="@+id/percentageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0%"
         android:layout_marginTop="10dp"
+        android:text="0%"
+        android:textColor="#EBEBEB"
         android:textSize="16sp" />
+
 </LinearLayout>
