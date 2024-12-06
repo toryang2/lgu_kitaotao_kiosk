@@ -32,7 +32,7 @@ android {
         _patch = versionProps["PATCH"].toString().toInt() + 1
         _major = versionProps["MAJOR"].toString().toInt()
         _minor = versionProps["MINOR"].toString().toInt()
-        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 3
+        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
 
         if (_patch == 100) {
             _patch = 0

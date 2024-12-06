@@ -40,7 +40,7 @@ class about : AppCompatActivity() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 // Add logs here to check whether this callback is being triggered correctly
-                Log.d("AboutActivity", "Back button pressed, finishing activity.")
+                // Log.d("AboutActivity", "Back button pressed, finishing activity.")
                 finish()
             }
         })

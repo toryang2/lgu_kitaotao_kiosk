@@ -108,7 +108,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         val dialog = AlertDialog.Builder(this)
             .setTitle("Success")
             .setMessage("Password has been changed successfully.")
-            .setPositiveButton("Ok") { _, _ ->
+            .setPositiveButton("OK") { _, _ ->
                 navigateBackToAboutPage()
             }
             .setCancelable(false)
