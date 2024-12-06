@@ -1,12 +1,51 @@
 import java.io.FileInputStream
 import java.util.Properties
+import com.google.gson.Gson
+import org.gradle.api.file.Directory
 
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id ("kotlin-kapt")
-
+    id("kotlin-kapt")
 }
+
+// Define version variables at a broader scope
+var _versionCode = 0
+var _major = 0
+var _minor = 0
+var _patch = 0
+
+val versionPropsFile = file("version.properties")
+
+if (versionPropsFile.canRead()) {
+    val versionProps = Properties().apply {
+        load(FileInputStream(versionPropsFile))
+    }
+
+    _patch = versionProps["PATCH"].toString().toInt() + 1
+    _major = versionProps["MAJOR"].toString().toInt()
+    _minor = versionProps["MINOR"].toString().toInt()
+    _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
+
+    if (_patch == 100) {
+        _patch = 0
+        _minor += 1
+    }
+    if (_minor == 10) {
+        _minor = 0
+        _major += 1
+    }
+
+    versionProps["MAJOR"] = _major.toString()
+    versionProps["MINOR"] = _minor.toString()
+    versionProps["PATCH"] = _patch.toString()
+    versionProps["VERSION_CODE"] = _versionCode.toString()
+    versionProps.store(versionPropsFile.writer(), null)
+} else {
+    throw GradleException("Could not read version.properties!")
+}
+
+val _versionName = "$_major.$_minor.$_patch:$_versionCode"
 
 android {
     lint {
@@ -14,46 +53,6 @@ android {
     }
     namespace = "com.kitaotao.sst"
     compileSdk = 34
-
-    // start
-
-    var _versionCode = 0
-    var _major = 0
-    var _minor = 0
-    var _patch = 0
-
-    val versionPropsFile = file("version.properties")
-
-    if (versionPropsFile.canRead()) {
-        val versionProps = Properties().apply {
-            load(FileInputStream(versionPropsFile))
-        }
-
-        _patch = versionProps["PATCH"].toString().toInt() + 1
-        _major = versionProps["MAJOR"].toString().toInt()
-        _minor = versionProps["MINOR"].toString().toInt()
-        _versionCode = versionProps["VERSION_CODE"].toString().toInt() + 1
-
-        if (_patch == 100) {
-            _patch = 0
-            _minor += 1
-        }
-        if (_minor == 10) {
-            _minor = 0
-            _major += 1
-        }
-
-        versionProps["MAJOR"] = _major.toString()
-        versionProps["MINOR"] = _minor.toString()
-        versionProps["PATCH"] = _patch.toString()
-        versionProps["VERSION_CODE"] = _versionCode.toString()
-        versionProps.store(versionPropsFile.writer(), null)
-    } else {
-        throw GradleException("Could not read version.properties!")
-    }
-
-    val _versionName = "$_major.$_minor.$_patch:$_versionCode"
-
 
     defaultConfig {
         applicationId = "com.kitaotao.sst"
@@ -90,14 +89,56 @@ android {
     }
 }
 
-allprojects{
+// Define the version JSON structure
+data class VersionJson(
+    val versionCode: Int,
+    val versionName: String,
+    val releaseUrl: String
+)
+
+// Task to generate version.json
+tasks.register("generateVersionJson") {
+    // Define the output directory for the release APK
+    val releaseOutputDir = layout.buildDirectory.dir("outputs/apk").get().asFile
+
+    // Define the version.json file path
+    val versionJsonFile = File(releaseOutputDir, "version.json")
+
+    // Mark version.json as an output file to prevent deletion
+    outputs.file(versionJsonFile)
+
+    doLast {
+        // Ensure the directory exists
+        if (!releaseOutputDir.exists()) {
+            releaseOutputDir.mkdirs()
+        }
+
+        // Create the version.json content
+        val versionJson = VersionJson(
+            versionCode = _versionCode,
+            versionName = "$_major.$_minor.$_patch",
+            releaseUrl = "https://github.com/yourusername/yourrepository/releases/latest"
+        )
+
+        // Write the JSON content to the file
+        versionJsonFile.writeText(Gson().toJson(versionJson))
+        println("Generated version.json at ${versionJsonFile.path}")
+    }
+}
+
+// Attach the task to the assembleRelease task
+tasks.matching { it.name == "assembleRelease" }.configureEach {
+    dependsOn("generateVersionJson")
+}
+
+
+allprojects {
     repositories {
 
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
