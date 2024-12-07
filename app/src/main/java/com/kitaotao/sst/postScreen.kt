@@ -5,6 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -19,6 +20,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import showClickPopAnimation
 
 class postScreen : AppCompatActivity() {
 
@@ -76,6 +78,13 @@ class postScreen : AppCompatActivity() {
 
         // Add click listener for navigation
         setClickListener(R.id.imageButton2, MainActivity::class.java)
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (isTvDevice()) {
+            showClickPopAnimation(event) // Call the function defined in clickPop.kt
+        }
+        return super.dispatchTouchEvent(event)
     }
 
     /**
