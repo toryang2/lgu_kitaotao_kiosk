@@ -1,6 +1,9 @@
 package com.kitaotao.sst
 
+import android.app.UiModeManager
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.net.Uri
 import android.os.Build
@@ -9,6 +12,7 @@ import android.os.Environment
 import android.provider.DocumentsContract
 import android.view.Gravity
 import android.view.KeyEvent
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
@@ -16,6 +20,7 @@ import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -49,6 +54,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setDynamicHeader()
+
         // Check for updates asynchronously when the app starts
         CoroutineScope(Dispatchers.Main).launch {
             checkForUpdates()
@@ -57,8 +64,6 @@ class MainActivity : AppCompatActivity() {
         // Set up RecyclerView
         setupRecyclerView()
 
-        // Handle back press behavior
-        handleBackPress()
     }
 
     private fun setupRecyclerView() {
@@ -97,44 +102,28 @@ class MainActivity : AppCompatActivity() {
             GridItem("Municipal Treasurer's Office", getDrawable(R.drawable.treasury256)!!, TREASURER::class.java)
         )
 
-        val layoutManager = GridLayoutManager(this, 10)
+        // Detect if the device is a TV or a phone
+        val isTv = isTvDevice()
+
+        // Adjust layout manager based on the device type
+        val layoutManager = if (isTv) {
+            // Use fewer columns for a TV
+            GridLayoutManager(this, 10)
+        } else {
+            // Use more columns for a phone
+            GridLayoutManager(this, 3)
+        }
+
         recyclerView.layoutManager = layoutManager
 
         val adapter = CardAdapter(items, this)
         recyclerView.adapter = adapter
 
-        val aboutButton: Button = findViewById(R.id.buttonAbout)
-
-        aboutButton.text = "Settings"
-        aboutButton.visibility = View.VISIBLE
-
-        aboutButton.setOnClickListener {
-            val intent = Intent(this, about::class.java)
-            startActivity(intent)
-        }
-
-        listOf(R.id.buttonBack, R.id.buttonHome).forEach { buttonId ->
-            val button = findViewById<Button>(buttonId)
-            button.visibility = View.GONE
-
-            if (buttonId == R.id.buttonBack) {
-                button.visibility = View.VISIBLE
-
-                button.text = "Exit"
-
-                button.setOnClickListener{
-                    showAdminPasswordDialog()
-                }
-            }
-        }
     }
 
-    private fun handleBackPress() {
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                Toast.makeText(this@MainActivity, "Action not allowed!", Toast.LENGTH_SHORT).show()
-            }
-        })
+    private fun isTvDevice(): Boolean {
+        val uiModeManager = getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        return uiModeManager.currentModeType == Configuration.UI_MODE_TYPE_TELEVISION
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
@@ -145,7 +134,7 @@ class MainActivity : AppCompatActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
-    private fun showAdminPasswordDialog() {
+    fun showAdminPasswordDialog() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_password, null)
         val passwordEditText: EditText = dialogView.findViewById(R.id.passwordEditText)
 

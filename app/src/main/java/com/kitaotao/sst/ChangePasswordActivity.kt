@@ -20,22 +20,7 @@ class ChangePasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_password)
 
-        // Back Button
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                finish()
-            }
-        })
-
-        val backButton: Button = findViewById(R.id.buttonBack)
-        backButton.setOnClickListener {
-            finish()
-        }
-
-        listOf(R.id.buttonAbout, R.id.buttonHome).forEach { buttonId ->
-            val button = findViewById<Button>(buttonId)
-            button.visibility = View.GONE
-        }
+        setDynamicHeader()
 
         val dummyView = findViewById<View>(R.id.dummyView)
         dummyView.requestFocus()

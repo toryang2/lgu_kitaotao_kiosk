@@ -50,6 +50,8 @@ class about : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.about)
 
+        setDynamicHeader()
+
         val githubProfilePicture: ImageView = findViewById(R.id.githubProfilePicture)
         val githubLink: TextView = findViewById(R.id.githubLink)
 
@@ -82,25 +84,6 @@ class about : AppCompatActivity() {
 
         val versionTextView: TextView = findViewById(R.id.versionTextView)
         versionTextView.text = "v${BuildConfig.VERSION_NAME}"
-
-        // Back Button
-        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                // Add logs here to check whether this callback is being triggered correctly
-                // Log.d("AboutActivity", "Back button pressed, finishing activity.")
-                finish()
-            }
-        })
-
-        val backButton: Button = findViewById(R.id.buttonBack)
-        backButton.setOnClickListener {
-            finish() // Finish on back button click
-        }
-
-        listOf(R.id.buttonAbout, R.id.buttonHome).forEach { buttonId ->
-            val button = findViewById<Button>(buttonId)
-            button.visibility = View.GONE
-        }
 
         val changePasswordButton: Button = findViewById(R.id.buttonChangePassword)
         changePasswordButton.setOnClickListener {
