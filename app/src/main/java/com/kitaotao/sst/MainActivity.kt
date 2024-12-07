@@ -5,34 +5,24 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.os.Environment
-import android.provider.DocumentsContract
-import android.view.Gravity
 import android.view.KeyEvent
-import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
-import android.view.ViewGroup
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
 import android.widget.EditText
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 import com.kitaotao.sst.office.*
-import com.kitaotao.sst.model.Release
 import com.kitaotao.sst.network.GitHubService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -44,6 +34,7 @@ import okhttp3.Request
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import showClickPopAnimation
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -119,6 +110,13 @@ class MainActivity : AppCompatActivity() {
         val adapter = CardAdapter(items, this)
         recyclerView.adapter = adapter
 
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (isTvDevice()) {
+            showClickPopAnimation(event) // Call the function defined in clickPop.kt
+        }
+            return super.dispatchTouchEvent(event)
     }
 
     private fun isTvDevice(): Boolean {
