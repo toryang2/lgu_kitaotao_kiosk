@@ -1,7 +1,9 @@
 package com.kitaotao.sst
 
+import android.app.UiModeManager
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
@@ -32,18 +34,30 @@ class CardAdapter(private val items: List<GridItem>, private val context: Contex
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.textView.text = item.title
+
+        // Load the image using Glide
         Glide.with(holder.imageView.context)
             .load(item.image)
             .into(holder.imageView)
 
-        // Dynamically adjust the top margin for the first three items
+        // Dynamically adjust the top margin for TV or phone
         val layoutParams = holder.cardView.layoutParams as ViewGroup.MarginLayoutParams
-        if (position < 10) {
-            layoutParams.topMargin = 600 // Apply 600dp margin directly (in px)
+        val isTv = isTvDevice(context)
+        if (isTv) {
+            layoutParams.topMargin = if (position < 10) 20 else 16 // Adjusted margins for TV
         } else {
-            layoutParams.topMargin = 16 // Default margin for other items (in px)
+            layoutParams.topMargin = if (position < 3) 20 else 16 // Adjusted margins for phone
+            layoutParams.leftMargin = 16
+            layoutParams.rightMargin = 16
+            layoutParams.width = 320
+            layoutParams.height = 320
         }
+
         holder.cardView.layoutParams = layoutParams
+
+        if (!isTv) {
+            holder.textView.setPadding(dpToPx(8,context), dpToPx(8,context), dpToPx(8,context), dpToPx(8,context))
+        }
 
         // Set the click listener to navigate to the target activity
         holder.cardView.setOnClickListener {
@@ -52,7 +66,17 @@ class CardAdapter(private val items: List<GridItem>, private val context: Contex
         }
     }
 
+    private fun dpToPx(dp: Int, context: Context): Int {
+        return (dp * context.resources.displayMetrics.density).toInt()
+    }
+
     override fun getItemCount(): Int {
         return items.size
+    }
+
+    // Helper method to check if the device is a TV
+    private fun isTvDevice(context: Context): Boolean {
+        val uiModeManager = context.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        return uiModeManager.currentModeType == Configuration.UI_MODE_TYPE_TELEVISION
     }
 }
