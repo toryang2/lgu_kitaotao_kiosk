@@ -2,7 +2,8 @@ package com.kitaotao.sst.model // Use your appropriate package name
 
 data class Release(
     val tag_name: String, // e.g. "v1.0.0"
-    val assets: List<Asset>
+    val assets: List<Asset>,
+    val body: String
 )
 
 data class Asset(
