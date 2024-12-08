@@ -125,9 +125,14 @@ fun AppCompatActivity.setDynamicHeader() {
     onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             if (!isTvDevice()) {
-                isEnabled = false // Disable the callback for non-TV devices
-                finishAffinity() // Close all activities and exit the app
-                return
+                if (this@setDynamicHeader is MainActivity) {
+
+                    isEnabled = false // Disable the callback for non-TV devices
+                    finishAffinity() // Close all activities and exit the app
+                    return
+                } else {
+                    finish()
+                }
             }
 
             if (this@setDynamicHeader is MainActivity) {

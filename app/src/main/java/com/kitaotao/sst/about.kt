@@ -96,9 +96,13 @@ class about : AppCompatActivity() {
 
         // Reset Password Button Logic
         val resetPasswordButton: Button = findViewById(R.id.buttonResetPassword)
-        resetPasswordButton.setOnClickListener {
-            resetPassword()
-            Toast.makeText(this, "Password reset to default", Toast.LENGTH_SHORT).show()
+        if(!isTvDevice()) {
+            resetPasswordButton.visibility = View.INVISIBLE
+        } else {
+            resetPasswordButton.setOnClickListener {
+                resetPassword()
+                Toast.makeText(this, "Password reset to default", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -211,7 +215,7 @@ class about : AppCompatActivity() {
 
             // Compare the versions to check if the GitHub version is newer
             if (isUpdateRequired(latestVersion, currentVersion)) {
-                showUpdateDialog(latestVersion, release.assets[0].browser_download_url)
+                showUpdateDialog(latestVersion, release.assets[0].browser_download_url, release.body)
             } else {
                 showNoUpdateDialog()
             }
@@ -263,10 +267,10 @@ class about : AppCompatActivity() {
         return false // Versions are equal
     }
 
-    fun showUpdateDialog(version: String, url: String) {
+    fun showUpdateDialog(version: String, url: String, description: String) {
         val dialog = AlertDialog.Builder(this)
             .setTitle("Update Available")
-            .setMessage("Version $version is available. Would you like to download it?")
+            .setMessage("Version $version is available.\n\nDescription: $description\n\nWould you like to download it?")
             .setPositiveButton("Yes") { _, _ ->
                 // Show progress dialog
                 showProgressDialog()
