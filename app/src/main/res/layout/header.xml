@@ -79,7 +79,7 @@
             <!-- Right Image -->
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="100dp"
+                android:layout_width="64dp"
                 android:layout_height="86dp"
                 android:layout_marginEnd="128dp"
                 android:contentDescription="KitaKitz Logo"

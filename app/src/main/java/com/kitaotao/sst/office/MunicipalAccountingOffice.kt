@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.accounting.*
 import com.kitaotao.sst.setDynamicHeader
+import officeViewChange
 
 class MunicipalAccountingOffice : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         setContentView(R.layout.office_municipal_accounting_office)
 
         setDynamicHeader()
+
+        officeViewChange()
 
         // Set padding for system bars
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
