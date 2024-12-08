@@ -143,5 +143,6 @@ fun AppCompatActivity.setDynamicHeader() {
 // Check if the device is a TV
 fun AppCompatActivity.isTvDevice(): Boolean {
     return resources.configuration.uiMode and
-            android.content.res.Configuration.UI_MODE_TYPE_TELEVISION != 0
+            android.content.res.Configuration.UI_MODE_TYPE_MASK ==
+            android.content.res.Configuration.UI_MODE_TYPE_TELEVISION
 }
