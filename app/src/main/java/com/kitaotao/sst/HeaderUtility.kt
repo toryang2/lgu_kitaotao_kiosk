@@ -35,14 +35,27 @@ fun AppCompatActivity.setDynamicHeader() {
     // Back Button Logic
     val backButton: Button = headerLayout.findViewById(R.id.buttonBack)
     backButton.let {
-        if (this is MainActivity) {
-            it.text = "Exit"
-            it.setOnClickListener {
-                showAdminPasswordDialog()
+        if (isTvDevice()) {
+            if (this is MainActivity) {
+                it.text = "Exit"
+                it.setOnClickListener {
+                    showAdminPasswordDialog()
+                }
+            } else {
+                it.setOnClickListener {
+                    finish()
+                }
             }
         } else {
-            it.setOnClickListener {
-                finish()
+            if (this is MainActivity) {
+                it.text = "Exit"
+                it.setOnClickListener {
+                    finishAffinity()
+                }
+            } else {
+                it.setOnClickListener {
+                    finish()
+                }
             }
         }
     }
@@ -111,6 +124,12 @@ fun AppCompatActivity.setDynamicHeader() {
     // Back Press Logic (Custom Back Action for MainActivity)
     onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
+            if (!isTvDevice()) {
+                isEnabled = false // Disable the callback for non-TV devices
+                finishAffinity() // Close all activities and exit the app
+                return
+            }
+
             if (this@setDynamicHeader is MainActivity) {
                 Toast.makeText(this@setDynamicHeader, "Action not allowed!", Toast.LENGTH_SHORT).show()
             } else {
@@ -118,6 +137,7 @@ fun AppCompatActivity.setDynamicHeader() {
             }
         }
     })
+
 }
 
 // Check if the device is a TV

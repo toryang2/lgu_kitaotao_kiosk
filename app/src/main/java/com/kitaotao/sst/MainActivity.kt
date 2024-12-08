@@ -125,6 +125,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (!isTvDevice()) return super.onKeyDown(keyCode, event) // Allow default behavior for non-TV devices
+
         if (keyCode == KeyEvent.KEYCODE_HOME || keyCode == KeyEvent.KEYCODE_APP_SWITCH) {
             showAdminPasswordDialog()
             return true

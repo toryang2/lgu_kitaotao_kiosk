@@ -86,8 +86,12 @@ class about : AppCompatActivity() {
         versionTextView.text = "v${BuildConfig.VERSION_NAME}"
 
         val changePasswordButton: Button = findViewById(R.id.buttonChangePassword)
-        changePasswordButton.setOnClickListener {
-            showPasswordConfirmationDialog()
+        if (!isTvDevice()) {
+            changePasswordButton.visibility = View.INVISIBLE
+        } else {
+            changePasswordButton.setOnClickListener {
+                showPasswordConfirmationDialog()
+            }
         }
 
         // Reset Password Button Logic

@@ -91,6 +91,7 @@ class postScreen : AppCompatActivity() {
      * Checks if the app is currently a device admin.
      */
     private fun isDeviceAdminActive(): Boolean {
+        if (!isTvDevice()) return false
         val devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         val componentName = ComponentName(this, MyDeviceAdminReceiver::class.java)
         return devicePolicyManager.isAdminActive(componentName)
@@ -100,6 +101,7 @@ class postScreen : AppCompatActivity() {
      * Launches the device admin activation screen.
      */
     private fun activateDeviceAdmin() {
+        if (!isTvDevice()) return
         val componentName = ComponentName(this, MyDeviceAdminReceiver::class.java)
         val intent = Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN).apply {
             putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, componentName)
@@ -113,6 +115,7 @@ class postScreen : AppCompatActivity() {
      * Configures Lock Task Mode if the app is a device owner.
      */
     private fun configureLockTaskMode() {
+        if (!isTvDevice()) return
         val devicePolicyManager = getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager
         val componentName = ComponentName(this, MyDeviceAdminReceiver::class.java)
 
@@ -130,6 +133,7 @@ class postScreen : AppCompatActivity() {
      * Prevents the back button from functioning.
      */
     private fun handleBackPress() {
+        if (!isTvDevice()) return
         onBackPressedDispatcher.addCallback(this) {
             Toast.makeText(this@postScreen, "Action not allowed!", Toast.LENGTH_SHORT).show()
         }
