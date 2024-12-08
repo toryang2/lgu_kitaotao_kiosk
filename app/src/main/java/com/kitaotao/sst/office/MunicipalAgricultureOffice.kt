@@ -2,9 +2,7 @@ package com.kitaotao.sst.office
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
-import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,6 +11,7 @@ import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.agriculture.*
 import com.kitaotao.sst.setDynamicHeader
+import officeViewChange
 
 class MunicipalAgricultureOffice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +20,8 @@ class MunicipalAgricultureOffice : AppCompatActivity() {
         setContentView(R.layout.office_municipal_agriculture_office)
 
         setDynamicHeader()
+
+        officeViewChange()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
