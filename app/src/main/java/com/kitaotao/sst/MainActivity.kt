@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("Kitaotao Water System Office", getDrawable(R.drawable.watersystem256)!!, KitaotaoWaterSystem::class.java),
             GridItem("LIGA ng Barangay", getDrawable(R.drawable.postscreenlogo256)!!, LIGA::class.java),
             GridItem("Local Economic Development and Investment Promotion Office", getDrawable(R.drawable.ledipo256)!!, LEDIPO::class.java),
-            GridItem("Local Youth Development Office", getDrawable(R.drawable.postscreenlogo256)!!, LYDO::class.java),
+            GridItem("Local Youth Development Office", getDrawable(R.drawable.lydo256)!!, LYDO::class.java),
             GridItem("Municipal Tourism Office", getDrawable(R.drawable.tourism256)!!, TOURISM::class.java),
             GridItem("Person With Disability Office", getDrawable(R.drawable.postscreenlogo256)!!, PWD::class.java),
             GridItem("Public Employment Services Office", getDrawable(R.drawable.postscreenlogo256)!!, PESO::class.java),
@@ -220,7 +220,7 @@ class MainActivity : AppCompatActivity() {
 
             // Compare the versions to check if the GitHub version is newer
             if (isUpdateRequired(latestVersion, currentVersion)) {
-                showUpdateDialog(latestVersion, release.assets[0].browser_download_url)
+                showUpdateDialog(latestVersion, release.assets[0].browser_download_url, release.body)
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -243,10 +243,10 @@ class MainActivity : AppCompatActivity() {
         return false // Versions are equal
     }
 
-    fun showUpdateDialog(version: String, url: String) {
+    fun showUpdateDialog(version: String, url: String, description: String) {
         val dialog = AlertDialog.Builder(this)
             .setTitle("Update Available")
-            .setMessage("Version $version is available. Would you like to download it?")
+            .setMessage("Version $version is available.\n\nDescription: $description\n\nWould you like to download it?")
             .setPositiveButton("Yes") { _, _ ->
                 // Show progress dialog
                 showProgressDialog()
