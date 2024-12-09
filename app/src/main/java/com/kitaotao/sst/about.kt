@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
@@ -39,6 +40,7 @@ import okhttp3.Request
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import showClickPopAnimation
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
@@ -401,5 +403,12 @@ class about : AppCompatActivity() {
 
         // Start the installation intent
         startActivity(intent)
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (isTvDevice()) {
+            showClickPopAnimation(event) // Call the function defined in clickPop.kt
+        }
+        return super.dispatchTouchEvent(event)
     }
 }

@@ -11,7 +11,7 @@ fun Activity.showClickPopAnimation(event: MotionEvent) {
         val rootView = window.decorView.findViewById<FrameLayout>(android.R.id.content)
         // Create and configure the Lottie animation view
 
-        val size = 300
+        val size = 400
 
         val lottieView = LottieAnimationView(this).apply {
             setAnimation(R.raw.click_pop_animation) // Set the Lottie animation
