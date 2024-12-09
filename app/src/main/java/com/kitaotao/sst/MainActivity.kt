@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("Municipal Planning and Development Office", getDrawable(R.drawable.postscreenlogo256)!!, MPDO::class.java),
             GridItem("Population Development Office", getDrawable(R.drawable.postscreenlogo256)!!, POPDEV::class.java),
             GridItem("Sangguniang Bayan Office", getDrawable(R.drawable.postscreenlogo256)!!, SBO::class.java),
-            GridItem("Municipal Social Welfare and Development Office", getDrawable(R.drawable.postscreenlogo256)!!, MSWDO::class.java),
+            GridItem("Municipal Social Welfare and Development Office", getDrawable(R.drawable.mswdo256)!!, MSWDO::class.java),
             GridItem("Municipal Treasurer's Office", getDrawable(R.drawable.treasury256)!!, TREASURER::class.java)
         )
 
