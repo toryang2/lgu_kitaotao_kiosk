@@ -76,7 +76,6 @@ class CardAdapter(private val items: List<GridItem>, private val context: Contex
 
     // Helper method to check if the device is a TV
     private fun isTvDevice(context: Context): Boolean {
-        val uiModeManager = context.getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
-        return uiModeManager.currentModeType == Configuration.UI_MODE_TYPE_TELEVISION
+        return context.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
     }
 }

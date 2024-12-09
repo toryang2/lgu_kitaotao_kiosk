@@ -120,8 +120,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isTvDevice(): Boolean {
-        val uiModeManager = getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
-        return uiModeManager.currentModeType == Configuration.UI_MODE_TYPE_TELEVISION
+        return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
