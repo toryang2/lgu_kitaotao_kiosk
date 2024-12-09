@@ -336,7 +336,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Submit Obligation Request and complete set of disbursement document to the receiving personnel."
+                            android:text="1. Submit Obligation Request and complete set of disbursement document to the receiving personnel."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -348,7 +348,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1.	Receive Obligation Request and complete set of disbursement documents"
+                            android:text="1.1. Receive Obligation Request and complete set of disbursement documents"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -372,7 +372,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="2 minutes"
+                            android:text="8 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -412,7 +412,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.2.	Review and evaluate the attached disbursement documents"
+                            android:text="1.2. Review and evaluate the attached disbursement documents"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -435,7 +435,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="15 minutes"
+                            android:text="1 hour and 40 Minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -475,7 +475,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.3.	Control Obligation request as to the existence of available appropriation."
+                            android:text="1.3. Control Obligation request as to the existence of available appropriation."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -498,7 +498,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="10 minutes"
+                            android:text="1 hour and 5 Minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -538,7 +538,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.4.	If no available appropriation, return the documents."
+                            android:text="1.4. If no available appropriation, return the documents."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -600,7 +600,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.5.	Approve the Obligation request"
+                            android:text="1.5. Approve the Obligation request"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -623,7 +623,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="5 minutes"
+                            android:text="1 hour and 2 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -652,7 +652,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	Receive the approved Obligation Request by affixing signature in the logbook "
+                            android:text="2. Receive the approved Obligation Request by affixing signature in the logbook"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -664,7 +664,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.1.	Release the documents"
+                            android:text="2.1. Release the documents"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -688,7 +688,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="2 minutes"
+                            android:text="5 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -700,7 +700,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="@string/aa2nbo1"
+                            android:text="@string/aabo1"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
                     </TableRow>
@@ -717,7 +717,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.	Accomplish the Client Satisfaction Service (CSS) Form and drop in the CSS drop box"
+                            android:text="3. Accomplish the Client Satisfaction Service (CSS) Form and drop in the CSS drop box"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -729,7 +729,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.1.	Request the client to accomplish the Client Satisfaction Service (CSS) form"
+                            android:text="3.1. Request the client to accomplish the Client Satisfaction Service (CSS) form"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -796,7 +796,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="54 minutes"
+                            android:text="4 hours and 20 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 

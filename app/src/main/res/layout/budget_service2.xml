@@ -336,7 +336,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Submit filled up request form"
+                            android:text="1. Submit filled up request form "
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -348,7 +348,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.1.	Receive filled up request form "
+                            android:text="1.1. Receive filled up request form"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -412,7 +412,7 @@
                             android:background="@drawable/cell_shape_normal_left_notop"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.2.	Prepare the requested Registry of Appropriation, Allotment and Obligation (RAAO)"
+                            android:text="1.2. Prepare the requested Registry of Appropriation, Allotment and Obligation (RAAO)"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
