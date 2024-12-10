@@ -39,9 +39,9 @@
     <string name="aabo1">Administrative Aide\nBudget Office - I</string>
 
     <!-- BPLO -->
-    <string name="titleBPLO">MUNICIPAL BUSINESS PROCESSING AND LICENSING OFFICE</string>
+    <string name="titleBPLO">MUNICIPAL BUSINESS PERMIT AND LICENSING OFFICE</string>
     <string name="bplo">Business Permit and Licensing Office</string>
-    <string name="bploaa1">Administrative Aide - I\n\n"<b>"Business Processing and Licensing Office"</b>"</string>
+    <string name="bploaa1">Administrative Aide - I\n\n"<b>"Business Permit and Licensing Office"</b>"</string>
     <string name="mtoCollectorRCC2">MTO Collector\'s\n\nRevenue Collection\'s Clerk - II</string>
 
     <!-- CivilRegistry -->
