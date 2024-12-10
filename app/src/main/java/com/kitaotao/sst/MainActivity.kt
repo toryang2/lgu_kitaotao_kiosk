@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             GridItem("Municipal Agriculture Office", getDrawable(R.drawable.magro256)!!, MunicipalAgricultureOffice::class.java),
             GridItem("Municipal Assessor's Office", getDrawable(R.drawable.assessor256)!!, MunicipalAssessorsOffice::class.java),
             GridItem("Municipal Budget Office", getDrawable(R.drawable.budget256)!!, MunicipalBudgetOffice::class.java),
-            GridItem("Municipal Business Processing and Licensing Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBusinessProcessingAndLicensingOffice::class.java),
+            GridItem("Municipal Business Permit and Licensing Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalBusinessProcessingAndLicensingOffice::class.java),
             GridItem("Municipal Civil Registry Office", getDrawable(R.drawable.mcro256)!!, MunicipalCivilRegistryOffice::class.java),
             GridItem("Municipal Disaster Risk Reduction Management Office", getDrawable(R.drawable.mdrrmc256)!!, MDRRMO::class.java),
             GridItem("Municipal Engineering Office", getDrawable(R.drawable.postscreenlogo256)!!, MunicipalEngineeringOffice::class.java),
