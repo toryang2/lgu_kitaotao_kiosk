@@ -2,6 +2,7 @@ package com.kitaotao.sst.office
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,7 +46,12 @@ class MunicipalCivilRegistryOffice : AppCompatActivity() {
         setClickListener(R.id.service_12, civilRegistry_service_12::class.java)
         setClickListener(R.id.service_13, civilRegistry_service_13::class.java)
 
+        val imageView = findViewById<ImageView>(R.id.imageLayout)
+
+// Set the drawable resource for the ImageView
+        imageView.setImageResource(R.drawable.kitaotao_1st_floor_model)
     }
+
     private fun setClickListener(viewId: Int, activityClass: Class<*>){
         findViewById<TextView>(viewId).setOnClickListener{
             startActivity(Intent(this, activityClass))
