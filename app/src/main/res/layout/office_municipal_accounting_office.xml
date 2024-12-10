@@ -180,6 +180,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/scrollableLeft"
@@ -194,8 +195,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical|center_horizontal"/>
+                android:layout_weight="1"/>
 
         </LinearLayout>
 

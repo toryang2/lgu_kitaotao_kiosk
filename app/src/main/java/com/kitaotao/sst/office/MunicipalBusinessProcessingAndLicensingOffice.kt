@@ -1,8 +1,10 @@
 package com.kitaotao.sst.office
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,6 +38,17 @@ class MunicipalBusinessProcessingAndLicensingOffice : AppCompatActivity() {
         setClickListener(R.id.service_3, bplo_service_3::class.java)
         setClickListener(R.id.service_4, bplo_service_4::class.java)
         setClickListener(R.id.service_5, bplo_service_5::class.java)
+
+        val videoView = findViewById<VideoView>(R.id.videoView)
+        val videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_1st_floor_model_bplo")
+
+        videoView.setVideoURI(videoUri)
+        videoView.start() // Automatically start playback
+
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
+        }
     }
     private fun setClickListener(viewId: Int, activityClass: Class<*>){
         findViewById<TextView>(viewId).setOnClickListener{
