@@ -2,6 +2,7 @@ package com.kitaotao.sst.office
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,6 +47,11 @@ class TREASURER : AppCompatActivity() {
         //Internal/External Services
         setClickListener(R.id.in_ex_service_1, mto_in_ex_service_1::class.java)
         setClickListener(R.id.in_ex_service_2, mto_in_ex_service_2::class.java)
+
+        val imageView = findViewById<ImageView>(R.id.imageLayout)
+
+// Set the drawable resource for the ImageView
+        imageView.setImageResource(R.drawable.kitaotao_1st_floor_model)
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
