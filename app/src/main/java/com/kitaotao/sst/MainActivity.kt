@@ -1,7 +1,5 @@
 package com.kitaotao.sst
 
-import android.app.UiModeManager
-import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
@@ -12,7 +10,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -21,9 +18,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.airbnb.lottie.LottieAnimationView
 import com.kitaotao.sst.office.*
 import com.kitaotao.sst.network.GitHubService
+import isDeviceTabletClickPop
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -113,7 +110,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-        if (isTvDevice()) {
+        if (isDeviceTabletClickPop()) {
             showClickPopAnimation(event) // Call the function defined in clickPop.kt
         }
             return super.dispatchTouchEvent(event)

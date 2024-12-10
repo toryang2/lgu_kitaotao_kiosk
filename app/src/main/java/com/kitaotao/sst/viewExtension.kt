@@ -1,10 +1,10 @@
 // Extension.kt
+import android.content.res.Configuration
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.kitaotao.sst.R
-import com.kitaotao.sst.isTvDevice
 
 // Hide LinearLayout for non-TV devices and adjust the ScrollView layout
 fun AppCompatActivity.officeViewChange() {
@@ -48,4 +48,15 @@ fun AppCompatActivity.officeViewChange() {
             linearLayout.layoutParams = linearParams
         }
     }
+}
+// Check if the device is a TV
+private fun AppCompatActivity.isTvDevice(): Boolean {
+    return resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+}
+
+// Check if the device is a TV
+fun AppCompatActivity.isDeviceTabletClickPop(): Boolean {
+    val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+    return screenLayout == Configuration.SCREENLAYOUT_SIZE_LARGE ||
+            screenLayout == Configuration.SCREENLAYOUT_SIZE_XLARGE
 }
