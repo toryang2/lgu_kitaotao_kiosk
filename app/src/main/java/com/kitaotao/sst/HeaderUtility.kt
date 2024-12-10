@@ -1,6 +1,7 @@
 package com.kitaotao.sst
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -147,5 +148,7 @@ fun AppCompatActivity.setDynamicHeader() {
 
 // Check if the device is a TV
 fun AppCompatActivity.isTvDevice(): Boolean {
-    return resources.configuration.orientation == android.content.res.Configuration.ORIENTATION_LANDSCAPE
+    val screenLayout = resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK
+    return screenLayout == Configuration.SCREENLAYOUT_SIZE_LARGE ||
+            screenLayout == Configuration.SCREENLAYOUT_SIZE_XLARGE
 }
