@@ -1,9 +1,11 @@
 package com.kitaotao.sst.office
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -46,10 +48,16 @@ class MunicipalAgricultureOffice : AppCompatActivity() {
         setClickListener(R.id.service_12, agriculture_service_12::class.java)
         setClickListener(R.id.service_13, agriculture_service_13::class.java)
 
-        val imageView = findViewById<ImageView>(R.id.imageLayout)
+        val videoView = findViewById<VideoView>(R.id.videoView)
+        val videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_1st_floor_model_agriculture")
 
-// Set the drawable resource for the ImageView
-        imageView.setImageResource(R.drawable.kitaotao_1st_floor_model)
+        videoView.setVideoURI(videoUri)
+        videoView.start() // Automatically start playback
+
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
+        }
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>){

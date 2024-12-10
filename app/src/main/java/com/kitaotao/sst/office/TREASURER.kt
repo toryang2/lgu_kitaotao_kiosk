@@ -1,9 +1,11 @@
 package com.kitaotao.sst.office
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -48,10 +50,16 @@ class TREASURER : AppCompatActivity() {
         setClickListener(R.id.in_ex_service_1, mto_in_ex_service_1::class.java)
         setClickListener(R.id.in_ex_service_2, mto_in_ex_service_2::class.java)
 
-        val imageView = findViewById<ImageView>(R.id.imageLayout)
+        val videoView = findViewById<VideoView>(R.id.videoView)
+        val videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_1st_floor_model_treasury")
 
-// Set the drawable resource for the ImageView
-        imageView.setImageResource(R.drawable.kitaotao_1st_floor_model)
+        videoView.setVideoURI(videoUri)
+        videoView.start() // Automatically start playback
+
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
+        }
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
