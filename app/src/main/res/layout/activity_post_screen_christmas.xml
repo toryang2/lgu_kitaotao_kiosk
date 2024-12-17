@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fake_white"
+    android:background="@drawable/christmas"
     tools:context=".postScreen">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -16,7 +16,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation" />
+        app:lottie_rawRes="@raw/animation"
+        android:visibility="gone"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView3"
@@ -28,9 +29,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation" />
+        app:lottie_rawRes="@raw/animation"
+        android:visibility="gone"/>
 
-    <ImageButton
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/christmasTreeView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".3"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/christmas_tree" />
+
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/imageButton"
         android:layout_width="192dp"
         android:layout_height="192dp"
@@ -43,7 +57,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/postscreenlogo256" />
+        app:lottie_rawRes="@raw/lgu_kitaotao_christmas_logo"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"/>
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -64,7 +80,7 @@
         android:text="Local Government of Kitaotao"
 
         android:textAllCaps="true"
-        android:textColor="@color/blue_2"
+        android:textColor="@color/search_opaque"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
@@ -82,7 +98,7 @@
         android:text="KIOSK"
 
         android:textAllCaps="true"
-        android:textColor="@color/blue_2"
+        android:textColor="@color/search_opaque"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/title"
@@ -101,7 +117,7 @@
         android:shadowDy="1.3"
         android:text="Press to start"
         android:textAllCaps="true"
-        android:textColor="@color/blue_2"
+        android:textColor="@color/search_opaque"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="Version:"
-        android:textColor="@color/blue_2"
+        android:textColor="@color/search_opaque"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -18,9 +18,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.airbnb.lottie.LottieAnimationView
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import playWithLoopFrom
 import showClickPopAnimation
+import java.util.Calendar
 
 class postScreen : AppCompatActivity() {
 
@@ -38,7 +41,32 @@ class postScreen : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_post_screen)
+
+        // Get the current date
+        val calendar = Calendar.getInstance()
+        val currentMonth = calendar.get(Calendar.MONTH) + 1 // Calendar.MONTH is 0-indexed
+        val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
+
+        if (isTvDevice()) {
+            if (currentMonth == 12 && currentDay in 1..31) {
+
+                setContentView(R.layout.activity_post_screen_christmas)
+
+                // Find your LottieAnimationView from the layout
+                val lottieAnimationView = findViewById<LottieAnimationView>(R.id.imageButton)
+
+                // Set the animation resource
+                lottieAnimationView.setAnimation(R.raw.lgu_kitaotao_christmas_logo)
+
+                // Play the animation and start looping from a specific point (e.g., 2000 ms)
+                val loopStartTimeMs: Long = 4100 // Set the loop start time in milliseconds
+                lottieAnimationView.playWithLoopFrom(loopStartTimeMs)
+            } else {
+                setContentView(R.layout.activity_post_screen)
+            }
+        } else {
+            setContentView(R.layout.activity_post_screen)
+        }
 
         // Show app version
         val versionTextView: TextView = findViewById(R.id.versionTextView)

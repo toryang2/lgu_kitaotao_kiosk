@@ -3,7 +3,7 @@ package com.kitaotao.sst.office
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
+import android.view.MotionEvent
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
@@ -13,7 +13,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.accounting.*
 import com.kitaotao.sst.setDynamicHeader
+import isDeviceTabletClickPop
 import officeViewChange
+import showClickPopAnimation
 
 class MunicipalAccountingOffice : AppCompatActivity() {
 
@@ -52,6 +54,13 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         videoView.setOnCompletionListener {
             videoView.start() // Restart video when it finishes
         }
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (isDeviceTabletClickPop()) {
+            showClickPopAnimation(event) // Call the function defined in clickPop.kt
+        }
+        return super.dispatchTouchEvent(event)
     }
 
 

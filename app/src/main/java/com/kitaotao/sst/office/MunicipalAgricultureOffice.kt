@@ -3,14 +3,12 @@ package com.kitaotao.sst.office
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.agriculture.*
 import com.kitaotao.sst.setDynamicHeader
@@ -33,7 +31,6 @@ class MunicipalAgricultureOffice : AppCompatActivity() {
         }
 
         // Set click listeners for various services
-        setClickListener(R.id.buttonBack, MainActivity::class.java)
         setClickListener(R.id.service_1, agriculture_service_1::class.java)
         setClickListener(R.id.service_2, agriculture_service_2::class.java)
         setClickListener(R.id.service_3, agriculture_service_3::class.java)

@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.engineering.*
 import com.kitaotao.sst.setDynamicHeader
@@ -30,7 +29,6 @@ class MunicipalEngineeringOffice : AppCompatActivity() {
         }
 
         // Set click listeners for various services
-        setClickListener(R.id.buttonBack, MainActivity::class.java)
         setClickListener(R.id.service_1, engineering_service_1::class.java)
         setClickListener(R.id.service_2, engineering_service_2::class.java)
 
