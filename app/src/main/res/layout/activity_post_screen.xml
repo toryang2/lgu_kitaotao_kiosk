@@ -30,18 +30,6 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/animation" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/christmasTreeView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent=".3"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/christmas_tree" />
-
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="192dp"

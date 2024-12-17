@@ -1,8 +1,10 @@
 package com.kitaotao.sst.office
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -36,6 +38,17 @@ class HumanResourceManagementOffice : AppCompatActivity() {
         setClickListener(R.id.int_service_4, hrmo_int_service_4::class.java)
         setClickListener(R.id.inEx_service_1, hrmo_int_ext_service_1::class.java)
         setClickListener(R.id.inEx_service_2, hrmo_int_ext_service_2::class.java)
+
+        val videoView = findViewById<VideoView>(R.id.videoView)
+        val videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_2st_floor_model_hr")
+
+        videoView.setVideoURI(videoUri)
+        videoView.start() // Automatically start playback
+
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
+        }
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
