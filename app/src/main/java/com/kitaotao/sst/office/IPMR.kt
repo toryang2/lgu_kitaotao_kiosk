@@ -1,5 +1,6 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
@@ -17,6 +18,8 @@ class IPMR : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.office_ipmr)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 

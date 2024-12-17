@@ -1,5 +1,6 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -23,6 +24,8 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.office_municipal_accounting_office)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 
@@ -54,6 +57,9 @@ class MunicipalAccountingOffice : AppCompatActivity() {
         videoView.setOnCompletionListener {
             videoView.start() // Restart video when it finishes
         }
+
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "1st Floor"
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {

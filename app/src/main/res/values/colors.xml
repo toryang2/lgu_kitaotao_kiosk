@@ -15,4 +15,6 @@
     <color name="selected_background">#ffaa3f</color>
     <color name="default_background">#3d3d3d</color>
     <color name="semi_transparent_black">#88474747</color>
+    <color name="christmasGreen">#06402B</color>
+    <color name="christmasGreenLight">#0d865a</color>
 </resources>

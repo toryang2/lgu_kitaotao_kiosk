@@ -1,5 +1,6 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -19,6 +20,8 @@ class MunicipalAgricultureOffice : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.office_municipal_agriculture_office)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 
@@ -55,6 +58,9 @@ class MunicipalAgricultureOffice : AppCompatActivity() {
         videoView.setOnCompletionListener {
             videoView.start() // Restart video when it finishes
         }
+
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "1st Floor"
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>){

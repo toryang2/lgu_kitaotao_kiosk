@@ -1,8 +1,11 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,6 +21,8 @@ class MunicipalEngineeringOffice : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.office_municipal_engineering_office)
 
+        addSeasonalBackground()
+
         setDynamicHeader()
 
         officeViewChange()
@@ -32,6 +37,19 @@ class MunicipalEngineeringOffice : AppCompatActivity() {
         setClickListener(R.id.service_1, engineering_service_1::class.java)
         setClickListener(R.id.service_2, engineering_service_2::class.java)
 
+        val videoView = findViewById<VideoView>(R.id.videoView)
+        val videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_2st_floor_model_engineering")
+
+        videoView.setVideoURI(videoUri)
+        videoView.start() // Automatically start playback
+
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
+        }
+
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "2nd Floor"
     }
     private fun setClickListener(viewId: Int, activityClass: Class<*>){
         findViewById<TextView>(viewId).setOnClickListener{

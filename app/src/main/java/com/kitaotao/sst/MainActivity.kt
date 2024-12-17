@@ -1,5 +1,6 @@
 package com.kitaotao.sst
 
+import addSeasonalBackground
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
@@ -41,6 +42,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 

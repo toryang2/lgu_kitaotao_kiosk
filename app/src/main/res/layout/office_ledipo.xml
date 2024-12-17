@@ -122,6 +122,15 @@
             app:layout_constraintStart_toEndOf="@id/scrollableLeft"
             app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/floorID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"/>
+
             <!-- Non-scrollable content here -->
             <ImageView
                 android:id="@+id/imageLayout"
