@@ -1,5 +1,6 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -21,6 +22,8 @@ class TREASURER : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.office_treasurer)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 
@@ -59,6 +62,9 @@ class TREASURER : AppCompatActivity() {
         videoView.setOnCompletionListener {
             videoView.start() // Restart video when it finishes
         }
+
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "1st Floor"
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {

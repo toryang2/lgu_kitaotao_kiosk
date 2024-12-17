@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
@@ -15,10 +16,12 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.airbnb.lottie.LottieAnimationView
+import com.kitaotao.sst.SnowFallUtility.addSnowfall
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import playWithLoopFrom
@@ -51,6 +54,12 @@ class postScreen : AppCompatActivity() {
             if (currentMonth == 12 && currentDay in 1..31) {
 
                 setContentView(R.layout.activity_post_screen_christmas)
+
+                // Create a root layout for the Activity
+                val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+
+                // Add snowfall effect using the utility function
+                rootLayout.addSnowfall(this)
 
                 // Find your LottieAnimationView from the layout
                 val lottieAnimationView = findViewById<LottieAnimationView>(R.id.imageButton)

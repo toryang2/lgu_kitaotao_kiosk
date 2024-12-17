@@ -1,5 +1,6 @@
 package com.kitaotao.sst.office
 
+import addSeasonalBackground
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -19,6 +20,8 @@ class PESO : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.office_peso)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 
@@ -45,6 +48,9 @@ class PESO : AppCompatActivity() {
         videoView.setOnCompletionListener {
             videoView.start() // Restart video when it finishes
         }
+
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "2nd Floor"
     }
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
