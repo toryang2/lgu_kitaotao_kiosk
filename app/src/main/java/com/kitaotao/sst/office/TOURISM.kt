@@ -4,10 +4,10 @@ import addSeasonalBackground
 import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.core.content.ContextCompat
-import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
@@ -16,7 +16,9 @@ import com.kitaotao.sst.services.tourism.*
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
+import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase
 import org.osmdroid.util.GeoPoint
+import org.osmdroid.util.MapTileIndex
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.compass.CompassOverlay
@@ -25,7 +27,8 @@ import showClickPopAnimation
 
 class TOURISM : BaseActivity() {
 
-    private lateinit var mapView: MapView
+    lateinit var mapView: MapView
+    private lateinit var overlayImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,43 +47,42 @@ class TOURISM : BaseActivity() {
             insets
         }
 
-        mapView = findViewById(R.id.mapView)
+        mapView = findViewById(R.id.mapView)  // Ensure your layout has a MapView
 
-// Set the OpenTopoMap tile source (terrain map)
-        mapView.setTileSource(TileSourceFactory.OpenTopo)
+        // Initialize the map only in this activity
+        initializeMap(mapView)
 
-// Adjust the map center to be slightly below the original center
-        val originalCenter = GeoPoint(7.639444, 125.008618)
+// Clear cache to ensure the new tiles load
+        mapView.tileProvider.clearTileCache()
+
+// Adjust the map center slightly below the original center
+        val originalCenter = GeoPoint(7.639452, 125.008603)
         val adjustedCenter = GeoPoint(originalCenter.latitude + 0.0005, originalCenter.longitude) // Shift slightly below
 
-// Setup map with the adjusted position
-        MapUtility.setupMap(mapView, adjustedCenter, 19.0) // Example: Slightly shifted position
+// Setup map with the adjusted position and zoom level
+        mapView.controller.setZoom(20.0)
+        mapView.controller.setCenter(adjustedCenter)
 
-        // Add the CompassOverlay
+// Add the CompassOverlay
         val compassOverlay = CompassOverlay(this, mapView)
-        compassOverlay.enableCompass()  // Enable compass functionality
+        compassOverlay.enableCompass() // Enable compass functionality
         mapView.overlays.add(compassOverlay)
 
 // First Marker
-        val firstMarkerPoint = GeoPoint(7.639531, 125.008597) // First marker position
+        val firstMarkerPoint = GeoPoint(7.639452, 125.008603) // First marker position
         val firstMarker = Marker(mapView)
         firstMarker.position = firstMarkerPoint
         firstMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         firstMarker.title = "Municipal Tourism Office" // Title for the first marker
-        mapView.overlays.add(firstMarker)
-
         firstMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        mapView.overlays.add(firstMarker)
 
 // Custom info window for the first marker
         firstMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
             override fun onOpen(item: Any?) {
                 val marker = item as Marker
-
-                // Find the TextViews in the custom layout
                 val titleTextView = mView.findViewById<TextView>(R.id.infoWindowTitle)
-
-                // Set the marker's title and description to the TextViews
-                titleTextView.text = marker.title // Set the title of the marker
+                titleTextView.text = marker.title
             }
 
             override fun onClose() {
@@ -90,25 +92,20 @@ class TOURISM : BaseActivity() {
         firstMarker.showInfoWindow()
 
 // Second Marker
-        val secondMarkerPoint = GeoPoint(7.640138, 125.008442) // Second marker position
+        val secondMarkerPoint = GeoPoint(7.640047, 125.008539) // Second marker position
         val secondMarker = Marker(mapView)
         secondMarker.position = secondMarkerPoint
         secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         secondMarker.title = "Municipality of Kitaotao" // Title for the second marker
-        mapView.overlays.add(secondMarker)
-
         secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        mapView.overlays.add(secondMarker)
 
 // Custom info window for the second marker
         secondMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
             override fun onOpen(item: Any?) {
                 val marker = item as Marker
-
-                // Find the TextViews in the custom layout
                 val titleTextView = mView.findViewById<TextView>(R.id.infoWindowTitle)
-
-                // Set the marker's title and description to the TextViews
-                titleTextView.text = marker.title // Set the title of the marker
+                titleTextView.text = marker.title
             }
 
             override fun onClose() {
@@ -116,6 +113,13 @@ class TOURISM : BaseActivity() {
             }
         }
         secondMarker.showInfoWindow()
+
+        // Set the overlay image resource here
+        overlayImage = findViewById(R.id.overlayImage) // Ensure you have an ImageView in your layout with this ID
+        overlayImage.setImageResource(R.drawable.tourism256)  // Replace with your image resource
+
+        // Set up the overlay image functionality
+        setupOverlayImage(mapView, overlayImage)
 
 
         // Set click listeners for various services
