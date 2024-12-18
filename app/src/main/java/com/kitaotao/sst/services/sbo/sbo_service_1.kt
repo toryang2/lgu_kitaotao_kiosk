@@ -1,5 +1,6 @@
 package com.kitaotao.sst.services.sbo
 
+import addSeasonalBackground
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,15 +9,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.setDynamicHeader
 
-class sbo_service_1 : AppCompatActivity() {
+class sbo_service_1 : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.sbo_service1)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 

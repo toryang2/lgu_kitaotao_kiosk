@@ -39,7 +39,7 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
 
-class about : AppCompatActivity() {
+class about : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

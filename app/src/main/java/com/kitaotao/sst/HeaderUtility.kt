@@ -39,7 +39,7 @@ fun AppCompatActivity.setDynamicHeader() {
 
             // Set the toolbar colors as needed
             toolBarView.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
-            toolBarView2.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreenLight))
+            toolBarView2.setBackgroundColor(Color.TRANSPARENT)
 
             val backButton: Button = header.findViewById(R.id.buttonBack)
             val homeButton: Button = header.findViewById(R.id.buttonHome)

@@ -1,5 +1,6 @@
 package com.kitaotao.sst.services.treasurer.internal_external
 
+import addSeasonalBackground
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,15 +9,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.setDynamicHeader
 
-class mto_in_ex_service_2 : AppCompatActivity() {
+class mto_in_ex_service_2 : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.mto_in_ex_service2)
+
+        addSeasonalBackground()
 
         setDynamicHeader()
 

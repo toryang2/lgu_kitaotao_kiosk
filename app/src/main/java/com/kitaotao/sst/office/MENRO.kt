@@ -8,12 +8,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.menro.*
 import com.kitaotao.sst.setDynamicHeader
 import officeViewChange
 
-class MENRO : AppCompatActivity() {
+class MENRO : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

@@ -8,13 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.ledipo.external.*
 import com.kitaotao.sst.services.ledipo.internal.*
 import com.kitaotao.sst.setDynamicHeader
 import officeViewChange
 
-class LEDIPO : AppCompatActivity() {
+class LEDIPO : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
