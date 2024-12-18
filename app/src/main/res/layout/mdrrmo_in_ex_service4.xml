@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fake_white"
     tools:context=".services.mdrrmo.internal_external.mdrrmo_in_ex_service_4">
 
     <!-- FrameLayout positioned at the top -->

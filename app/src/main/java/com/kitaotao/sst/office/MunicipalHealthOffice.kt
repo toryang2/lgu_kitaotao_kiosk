@@ -8,12 +8,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.mho.*
 import com.kitaotao.sst.setDynamicHeader
 import officeViewChange
 
-class MunicipalHealthOffice : AppCompatActivity() {
+class MunicipalHealthOffice : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

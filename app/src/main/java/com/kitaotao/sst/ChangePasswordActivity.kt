@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import showClickPopAnimation
 import java.io.FileNotFoundException
 
-class ChangePasswordActivity : AppCompatActivity() {
+class ChangePasswordActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -8,13 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.services.mdrrmo.external.*
 import com.kitaotao.sst.services.mdrrmo.internal_external.*
 import com.kitaotao.sst.setDynamicHeader
 import officeViewChange
 
-class MDRRMO : AppCompatActivity() {
+class MDRRMO : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
