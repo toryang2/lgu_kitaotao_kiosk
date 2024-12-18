@@ -21,7 +21,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.airbnb.lottie.LottieAnimationView
-import com.kitaotao.sst.SnowFallUtility.addSnowfall
+import com.kitaotao.sst.SeasonalFallUtility.addSeasonalFall
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import playWithLoopFrom
@@ -51,7 +51,7 @@ class postScreen : AppCompatActivity() {
         val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
 
         if (isTvDevice()) {
-            if (currentMonth == 12 && currentDay in 1..31) {
+            if (currentMonth == 12 && currentDay in 1..31) {  //Christmas
 
                 setContentView(R.layout.activity_post_screen_christmas)
 
@@ -59,7 +59,7 @@ class postScreen : AppCompatActivity() {
                 val rootLayout = findViewById<ConstraintLayout>(R.id.main)
 
                 // Add snowfall effect using the utility function
-                rootLayout.addSnowfall(this)
+                rootLayout.addSeasonalFall(this)
 
                 // Find your LottieAnimationView from the layout
                 val lottieAnimationView = findViewById<LottieAnimationView>(R.id.imageButton)
@@ -70,6 +70,22 @@ class postScreen : AppCompatActivity() {
                 // Play the animation and start looping from a specific point (e.g., 2000 ms)
                 val loopStartTimeMs: Long = 4100 // Set the loop start time in milliseconds
                 lottieAnimationView.playWithLoopFrom(loopStartTimeMs)
+            } else if (currentMonth == 2 && currentDay in 1..14) { //Valentines
+                setContentView(R.layout.activity_post_screen)
+
+                // Create a root layout for the Activity
+                val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+
+                // Add snowfall effect using the utility function
+                rootLayout.addSeasonalFall(this)
+            } else if (currentMonth == 11 && currentDay in 1..31) { //Halloween
+                setContentView(R.layout.activity_post_screen)
+
+                // Create a root layout for the Activity
+                val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+
+                // Add snowfall effect using the utility function
+                rootLayout.addSeasonalFall(this)
             } else {
                 setContentView(R.layout.activity_post_screen)
             }
