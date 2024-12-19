@@ -243,26 +243,45 @@
             app:layout_constraintStart_toEndOf="@id/scrollableLeft"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/floorID"
+            <!-- CardView wrapping the MapView for rounded corners -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center"/>
-
-            <!-- Non-scrollable content here -->
-            <VideoView
-                android:id="@+id/videoView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_weight="1"/>
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/transparent">
 
+                <TextView
+                    android:id="@+id/floorID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"/>
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"/>
+
+                <!-- Overlay Image at Bottom-Right -->
+                <ImageView
+                    android:id="@+id/overlayImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom|end"
+                    android:padding="10dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
