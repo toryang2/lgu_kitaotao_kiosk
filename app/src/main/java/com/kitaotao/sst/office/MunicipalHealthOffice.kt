@@ -2,6 +2,8 @@ package com.kitaotao.sst.office
 
 import addSeasonalBackground
 import android.content.Intent
+import android.graphics.DashPathEffect
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
@@ -18,11 +20,15 @@ import com.kitaotao.sst.services.mho.*
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
+import org.json.JSONObject
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.infowindow.InfoWindow
 import showClickPopAnimation
+import java.net.HttpURLConnection
+import java.net.URL
 
 class MunicipalHealthOffice : BaseActivity() {
 
@@ -81,7 +87,7 @@ class MunicipalHealthOffice : BaseActivity() {
         val secondMarker = Marker(mapView)
         secondMarker.position = secondMarkerPoint
         secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        secondMarker.title = "Municipality of Kitaotao"
+        secondMarker.title = "Municipal Hall"
         secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
         mapView.overlays.add(secondMarker)
 
@@ -102,6 +108,98 @@ class MunicipalHealthOffice : BaseActivity() {
 // Optional: Display info windows
         firstMarker.showInfoWindow()
         secondMarker.showInfoWindow()
+
+        // Call the method from BaseActivity to get the URL
+        val urlString = createGraphHopperUrl(firstMarkerPoint, secondMarkerPoint)
+
+        Thread {
+            try {
+                val url = URL(urlString)
+                val connection = url.openConnection() as HttpURLConnection
+                connection.requestMethod = "GET"
+
+                val response = connection.inputStream.bufferedReader().readText()
+
+                val jsonResponse = JSONObject(response)
+                val paths = jsonResponse.getJSONArray("paths")
+                if (paths.length() > 0) {
+                    val route = paths.getJSONObject(0)
+
+                    // Decode the polyline string
+                    val encodedPolyline = route.getString("points")
+                    val decodedPoints = decodePolyline(encodedPolyline)
+
+                    // Create a Polyline for the map
+                    val polyline = Polyline(mapView)
+                    for (geoPoint in decodedPoints) {
+                        polyline.addPoint(geoPoint)
+                    }
+
+                    // Customize the polyline appearance
+                    val paint = polyline.outlinePaint
+                    paint.color = ContextCompat.getColor(this, R.color.red)
+                    paint.strokeWidth = 10f
+                    paint.style = Paint.Style.STROKE
+                    paint.strokeCap = Paint.Cap.ROUND // Set the line ends to be rounded
+                    paint.strokeJoin = Paint.Join.ROUND
+
+                    // Check if the last decoded point is not the destination point
+                    val lastDecodedPoint = decodedPoints.last()
+                    val firstDecodedPoint = decodedPoints.first()
+
+                    // If the first decoded point is different from the destination, add the missing route
+                    if (firstDecodedPoint != firstMarkerPoint) {
+                        val missingRoutePolyline = Polyline(mapView)
+                        missingRoutePolyline.addPoint(firstDecodedPoint)
+                        missingRoutePolyline.addPoint(firstMarkerPoint)
+
+                        // Customize the missing route polyline appearance (dashed line for the missing route)
+                        val missingRoutePaint = missingRoutePolyline.outlinePaint
+                        missingRoutePaint.color = ContextCompat.getColor(this, R.color.red)
+                        missingRoutePaint.strokeWidth = 8f
+                        missingRoutePaint.style = Paint.Style.STROKE
+                        missingRoutePaint.strokeCap = Paint.Cap.ROUND
+                        missingRoutePaint.strokeJoin = Paint.Join.ROUND
+                        missingRoutePaint.pathEffect = DashPathEffect(floatArrayOf(5f, 15f), 0f) // Dashed line
+
+                        // Add the missing route polyline to the map
+                        runOnUiThread {
+                            mapView.overlays.add(missingRoutePolyline)
+                        }
+                    }
+
+
+                    // If the last decoded point is different from the destination, add the missing route
+                    if (lastDecodedPoint != secondMarkerPoint) {
+                        val missingRoutePolyline = Polyline(mapView)
+                        missingRoutePolyline.addPoint(lastDecodedPoint)
+                        missingRoutePolyline.addPoint(secondMarkerPoint)
+
+                        // Customize the missing route polyline appearance (dashed line for the missing route)
+                        val missingRoutePaint = missingRoutePolyline.outlinePaint
+                        missingRoutePaint.color = ContextCompat.getColor(this, R.color.red)
+                        missingRoutePaint.strokeWidth = 8f
+                        missingRoutePaint.style = Paint.Style.STROKE
+                        missingRoutePaint.strokeCap = Paint.Cap.ROUND
+                        missingRoutePaint.strokeJoin = Paint.Join.ROUND
+                        missingRoutePaint.pathEffect = DashPathEffect(floatArrayOf(5f, 15f), 0f) // Dashed line
+
+                        // Add the missing route polyline to the map
+                        runOnUiThread {
+                            mapView.overlays.add(missingRoutePolyline)
+                        }
+                    }
+
+                    // Add the main route polyline to the map
+                    runOnUiThread {
+                        mapView.overlays.add(polyline)
+                        mapView.invalidate()
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }.start()
 
         val floorIDTextView = findViewById<TextView>(R.id.floorID)
 

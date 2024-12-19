@@ -1,3 +1,4 @@
+import com.android.build.gradle.internal.utils.restrictRenderScriptOnRiscv
 import java.io.FileInputStream
 import java.util.Properties
 import com.google.gson.Gson
@@ -49,6 +50,18 @@ if (versionPropsFile.canRead()) {
 val _versionName = "$_major.$_minor.$_patch:$_versionCode"
 
 android {
+    packaging{
+        resources{
+            excludes += listOf(
+                "META-INF/LICENSE.md",
+                "META-INF/LICENSE",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/NOTICE.md",
+                "META-INF/LICENSE.txt"
+            )
+        }
+    }
     lint {
         checkReleaseBuilds = false
     }
@@ -168,7 +181,8 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
 
-    implementation("org.osmdroid:osmdroid-android:6.1.14")
-    implementation("com.graphhopper:graphhopper-core:10.0")
+    implementation("org.osmdroid:osmdroid-android:6.1.10")
+    implementation("com.graphhopper:graphhopper-core:6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
 
 }
