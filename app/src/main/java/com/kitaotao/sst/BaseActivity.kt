@@ -61,6 +61,54 @@ open class BaseActivity : AppCompatActivity() {
         Configuration.getInstance().userAgentValue = packageName
     }
 
+    // Static API key (static value)
+    companion object {
+        const val API_KEY = "5816775e-afb6-4912-b64e-be7a1066183a"  // Replace with your actual API key
+    }
+
+    // Method to create the GraphHopper URL
+    fun createGraphHopperUrl(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint): String {
+        return "https://graphhopper.com/api/1/route?point=${firstMarkerPoint.latitude},${firstMarkerPoint.longitude}&point=${secondMarkerPoint.latitude},${secondMarkerPoint.longitude}&vehicle=foot&key=$API_KEY"
+    }
+
+
+    // Function to decode polyline
+    fun decodePolyline(encoded: String): List<GeoPoint> {
+        val poly = ArrayList<GeoPoint>()
+        var index = 0
+        val len = encoded.length
+        var lat = 0
+        var lng = 0
+
+        while (index < len) {
+            var b: Int
+            var shift = 0
+            var result = 0
+            do {
+                b = encoded[index++].code - 63
+                result = result or (b and 0x1f shl shift)
+                shift += 5
+            } while (b >= 0x20)
+            val dlat = if (result and 1 != 0) (result shr 1).inv() else result shr 1
+            lat += dlat
+
+            shift = 0
+            result = 0
+            do {
+                b = encoded[index++].code - 63
+                result = result or (b and 0x1f shl shift)
+                shift += 5
+            } while (b >= 0x20)
+            val dlng = if (result and 1 != 0) (result shr 1).inv() else result shr 1
+            lng += dlng
+
+            val geoPoint = GeoPoint(lat / 1E5, lng / 1E5)
+            poly.add(geoPoint)
+        }
+        return poly
+    }
+
+
     // Flag to track the state of the overlay image (whether it's enlarged or not)
     private var isEnlarged = false
 
