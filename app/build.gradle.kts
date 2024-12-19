@@ -169,5 +169,6 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
 
     implementation("org.osmdroid:osmdroid-android:6.1.14")
+    implementation("com.graphhopper:graphhopper-core:10.0")
 
 }
