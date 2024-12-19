@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,7 @@ class TREASURER : BaseActivity() {
     private lateinit var videoView: VideoView
     private lateinit var videoUri: Uri
     private var isVideoPlaying = false // Track video playback state
+    private lateinit var overlayImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,6 +81,16 @@ class TREASURER : BaseActivity() {
 
         val textView = findViewById<TextView>(R.id.floorID)
         textView.text = "1st Floor"
+
+        // Set the overlay image resource here
+        overlayImage = findViewById(R.id.overlayImage) // Ensure you have an ImageView in your layout with this ID
+        overlayImage.setImageResource(R.drawable.treasury256)  // Replace with your image resource
+
+        // Set up the overlay image functionality
+        setupOverlayImage(videoView, overlayImage)
+
+        // Apply rounded corners without an image
+        applyRoundedCorners(overlayImage)
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
