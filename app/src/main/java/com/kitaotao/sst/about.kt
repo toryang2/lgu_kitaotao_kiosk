@@ -22,6 +22,7 @@ import androidx.core.content.FileProvider
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+import com.kitaotao.sst.model.Release
 import com.kitaotao.sst.network.GitHubService
 import com.kitaotao.sst.utils.NetworkUtils
 import kotlinx.coroutines.CoroutineScope
@@ -62,6 +63,15 @@ class about : BaseActivity() {
         githubLink.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/toryang2/lgu_kitaotao_kiosk")) // Replace with your GitHub URL
             startActivity(intent)
+        }
+
+        // Inside your activity's onCreate method or wherever you're setting up the UI
+        val changelogButton: Button = findViewById(R.id.buttonChangelog)
+        changelogButton.setOnClickListener {
+            // Trigger the changelog fetch when the button is clicked
+            CoroutineScope(Dispatchers.Main).launch {
+                showChangelogFromGitHub()
+            }
         }
 
 
@@ -220,6 +230,116 @@ class about : BaseActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    suspend fun fetchAllReleases(owner: String, repo: String): List<Release> {
+        val allReleases = mutableListOf<Release>()
+        var currentPage = 1
+        var hasMoreReleases = true
+
+        // Initialize Retrofit and create the service instance
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://api.github.com/") // GitHub API base URL
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        // Create the GitHubService instance
+        val service = retrofit.create(GitHubService::class.java)
+
+        while (hasMoreReleases) {
+            try {
+                // Fetch releases for the current page with pagination
+                val releases = service.getReleases(owner, repo, page = currentPage, perPage = 100)
+
+                // Add the fetched releases to the list
+                allReleases.addAll(releases)
+
+                // If the number of releases is less than 100, we are on the last page
+                hasMoreReleases = releases.size == 100
+                currentPage++
+            } catch (e: Exception) {
+                e.printStackTrace()
+                break
+            }
+        }
+
+        return allReleases
+    }
+
+    // Function to fetch and display the changelog
+    suspend fun showChangelogFromGitHub() {
+        if (!NetworkUtils.isNetworkAvailable(this)) {
+            showNoInternetDialog()
+            return
+        }
+
+        try {
+            // Fetch all releases from GitHub
+            val releases = fetchAllReleases("toryang2", "lgu_kitaotao_kiosk")
+
+            // Use the version from BuildConfig and split to get the part before the colon
+            val currentVersion = BuildConfig.VERSION_NAME.split(":")[0] // Only take the part before the colon
+
+            // Split versions into parts for comparison (major, minor, patch)
+            val currentVersionParts = currentVersion.split(".").map { it.toInt() }
+
+            // Find the release that matches the current version
+            val matchingRelease = releases.find { release ->
+                val releaseVersionParts = release.tag_name.trimStart('v').split(".").map { it.toInt() }
+                releaseVersionParts == currentVersionParts
+            }
+
+            if (matchingRelease != null) {
+                val version = matchingRelease.tag_name.trimStart('v')
+                val changelogDescription = matchingRelease.body
+
+                // Show the changelog dialog with this specific version's changelog
+                showChangelogDialog(version, changelogDescription)
+            } else {
+                // No matching version found, show an alternative dialog
+                showNoMatchingVersionDialog()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            // Optionally handle errors, such as network failures
+        }
+    }
+
+    // Function to show changelog dialog with the specific version's changelog
+    fun showChangelogDialog(version: String, description: String) {
+        val changelogMessage = """
+                    
+        $description
+        
+    """
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Whats new of v$version?")
+            .setMessage(changelogMessage)
+            .setPositiveButton("Got it") { dialog, _ ->
+                dialog.dismiss()
+            }
+
+        val alertDialog = builder.create()
+        alertDialog.show()
+
+        val color = Color.parseColor("#49454F") // Your desired color for the button text
+
+        // Change the text color of the positive button ("OK") ("No")
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(color)
+    }
+
+    fun showNoMatchingVersionDialog() {
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("No Matching Version")
+            .setMessage("No matching version found on GitHub for the current installed version.")
+            .setPositiveButton("OK", null)
+            .show()
+
+        val color = Color.parseColor("#49454F") // Your desired color for the button text
+
+        // Change the text color of the positive button ("OK") ("No")
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(color)
     }
 
     fun showNoInternetDialog() {

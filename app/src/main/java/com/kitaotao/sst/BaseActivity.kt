@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
+import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.DashPathEffect
@@ -144,7 +145,47 @@ open class BaseActivity : AppCompatActivity() {
 
     protected lateinit var mapView: MapView
 
+    fun getCacheFilePath(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint): File {
+        // Get the app's internal cache directory
+        val cacheDir = File(getExternalFilesDir(null), "osmdroid/polyline")
+
+        // Ensure the directory exists
+        if (!cacheDir.exists()) {
+            cacheDir.mkdirs()
+        }
+
+        // Create the cache file name
+        val cacheFileName = "polyline_cache_${firstMarkerPoint.latitude}_${firstMarkerPoint.longitude}_${secondMarkerPoint.latitude}_${secondMarkerPoint.longitude}.txt"
+
+        // Return the complete file path
+        return File(cacheDir, cacheFileName)
+    }
+
+    fun savePolylineToCache(file: File, polylineData: String) {
+        file.writeText(polylineData)
+    }
+
+    fun loadPolylineFromCache(file: File): String? {
+        return if (file.exists()) {
+            file.readText()
+        } else {
+            null
+        }
+    }
+
     fun fetchAndDisplayPolyline(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint) {
+        val cacheFile = getCacheFilePath(firstMarkerPoint, secondMarkerPoint)
+
+        // Check if the polyline is already cached
+        val cachedPolyline = loadPolylineFromCache(cacheFile)
+        if (cachedPolyline != null) {
+            // Decode the cached polyline and display it
+            val decodedPoints = decodePolyline(cachedPolyline)
+            displayPolylineOnMap(firstMarkerPoint, secondMarkerPoint, decodedPoints)
+            return
+        }
+
+        // If not cached, fetch from GraphHopper API
         val urlString = createGraphHopperUrl(firstMarkerPoint, secondMarkerPoint)
 
         Thread {
@@ -160,42 +201,53 @@ open class BaseActivity : AppCompatActivity() {
                 if (paths.length() > 0) {
                     val route = paths.getJSONObject(0)
                     val encodedPolyline = route.getString("points")
-                    val decodedPoints = decodePolyline(encodedPolyline) // Assuming you have this method
+                    val decodedPoints = decodePolyline(encodedPolyline)
+
+                    // Save the polyline to cache
+                    savePolylineToCache(cacheFile, encodedPolyline)
 
                     runOnUiThread {
-                        val overlays = mutableListOf<Polyline>()
-
-                        // Add the main route polyline
-                        overlays.add(createPolyline(mapView, decodedPoints, R.color.red, 10f, clickable = false))
-
-                        // Handle missing route segments
-                        val firstDecodedPoint = decodedPoints.first()
-                        val lastDecodedPoint = decodedPoints.last()
-
-                        // Adding dashed polyline for missing segments
-                        if (firstDecodedPoint != firstMarkerPoint) {
-                            overlays.add(createPolyline(
-                                mapView, listOf(firstMarkerPoint, firstDecodedPoint),
-                                R.color.red, 8f, clickable = false, dashed = true
-                            ))
-                        }
-
-                        if (lastDecodedPoint != secondMarkerPoint) {
-                            overlays.add(createPolyline(
-                                mapView, listOf(lastDecodedPoint, secondMarkerPoint),
-                                R.color.red, 8f, clickable = false, dashed = true
-                            ))
-                        }
-
-                        // Add all overlays to the map
-                        mapView.overlays.addAll(overlays)
-                        mapView.invalidate() // Redraw the map
+                        displayPolylineOnMap(firstMarkerPoint, secondMarkerPoint, decodedPoints)
                     }
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }.start()
+    }
+
+    fun displayPolylineOnMap(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint, decodedPoints: List<GeoPoint>) {
+        val overlays = mutableListOf<Polyline>()
+
+        // Add the main route polyline
+        overlays.add(createPolyline(mapView, decodedPoints, R.color.red, 10f, clickable = false))
+
+        // Handle missing route segments
+        val firstDecodedPoint = decodedPoints.first()
+        val lastDecodedPoint = decodedPoints.last()
+
+        // Add dashed polyline for missing segments
+        if (firstDecodedPoint != firstMarkerPoint) {
+            overlays.add(
+                createPolyline(
+                    mapView, listOf(firstMarkerPoint, firstDecodedPoint),
+                    R.color.red, 8f, clickable = false, dashed = true
+                )
+            )
+        }
+
+        if (lastDecodedPoint != secondMarkerPoint) {
+            overlays.add(
+                createPolyline(
+                    mapView, listOf(lastDecodedPoint, secondMarkerPoint),
+                    R.color.red, 8f, clickable = false, dashed = true
+                )
+            )
+        }
+
+        // Add all overlays to the map
+        mapView.overlays.addAll(overlays)
+        mapView.invalidate() // Redraw the map
     }
 
     // Flag to track the state of the overlay image (whether it's enlarged or not)
@@ -369,8 +421,8 @@ open class BaseActivity : AppCompatActivity() {
 
         // First animation: Expand to slightly larger size
         val firstAnimator = ValueAnimator.ofFloat(0f, 1f)
-        firstAnimator.addUpdateListener { animation ->
-            val progress = animation.animatedFraction
+        firstAnimator.addUpdateListener { firstAnimation ->
+            val progress = firstAnimation.animatedFraction
             val newWidth = startWidth + (breathingWidth - startWidth) * progress
             val newHeight = startHeight + (breathingHeight - startHeight) * progress
 
@@ -385,8 +437,8 @@ open class BaseActivity : AppCompatActivity() {
         firstAnimator.addListener(object : AnimatorListenerAdapter() {
             override fun onAnimationEnd(animation: Animator) {
                 val secondAnimator = ValueAnimator.ofFloat(0f, 1f)
-                secondAnimator.addUpdateListener { animation ->
-                    val progress = animation.animatedFraction
+                secondAnimator.addUpdateListener { secondAnimation ->
+                    val progress = secondAnimation.animatedFraction
                     val newWidth = breathingWidth + (endWidth - breathingWidth) * progress
                     val newHeight = breathingHeight + (endHeight - breathingHeight) * progress
 
@@ -459,19 +511,6 @@ open class BaseActivity : AppCompatActivity() {
         // Adjust the title padding factor based on the distance between the markers
         val titlePaddingFactor = getDynamicPadding(distance)
 
-        // Calculate the center of the bounding box (average of the latitudes and longitudes)
-        var extraPaddingForTitle = 0.0 // Adjust this as needed for better title visibility
-
-        if (firstMarker.title == "Sangguniang Bayan Office") {
-            // Additional padding for titles, especially if they are near the top or bottom
-            extraPaddingForTitle = 0.0005
-        } else if (firstMarker.title == "Municipal Administrator Office"
-            || firstMarker.title == "Kitaotao Water System Office") {
-            extraPaddingForTitle = 0.0003
-        } else if (firstMarker.title == "Municipal Tourism Office") {
-            extraPaddingForTitle = 0.0001
-        }
-
         val centerLatitude = (firstMarker.position.latitude + secondMarker.position.latitude) / 2
         val centerLongitude = (firstMarker.position.longitude + secondMarker.position.longitude) / 2
 
@@ -536,4 +575,6 @@ open class BaseActivity : AppCompatActivity() {
         super.onDestroy()
         idleHandler?.removeCallbacks(idleRunnable)
     }
+
+
 }

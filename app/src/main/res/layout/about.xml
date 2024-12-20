@@ -98,12 +98,33 @@
             app:iconGravity="end"
             app:iconTint="#6F6F6F"
             app:layout_constraintBottom_toTopOf="@+id/githubLink"
-            app:layout_constraintEnd_toEndOf="@+id/buttonResetPassword"
-            app:layout_constraintStart_toStartOf="@+id/buttonResetPassword" />
+            app:layout_constraintEnd_toEndOf="@+id/buttonChangelog"
+            app:layout_constraintStart_toStartOf="@+id/buttonChangelog" />
 
         <!-- GitHub Profile Picture (optional) -->
 
-        <!-- GitHub Link TextView -->
+        <!-- GitHub Changlog -->
+        <Button
+            android:id="@+id/buttonChangelog"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Changelog"
+            android:textAlignment="textStart"
+            android:textColor="#6F6F6F"
+            android:textSize="10sp"
+            app:cornerRadius="0dp"
+            app:icon="@mipmap/go_button"
+            app:iconGravity="end"
+            app:iconTint="#6F6F6F"
+            app:layout_constraintBottom_toTopOf="@+id/buttonCheckUpdate"
+            app:layout_constraintEnd_toEndOf="@+id/buttonResetPassword"
+            app:layout_constraintStart_toStartOf="@+id/buttonResetPassword" />
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/githubProfilePicture"
             android:layout_width="32dp"
