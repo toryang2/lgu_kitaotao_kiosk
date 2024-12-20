@@ -5,21 +5,17 @@ import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
+import android.graphics.DashPathEffect
+import android.graphics.Paint
 import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
-import android.graphics.drawable.ShapeDrawable
-import android.graphics.drawable.shapes.RectShape
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.TypedValue
+import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -27,15 +23,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import org.json.JSONObject
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase
 import org.osmdroid.util.BoundingBox
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.util.MapTileIndex
+import org.osmdroid.views.CustomZoomButtonsController
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.compass.CompassOverlay
 import java.io.File
+import java.net.HttpURLConnection
+import java.net.URL
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -70,7 +71,6 @@ open class BaseActivity : AppCompatActivity() {
     fun createGraphHopperUrl(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint): String {
         return "https://graphhopper.com/api/1/route?point=${firstMarkerPoint.latitude},${firstMarkerPoint.longitude}&point=${secondMarkerPoint.latitude},${secondMarkerPoint.longitude}&vehicle=foot&key=$API_KEY"
     }
-
 
     // Function to decode polyline
     fun decodePolyline(encoded: String): List<GeoPoint> {
@@ -108,6 +108,95 @@ open class BaseActivity : AppCompatActivity() {
         return poly
     }
 
+    protected fun createPolyline(
+        mapView: MapView, // Pass the mapView as a parameter
+        points: List<GeoPoint>,
+        colorResId: Int,
+        strokeWidth: Float,
+        clickable: Boolean = true,
+        dashed: Boolean = false
+    ): Polyline {
+        // Create the Polyline object
+        val polyline = object : Polyline(mapView) {
+            override fun onSingleTapConfirmed(e: MotionEvent?, mapView: MapView?): Boolean {
+                return !clickable // Disable interaction if `clickable` is false
+            }
+        }
+
+        // Apply the configuration to the polyline object
+        polyline.apply {
+            setPoints(points)
+            outlinePaint.apply {
+                color = ContextCompat.getColor(this@BaseActivity, colorResId)
+                this.strokeWidth = strokeWidth
+                style = Paint.Style.STROKE
+                strokeCap = Paint.Cap.ROUND
+                strokeJoin = Paint.Join.ROUND
+                if (dashed) {
+                    pathEffect = DashPathEffect(floatArrayOf(5f, 15f), 0f) // Dashed line
+                }
+            }
+        }
+
+        return polyline
+    }
+
+
+    protected lateinit var mapView: MapView
+
+    fun fetchAndDisplayPolyline(firstMarkerPoint: GeoPoint, secondMarkerPoint: GeoPoint) {
+        val urlString = createGraphHopperUrl(firstMarkerPoint, secondMarkerPoint)
+
+        Thread {
+            try {
+                val url = URL(urlString)
+                val connection = url.openConnection() as HttpURLConnection
+                connection.requestMethod = "GET"
+
+                val response = connection.inputStream.bufferedReader().readText()
+                val jsonResponse = JSONObject(response)
+                val paths = jsonResponse.getJSONArray("paths")
+
+                if (paths.length() > 0) {
+                    val route = paths.getJSONObject(0)
+                    val encodedPolyline = route.getString("points")
+                    val decodedPoints = decodePolyline(encodedPolyline) // Assuming you have this method
+
+                    runOnUiThread {
+                        val overlays = mutableListOf<Polyline>()
+
+                        // Add the main route polyline
+                        overlays.add(createPolyline(mapView, decodedPoints, R.color.red, 10f, clickable = false))
+
+                        // Handle missing route segments
+                        val firstDecodedPoint = decodedPoints.first()
+                        val lastDecodedPoint = decodedPoints.last()
+
+                        // Adding dashed polyline for missing segments
+                        if (firstDecodedPoint != firstMarkerPoint) {
+                            overlays.add(createPolyline(
+                                mapView, listOf(firstMarkerPoint, firstDecodedPoint),
+                                R.color.red, 8f, clickable = false, dashed = true
+                            ))
+                        }
+
+                        if (lastDecodedPoint != secondMarkerPoint) {
+                            overlays.add(createPolyline(
+                                mapView, listOf(lastDecodedPoint, secondMarkerPoint),
+                                R.color.red, 8f, clickable = false, dashed = true
+                            ))
+                        }
+
+                        // Add all overlays to the map
+                        mapView.overlays.addAll(overlays)
+                        mapView.invalidate() // Redraw the map
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }.start()
+    }
 
     // Flag to track the state of the overlay image (whether it's enlarged or not)
     private var isEnlarged = false
@@ -315,6 +404,12 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     fun initializeMap(mapView: MapView) {
+        // Enable pinch zoom
+        mapView.setMultiTouchControls(true)
+
+        // Disable zoom controls (plus/minus buttons)
+        mapView.zoomController.setVisibility(CustomZoomButtonsController.Visibility.NEVER)
+
         mapView.setTileSource(object : OnlineTileSourceBase(
             "GoogleMaps_Satellite",
             0, 20, 256, "",
