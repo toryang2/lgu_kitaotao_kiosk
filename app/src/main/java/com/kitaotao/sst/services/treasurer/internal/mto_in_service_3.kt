@@ -1,16 +1,11 @@
 package com.kitaotao.sst.services.treasurer.internal
 
 import addSeasonalBackground
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
-import com.kitaotao.sst.MainActivity
 import com.kitaotao.sst.R
 import com.kitaotao.sst.setDynamicHeader
 

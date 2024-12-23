@@ -1,5 +1,3 @@
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView

@@ -1,8 +1,7 @@
+import android.app.Activity
 import android.view.MotionEvent
 import android.widget.FrameLayout
 import com.airbnb.lottie.LottieAnimationView
-import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import com.kitaotao.sst.R
 
 fun Activity.showClickPopAnimation(event: MotionEvent) {
