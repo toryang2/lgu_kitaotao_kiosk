@@ -4,7 +4,6 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
-import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.DashPathEffect

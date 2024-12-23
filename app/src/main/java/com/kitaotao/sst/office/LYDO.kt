@@ -2,48 +2,26 @@ package com.kitaotao.sst.office
 
 import addSeasonalBackground
 import android.content.Intent
-import android.graphics.DashPathEffect
-import android.graphics.Paint
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.graphhopper.GHRequest
-import com.graphhopper.GHResponse
-import com.graphhopper.GraphHopper
-import com.graphhopper.config.Profile
-import com.graphhopper.util.PointList
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.lydo.*
+import com.kitaotao.sst.services.lydo.lydo_service_1
+import com.kitaotao.sst.services.lydo.lydo_service_2
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import officeViewChange
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.Response
-import org.json.JSONObject
-import org.osmdroid.util.BoundingBox
 import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.Polyline
-import org.osmdroid.views.overlay.compass.CompassOverlay
 import org.osmdroid.views.overlay.infowindow.InfoWindow
 import showClickPopAnimation
-import java.net.HttpURLConnection
-import java.net.URL
 
 class LYDO : BaseActivity() {
 
@@ -82,7 +60,7 @@ class LYDO : BaseActivity() {
         firstMarker.position = firstMarkerPoint
         firstMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         firstMarker.title = "Local Youth Development Office"
-        firstMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        firstMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(firstMarker)
 
         firstMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
@@ -102,7 +80,7 @@ class LYDO : BaseActivity() {
         secondMarker.position = secondMarkerPoint
         secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         secondMarker.title = "Municipal Hall"
-        secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        secondMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(secondMarker)
 
         secondMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {

@@ -2,36 +2,29 @@ package com.kitaotao.sst.office
 
 import addSeasonalBackground
 import android.content.Intent
-import android.graphics.DashPathEffect
-import android.graphics.Paint
+import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.administrator.*
+import com.kitaotao.sst.services.administrator.administrator_service_1
+import com.kitaotao.sst.services.administrator.administrator_service_2
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
-import org.json.JSONObject
-import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.MapView
-import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.Polyline
-import org.osmdroid.views.overlay.infowindow.InfoWindow
 import showClickPopAnimation
-import java.net.HttpURLConnection
-import java.net.URL
 
 class MunicipalAdministratorOffice : BaseActivity() {
 
+    private lateinit var videoView: VideoView
+    private lateinit var videoUri: Uri
+    private var isVideoPlaying = false // Track video playback state
     private lateinit var overlayImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,83 +44,41 @@ class MunicipalAdministratorOffice : BaseActivity() {
             insets
         }
 
-        // Initialize the map
-        mapView = findViewById(R.id.mapView)  // Ensure your layout has a MapView
-        initializeMap(mapView)
+        // Set click listeners for various services
+        setClickListener(R.id.service_1, administrator_service_1::class.java)
+        setClickListener(R.id.service_2, administrator_service_2::class.java)
 
-// Clear cache to ensure the new tiles load
-        mapView.tileProvider.clearTileCache()
+        //start of video url
+        videoView = findViewById(R.id.videoView)
+        videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_2nd_floor_model_budget")
 
-// Define GeoPoints for the markers
-        val firstMarkerPoint = GeoPoint(7.641036, 125.008671) // First marker position
-        val secondMarkerPoint = GeoPoint(7.640047, 125.008539) // Second marker position
+        videoView.setVideoURI(videoUri)
 
-// Add the first marker
-        val firstMarker = Marker(mapView)
-        firstMarker.position = firstMarkerPoint
-        firstMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        firstMarker.title = "Municipal Administrator Office"
-        firstMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
-        mapView.overlays.add(firstMarker)
-
-        firstMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
-            override fun onOpen(item: Any?) {
-                val marker = item as Marker
-                val titleTextView = mView.findViewById<TextView>(R.id.infoWindowTitle)
-                titleTextView.text = marker.title
-            }
-
-            override fun onClose() {
-                // Optional: actions when closing the window
-            }
+        // Loop the video
+        videoView.setOnCompletionListener {
+            videoView.start() // Restart video when it finishes
         }
 
-// Add the second marker
-        val secondMarker = Marker(mapView)
-        secondMarker.position = secondMarkerPoint
-        secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        secondMarker.title = "Municipal Hall"
-        secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
-        mapView.overlays.add(secondMarker)
-
-        secondMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
-            override fun onOpen(item: Any?) {
-                val marker = item as Marker
-                val titleTextView = mView.findViewById<TextView>(R.id.infoWindowTitle)
-                titleTextView.text = marker.title
-            }
-
-            override fun onClose() {
-                // Optional: actions when closing the window
-            }
+        // Start video playback if not already playing
+        if (!isVideoPlaying) {
+            videoView.start()
+            isVideoPlaying = true
         }
 
-        adjustMapViewForMarkers(mapView, firstMarker, secondMarker)
-
-// Optional: Display info windows
-        firstMarker.showInfoWindow()
-        secondMarker.showInfoWindow()
-
-        // Fetch PolyLine
-        fetchAndDisplayPolyline(firstMarkerPoint, secondMarkerPoint)
-
-        val floorIDTextView = findViewById<TextView>(R.id.floorID)
-
-        floorIDTextView.visibility = View.GONE
+        val textView = findViewById<TextView>(R.id.floorID)
+        textView.text = "2nd Floor"
 
         // Set the overlay image resource here
         overlayImage = findViewById(R.id.overlayImage) // Ensure you have an ImageView in your layout with this ID
         overlayImage.setImageResource(R.drawable.postscreenlogo256)  // Replace with your image resource
 
         // Set up the overlay image functionality
-        setupOverlayImage(mapView, overlayImage)
+        setupOverlayImage(videoView, overlayImage)
 
         // Apply rounded corners without an image
         applyRoundedCorners(overlayImage)
 
-        // Set click listeners for various services
-        setClickListener(R.id.service_1, administrator_service_1::class.java)
-        setClickListener(R.id.service_2, administrator_service_2::class.java)
+        //end of video url
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
@@ -137,15 +88,25 @@ class MunicipalAdministratorOffice : BaseActivity() {
         return super.dispatchTouchEvent(event)
     }
 
-    override fun onResume() {
-        super.onResume()
-        mapView.onResume() // Required for MapView lifecycle
-    }
-
+    // Pause the video when the activity is paused
     override fun onPause() {
         super.onPause()
-        mapView.onPause() // Required for MapView lifecycle
+        if (videoView.isPlaying) {
+            videoView.pause() // Pause the video to prevent background playback
+            isVideoPlaying = false // Track the video state
+        }
     }
+
+    // Resume the video when the activity is resumed
+    override fun onResume() {
+        super.onResume()
+        // Restart the video when coming back to this activity
+        if (!videoView.isPlaying && !isVideoPlaying) {
+            videoView.start() // Start the video again if it was paused
+            isVideoPlaying = true
+        }
+    }
+
 
     private fun setClickListener(viewId: Int, activityClass: Class<*>) {
         findViewById<TextView>(viewId).setOnClickListener {

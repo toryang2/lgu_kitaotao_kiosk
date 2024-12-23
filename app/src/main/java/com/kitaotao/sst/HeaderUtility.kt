@@ -9,11 +9,38 @@ import android.view.View
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.kitaotao.sst.office.*
+import com.kitaotao.sst.office.BidsAndAwardsCommittee
+import com.kitaotao.sst.office.HumanResourceManagementOffice
+import com.kitaotao.sst.office.IPMR
+import com.kitaotao.sst.office.KitaotaoWaterSystem
+import com.kitaotao.sst.office.LEDIPO
+import com.kitaotao.sst.office.LIGA
+import com.kitaotao.sst.office.LYDO
+import com.kitaotao.sst.office.MDRRMO
+import com.kitaotao.sst.office.MENRO
+import com.kitaotao.sst.office.MPDO
+import com.kitaotao.sst.office.MSWDO
+import com.kitaotao.sst.office.MunicipalAccountingOffice
+import com.kitaotao.sst.office.MunicipalAdministratorOffice
+import com.kitaotao.sst.office.MunicipalAgricultureOffice
+import com.kitaotao.sst.office.MunicipalAssessorsOffice
+import com.kitaotao.sst.office.MunicipalBudgetOffice
+import com.kitaotao.sst.office.MunicipalBusinessProcessingAndLicensingOffice
+import com.kitaotao.sst.office.MunicipalCivilRegistryOffice
+import com.kitaotao.sst.office.MunicipalEngineeringOffice
+import com.kitaotao.sst.office.MunicipalGeneralServiceOffice
+import com.kitaotao.sst.office.MunicipalHealthOffice
+import com.kitaotao.sst.office.MunicipalMayorOffice
+import com.kitaotao.sst.office.PESO
+import com.kitaotao.sst.office.POPDEV
+import com.kitaotao.sst.office.PWD
+import com.kitaotao.sst.office.SBO
+import com.kitaotao.sst.office.SENIOR
+import com.kitaotao.sst.office.TOURISM
+import com.kitaotao.sst.office.TREASURER
 
 // Function to set dynamic header
 fun AppCompatActivity.setDynamicHeader() {

@@ -9,12 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.peso.*
+import com.kitaotao.sst.services.peso.peso_service_1
+import com.kitaotao.sst.services.peso.peso_service_2
+import com.kitaotao.sst.services.peso.peso_service_3
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange

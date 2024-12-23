@@ -1,6 +1,5 @@
 package com.kitaotao.sst
 
-import android.app.UiModeManager
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration

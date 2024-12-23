@@ -2,34 +2,26 @@ package com.kitaotao.sst.office
 
 import addSeasonalBackground
 import android.content.Intent
-import android.graphics.DashPathEffect
-import android.graphics.Paint
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.ledipo.external.*
-import com.kitaotao.sst.services.ledipo.internal.*
+import com.kitaotao.sst.services.ledipo.external.ledipo_ex_service_1
+import com.kitaotao.sst.services.ledipo.internal.ledipo_in_service_1
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
-import org.json.JSONObject
 import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.infowindow.InfoWindow
 import showClickPopAnimation
-import java.net.HttpURLConnection
-import java.net.URL
 
 class LEDIPO : BaseActivity() {
 
@@ -68,7 +60,7 @@ class LEDIPO : BaseActivity() {
         firstMarker.position = firstMarkerPoint
         firstMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         firstMarker.title = "Local Economic Development and\nInvestment Promotion Office"
-        firstMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        firstMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(firstMarker)
 
         firstMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
@@ -88,7 +80,7 @@ class LEDIPO : BaseActivity() {
         secondMarker.position = secondMarkerPoint
         secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         secondMarker.title = "Municipal Hall"
-        secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        secondMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(secondMarker)
 
         secondMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {

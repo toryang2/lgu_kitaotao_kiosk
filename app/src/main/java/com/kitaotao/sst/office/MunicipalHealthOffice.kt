@@ -2,33 +2,40 @@ package com.kitaotao.sst.office
 
 import addSeasonalBackground
 import android.content.Intent
-import android.graphics.DashPathEffect
-import android.graphics.Paint
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.mho.*
+import com.kitaotao.sst.services.mho.mho_service_1
+import com.kitaotao.sst.services.mho.mho_service_10
+import com.kitaotao.sst.services.mho.mho_service_11
+import com.kitaotao.sst.services.mho.mho_service_12
+import com.kitaotao.sst.services.mho.mho_service_13
+import com.kitaotao.sst.services.mho.mho_service_14
+import com.kitaotao.sst.services.mho.mho_service_15
+import com.kitaotao.sst.services.mho.mho_service_16
+import com.kitaotao.sst.services.mho.mho_service_2
+import com.kitaotao.sst.services.mho.mho_service_3
+import com.kitaotao.sst.services.mho.mho_service_4
+import com.kitaotao.sst.services.mho.mho_service_5
+import com.kitaotao.sst.services.mho.mho_service_6
+import com.kitaotao.sst.services.mho.mho_service_7
+import com.kitaotao.sst.services.mho.mho_service_8
+import com.kitaotao.sst.services.mho.mho_service_9
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
-import org.json.JSONObject
 import org.osmdroid.util.GeoPoint
-import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
-import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.infowindow.InfoWindow
 import showClickPopAnimation
-import java.net.HttpURLConnection
-import java.net.URL
 
 class MunicipalHealthOffice : BaseActivity() {
 
@@ -67,7 +74,7 @@ class MunicipalHealthOffice : BaseActivity() {
         firstMarker.position = firstMarkerPoint
         firstMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         firstMarker.title = "Municipal Health Office"
-        firstMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        firstMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(firstMarker)
 
         firstMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
@@ -87,7 +94,7 @@ class MunicipalHealthOffice : BaseActivity() {
         secondMarker.position = secondMarkerPoint
         secondMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
         secondMarker.title = "Municipal Hall"
-        secondMarker.setIcon(ContextCompat.getDrawable(this, R.drawable.red_marker))
+        secondMarker.icon = ContextCompat.getDrawable(this, R.drawable.red_marker)
         mapView.overlays.add(secondMarker)
 
         secondMarker.infoWindow = object : InfoWindow(R.layout.bonuspack_bubble, mapView) {
