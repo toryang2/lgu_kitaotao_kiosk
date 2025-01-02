@@ -1,5 +1,6 @@
 package com.kitaotao.sst
 
+
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
@@ -11,6 +12,7 @@ import android.graphics.Paint
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -19,10 +21,47 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
+import androidx.annotation.OptIn
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import androidx.media3.common.MediaItem
+import androidx.media3.common.PlaybackException
+import androidx.media3.common.Player
+import androidx.media3.common.util.UnstableApi
+import androidx.media3.datasource.DefaultDataSource
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
+import com.kitaotao.sst.office.BidsAndAwardsCommittee
+import com.kitaotao.sst.office.HumanResourceManagementOffice
+import com.kitaotao.sst.office.IPMR
+import com.kitaotao.sst.office.KitaotaoWaterSystem
+import com.kitaotao.sst.office.LEDIPO
+import com.kitaotao.sst.office.LIGA
+import com.kitaotao.sst.office.LYDO
+import com.kitaotao.sst.office.MDRRMO
+import com.kitaotao.sst.office.MENRO
+import com.kitaotao.sst.office.MPDO
+import com.kitaotao.sst.office.MSWDO
+import com.kitaotao.sst.office.MunicipalAccountingOffice
+import com.kitaotao.sst.office.MunicipalAdministratorOffice
+import com.kitaotao.sst.office.MunicipalAgricultureOffice
+import com.kitaotao.sst.office.MunicipalAssessorsOffice
+import com.kitaotao.sst.office.MunicipalBudgetOffice
+import com.kitaotao.sst.office.MunicipalBusinessProcessingAndLicensingOffice
+import com.kitaotao.sst.office.MunicipalCivilRegistryOffice
+import com.kitaotao.sst.office.MunicipalEngineeringOffice
+import com.kitaotao.sst.office.MunicipalGeneralServiceOffice
+import com.kitaotao.sst.office.MunicipalHealthOffice
+import com.kitaotao.sst.office.MunicipalMayorOffice
+import com.kitaotao.sst.office.PESO
+import com.kitaotao.sst.office.POPDEV
+import com.kitaotao.sst.office.PWD
+import com.kitaotao.sst.office.SBO
+import com.kitaotao.sst.office.SENIOR
+import com.kitaotao.sst.office.TOURISM
+import com.kitaotao.sst.office.TREASURER
 import org.json.JSONObject
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase
@@ -38,17 +77,19 @@ import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 
+@OptIn(UnstableApi::class)
 open class BaseActivity : AppCompatActivity() {
 
-    // Define the idle timeout duration (e.g., 5 minutes)
+    private var exoPlayer: ExoPlayer? = null
+
     private val idleTimeout: Long = 600000 // 600,000 ms = 10 minutes
     private var idleHandler: Handler? = null
     private val idleRunnable = Runnable {
-        // Navigate to the Post Screen when idle
-        val intent = Intent(this, postScreen::class.java)
+        // Trigger screensaver after timeout
+        val intent = Intent(this, ScreensaverActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
-        finish()
+        finish()  // Close the current activity
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +99,8 @@ open class BaseActivity : AppCompatActivity() {
         resetIdleTimer()
 
         initializeOSMDroid()
+
+        playAudioForActivity()
 
         Configuration.getInstance().userAgentValue = packageName
     }
@@ -565,6 +608,19 @@ open class BaseActivity : AppCompatActivity() {
         resetIdleTimer()
     }
 
+    override fun onResume() {
+        super.onResume()
+        // Reset idle timeout when the activity is resumed
+        idleHandler?.removeCallbacks(idleRunnable)
+        idleHandler?.postDelayed(idleRunnable, idleTimeout)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // Stop the idle timeout when the activity is paused
+        idleHandler?.removeCallbacks(idleRunnable)
+    }
+
     private fun resetIdleTimer() {
         idleHandler?.removeCallbacks(idleRunnable)
         idleHandler?.postDelayed(idleRunnable, idleTimeout)
@@ -573,7 +629,80 @@ open class BaseActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         idleHandler?.removeCallbacks(idleRunnable)
+        exoPlayer?.release()
     }
 
+    private fun playAudioForActivity() {
+        // Check the current activity and associate it with the correct audio resource
+        val audioResId = when {
+            this is BidsAndAwardsCommittee -> R.raw.bac_sound
+            this is HumanResourceManagementOffice -> R.raw.hrmo_sound
+            this is IPMR -> R.raw.ipmr_sound
+            this is KitaotaoWaterSystem -> R.raw.water_sound
+            this is LEDIPO -> R.raw.ledipo_sound
+            this is LIGA -> R.raw.liga_sound
+            this is LYDO -> R.raw.lydo_sound
+            this is MDRRMO -> R.raw.mdrrmo_sound
+            this is MENRO -> R.raw.menro_sound
+            this is MPDO -> R.raw.mpdo_sound
+            this is MSWDO -> R.raw.mswdo_sound
+            this is MunicipalAccountingOffice -> R.raw.macco_sound
+            this is MunicipalAdministratorOffice -> R.raw.admin_sound
+            this is MunicipalAgricultureOffice -> R.raw.magro_sound
+            this is MunicipalAssessorsOffice -> R.raw.assessor_sound
+            this is MunicipalBudgetOffice -> R.raw.budget_sound
+            this is MunicipalCivilRegistryOffice -> R.raw.mcro_sound
+            this is MunicipalEngineeringOffice -> R.raw.engineering_sound
+            this is MunicipalGeneralServiceOffice -> R.raw.gso_sound
+            this is MunicipalHealthOffice -> R.raw.health_sound
+            this is MunicipalMayorOffice -> R.raw.mayor_sound
+            this is PESO -> R.raw.peso_sound
+            this is POPDEV -> R.raw.popdev_sound
+            this is PWD -> R.raw.pwd_sound
+            this is SBO -> R.raw.sbo_sound
+            this is SENIOR -> R.raw.osca_sound
+            this is TOURISM -> R.raw.tourism_sound
+            this is TREASURER -> R.raw.treasurer_sound
+            this is MunicipalBusinessProcessingAndLicensingOffice -> R.raw.bplo_sound
+            else -> null // No audio for other activities
+        }
 
+        // If a valid audio resource was found, play it
+        audioResId?.let {
+            playAudio(it)
+        }
+    }
+
+    private fun playAudio(audioResId: Int) {
+        // Create MediaItem with audio resource URI
+        val mediaItem = MediaItem.fromUri(Uri.parse("android.resource://${packageName}/$audioResId"))
+
+        // Create the DataSource.Factory (Non-deprecated way)
+        val dataSourceFactory = DefaultDataSource.Factory(this)
+
+        // Create the MediaSource using DefaultMediaSourceFactory
+        val mediaSourceFactory = DefaultMediaSourceFactory(dataSourceFactory)
+
+        // Initialize ExoPlayer
+        exoPlayer = ExoPlayer.Builder(this).build()
+
+        // Prepare the media and start playback
+        exoPlayer?.setMediaSource(mediaSourceFactory.createMediaSource(mediaItem))
+        exoPlayer?.prepare()
+        exoPlayer?.playWhenReady = true
+
+        // Add the player listener for playback state and error handling
+        exoPlayer?.addListener(object : Player.Listener {
+            override fun onPlaybackStateChanged(state: Int) {
+                if (state == Player.STATE_ENDED) {
+                    exoPlayer?.release() // Release resources when done
+                }
+            }
+
+            override fun onPlayerError(error: PlaybackException) {
+                // Handle the error when playback fails
+                exoPlayer?.release() // Release resources on error
+            }
+        })
+    }
 }

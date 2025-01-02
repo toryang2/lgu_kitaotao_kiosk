@@ -16,8 +16,8 @@ object NetworkUtils {
                     (networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
                             networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR))
         } else {
-            val networkInfo = connectivityManager.activeNetworkInfo
-            return networkInfo != null && networkInfo.isConnected
+            val activeNetworkInfo = connectivityManager.activeNetworkInfo
+            return activeNetworkInfo != null && activeNetworkInfo.isConnected
         }
     }
 }

@@ -4,11 +4,14 @@ import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
+import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.VideoView
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResultCallback
@@ -31,6 +34,8 @@ class postScreen : AppCompatActivity() {
 
     // Define the ActivityResultLauncher for the device admin activation result
     private lateinit var deviceAdminResultLauncher: ActivityResultLauncher<Intent>
+//    private lateinit var videoView: VideoView
+//    private var isVideoPlaying = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Install splash screen with a coroutine-based delay
@@ -87,9 +92,51 @@ class postScreen : AppCompatActivity() {
                 rootLayout.addSeasonalFall(this)
             } else {
                 setContentView(R.layout.activity_post_screen)
+                val videoView: VideoView = findViewById(R.id.postScreenVideo)
+                videoView.visibility = View.GONE
+//
+//                // Inside your Activity (e.g., onCreate or appropriate lifecycle method)
+//                val videoView: VideoView = findViewById(R.id.postScreenVideo)
+//
+//                // Set the video URI for the video stored in res/raw folder
+//                val videoUri = Uri.parse("android.resource://${packageName}/raw/kitakitz_kitaotao_palanggaon_ko_ikaw")
+//                videoView.setVideoURI(videoUri)
+//
+//                // Set an OnCompletionListener to loop the video when it finishes
+//                videoView.setOnCompletionListener {
+//                    videoView.start() // Restart video when it finishes
+//                }
+//
+//                // Check if the video is already playing before starting it
+//                if (!isVideoPlaying) {
+//                    videoView.start() // Start video playback
+//                    isVideoPlaying = true // Mark the video as playing
+//                }
             }
         } else {
             setContentView(R.layout.activity_post_screen)
+            val videoView: VideoView = findViewById(R.id.postScreenVideo)
+            videoView.visibility = View.GONE
+//            // Declare a flag to check if video is playing
+//
+//            // Inside your Activity (e.g., onCreate or appropriate lifecycle method)
+//            val videoView: VideoView = findViewById(R.id.postScreenVideo)
+//
+//            // Set the video URI for the video stored in res/raw folder
+//            val videoUri = Uri.parse("android.resource://${packageName}/raw/kitakitz_kitaotao_palanggaon_ko_ikaw")
+//            videoView.setVideoURI(videoUri)
+//
+//            // Set an OnCompletionListener to loop the video when it finishes
+//            videoView.setOnCompletionListener {
+//                videoView.start() // Restart video when it finishes
+//            }
+//
+//            // Check if the video is already playing before starting it
+//            if (!isVideoPlaying) {
+//                videoView.start() // Start video playback
+//                isVideoPlaying = true // Mark the video as playing
+//            }
+
         }
 
         // Show app version
@@ -199,4 +246,26 @@ class postScreen : AppCompatActivity() {
             startActivity(Intent(this, activityClass))
         }
     }
+
+//    // Pause the video when the activity is paused
+//    override fun onPause() {
+//        super.onPause()
+//
+//        // Check if the videoView is initialized before accessing it
+//        if (this::videoView.isInitialized && videoView.isPlaying) {
+//            videoView.pause() // Pause the video to prevent background playback
+//            isVideoPlaying = false // Track the video state
+//        }
+//    }
+//
+//    // Resume the video when the activity is resumed
+//    override fun onResume() {
+//        super.onResume()
+//
+//        // Check if the videoView is initialized before accessing it
+//        if (this::videoView.isInitialized && !videoView.isPlaying && !isVideoPlaying) {
+//            videoView.start() // Start the video again if it was paused
+//            isVideoPlaying = true
+//        }
+//    }
 }

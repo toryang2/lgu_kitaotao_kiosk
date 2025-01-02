@@ -66,12 +66,12 @@ android {
         checkReleaseBuilds = false
     }
     namespace = "com.kitaotao.sst"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.kitaotao.sst"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = _versionCode
         versionName = _versionName
 
@@ -162,6 +162,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.leanback)
     implementation(libs.glide)
+    implementation(libs.androidx.media3.exoplayer)
     // More dependencies...
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
