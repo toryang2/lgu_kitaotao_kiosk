@@ -9,16 +9,30 @@ import com.kitaotao.sst.isTvDevice
 import java.util.Calendar
 
 fun AppCompatActivity.addSeasonalBackground() {
-    // Get the current date
+// Get the current date
     val calendar = Calendar.getInstance()
     val currentMonth = calendar.get(Calendar.MONTH) + 1 // Calendar.MONTH is 0-indexed
     val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
 
-    // Check if the device is a TV and the current date is in December (1st to 31st)
-    if (isTvDevice() && currentMonth == 12 && currentDay in 1..31) {
-        // Add the Christmas background if it's December
-        seasonalBackground(R.drawable.christmas_header) // Replace with your Christmas image resource ID
+// Add a seasonal background if the device is a TV
+    if (isTvDevice()) {
+        when {
+            currentMonth == 12 -> {
+                // Add the Christmas background for December
+                seasonalBackground(R.drawable.christmas_header) // Replace with your Christmas image resource ID
+            }
+            currentMonth == 2 && currentDay in 1..14 -> {
+                // Add the Valentine's Day background for February
+                seasonalBackground(R.drawable.hearts_header)
+            }
+            else -> {
+                // No seasonal background; apply default styling
+                removeSeasonalBackground()
+                setSolidBackgroundColor()
+            }
+        }
     } else {
+        // For non-TV devices, ensure default styling
         removeSeasonalBackground()
         setSolidBackgroundColor()
     }

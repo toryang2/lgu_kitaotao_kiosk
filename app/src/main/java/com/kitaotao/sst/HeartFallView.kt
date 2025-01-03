@@ -11,7 +11,7 @@ class HeartFallView(context: Context, attrs: AttributeSet? = null) : View(contex
 
     private val hearts = mutableListOf<Heart>()
     private val heartCount = 100 // Number of hearts
-    private val paint = Paint().apply { color = Color.rgb(255, 105, 180) } // Pink color
+    private val paint = Paint().apply { color = Color.rgb(243, 83, 106) } // Pink color
 
     init {
         paint.isAntiAlias = true

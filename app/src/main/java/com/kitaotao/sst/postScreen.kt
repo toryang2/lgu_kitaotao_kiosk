@@ -4,6 +4,8 @@ import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Paint
 import android.net.Uri
 import android.os.Bundle
 import android.view.MotionEvent
@@ -75,13 +77,18 @@ class postScreen : AppCompatActivity() {
                 val loopStartTimeMs: Long = 4100 // Set the loop start time in milliseconds
                 lottieAnimationView.playWithLoopFrom(loopStartTimeMs)
             } else if (currentMonth == 2 && currentDay in 1..14) { //Valentines
-                setContentView(R.layout.activity_post_screen)
+                setContentView(R.layout.activity_post_screen_valentines)
 
                 // Create a root layout for the Activity
                 val rootLayout = findViewById<ConstraintLayout>(R.id.main)
+                // List of TextViews
 
                 // Add snowfall effect using the utility function
                 rootLayout.addSeasonalFall(this)
+
+                val lottieAnimationView = findViewById<LottieAnimationView>(R.id.christmasTreeView)
+                lottieAnimationView.visibility = View.GONE
+                
             } else if (currentMonth == 11 && currentDay in 1..31) { //Halloween
                 setContentView(R.layout.activity_post_screen)
 
@@ -92,8 +99,8 @@ class postScreen : AppCompatActivity() {
                 rootLayout.addSeasonalFall(this)
             } else {
                 setContentView(R.layout.activity_post_screen)
-                val videoView: VideoView = findViewById(R.id.postScreenVideo)
-                videoView.visibility = View.GONE
+//                val videoView: VideoView = findViewById(R.id.postScreenVideo)
+//                videoView.visibility = View.GONE
 //
 //                // Inside your Activity (e.g., onCreate or appropriate lifecycle method)
 //                val videoView: VideoView = findViewById(R.id.postScreenVideo)
@@ -115,8 +122,8 @@ class postScreen : AppCompatActivity() {
             }
         } else {
             setContentView(R.layout.activity_post_screen)
-            val videoView: VideoView = findViewById(R.id.postScreenVideo)
-            videoView.visibility = View.GONE
+//            val videoView: VideoView = findViewById(R.id.postScreenVideo)
+//            videoView.visibility = View.GONE
 //            // Declare a flag to check if video is playing
 //
 //            // Inside your Activity (e.g., onCreate or appropriate lifecycle method)

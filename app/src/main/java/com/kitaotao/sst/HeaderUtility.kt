@@ -54,33 +54,55 @@ fun AppCompatActivity.setDynamicHeader() {
     val currentMonth = calendar.get(Calendar.MONTH) + 1 // Calendar.MONTH is 0-indexed
     val currentDay = calendar.get(Calendar.DAY_OF_MONTH)
 
-// Inflate the correct header layout based on the device type
+// Determine the correct header layout based on the device type and date
     val headerLayout = if (isTv) {
-        // Inflate TV header layout only if it's December
-        if (currentMonth == 12 && currentDay in 1..31) {
-            val header = LayoutInflater.from(this).inflate(R.layout.header, rootLayout, false)
+        when {
+            currentMonth == 12 && currentDay in 1..31 -> {
+                val header = LayoutInflater.from(this).inflate(R.layout.header, rootLayout, false)
 
-            // Access Toolbars from the inflated header layout, not from the rootLayout
-            val toolBarView = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-            val toolBarView2 = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar2)
+                // Access Toolbars from the inflated header layout
+                val toolBarView = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+                val toolBarView2 = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar2)
 
-            // Set the toolbar colors as needed
-            toolBarView.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
-            toolBarView2.setBackgroundColor(Color.TRANSPARENT)
+                // Set the toolbar colors for Christmas
+                toolBarView.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
+                toolBarView2.setBackgroundColor(Color.TRANSPARENT)
 
-            val backButton: Button = header.findViewById(R.id.buttonBack)
-            val homeButton: Button = header.findViewById(R.id.buttonHome)
-            val aboutButton: Button = header.findViewById(R.id.buttonAbout)
+                val backButton: Button = header.findViewById(R.id.buttonBack)
+                val homeButton: Button = header.findViewById(R.id.buttonHome)
+                val aboutButton: Button = header.findViewById(R.id.buttonAbout)
 
+                backButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
+                homeButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
+                aboutButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
 
-            backButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
-            homeButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
-            aboutButton.setBackgroundColor(ContextCompat.getColor(this, R.color.christmasGreen))
-            // Return the header layout
-            header
-        } else {
-            // Inflate default header layout if it's not December
-            LayoutInflater.from(this).inflate(R.layout.header, rootLayout, false)
+                header
+            }
+            currentMonth == 2 && currentDay in 1..14 -> {
+                val header = LayoutInflater.from(this).inflate(R.layout.header, rootLayout, false)
+
+                // Access Toolbars from the inflated header layout
+                val toolBarView = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+                val toolBarView2 = header.findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar2)
+
+                // Set the toolbar colors for Valentine's Day
+                toolBarView.setBackgroundColor(ContextCompat.getColor(this, R.color.valentines))
+                toolBarView2.setBackgroundColor(Color.TRANSPARENT)
+
+                val backButton: Button = header.findViewById(R.id.buttonBack)
+                val homeButton: Button = header.findViewById(R.id.buttonHome)
+                val aboutButton: Button = header.findViewById(R.id.buttonAbout)
+
+                backButton.setBackgroundColor(ContextCompat.getColor(this, R.color.valentines))
+                homeButton.setBackgroundColor(ContextCompat.getColor(this, R.color.valentines))
+                aboutButton.setBackgroundColor(ContextCompat.getColor(this, R.color.valentines))
+
+                header
+            }
+            else -> {
+                // Default header layout
+                LayoutInflater.from(this).inflate(R.layout.header, rootLayout, false)
+            }
         }
     } else {
         // Inflate phone header layout if it's not a TV
