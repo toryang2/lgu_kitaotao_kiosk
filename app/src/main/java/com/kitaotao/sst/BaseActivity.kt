@@ -81,15 +81,17 @@ import java.net.URL
 open class BaseActivity : AppCompatActivity() {
 
     private var exoPlayer: ExoPlayer? = null
-
+    var screensaverEnabled = true
     private val idleTimeout: Long = 600000 // 600,000 ms = 10 minutes
     private var idleHandler: Handler? = null
     private val idleRunnable = Runnable {
-        // Trigger screensaver after timeout
-        val intent = Intent(this, ScreensaverActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
-        finish()  // Close the current activity
+        if(screensaverEnabled) {
+            // Trigger screensaver after timeout
+            val intent = Intent(this, ScreensaverActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()  // Close the current activity
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -621,7 +623,7 @@ open class BaseActivity : AppCompatActivity() {
         idleHandler?.removeCallbacks(idleRunnable)
     }
 
-    private fun resetIdleTimer() {
+    fun resetIdleTimer() {
         idleHandler?.removeCallbacks(idleRunnable)
         idleHandler?.postDelayed(idleRunnable, idleTimeout)
     }

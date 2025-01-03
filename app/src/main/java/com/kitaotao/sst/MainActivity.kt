@@ -301,8 +301,12 @@ class MainActivity : BaseActivity() {
     private fun showProgressDialog() {
         // Check if the dialog is already visible
         if (::progressDialog.isInitialized && progressDialog.isShowing) {
-            return // Don't create a new dialog if one is already showing
+            progressDialog.dismiss() // Dismiss the dialog
+            screensaverEnabled = true // Re-enable screensaver
+            resetIdleTimer() // Restart idle timer
         }
+
+        screensaverEnabled = false
 
         val builder = AlertDialog.Builder(this, R.style.SemiTransparentDialog)
         val view = layoutInflater.inflate(R.layout.progress_dialog_layout, null)
@@ -318,6 +322,12 @@ class MainActivity : BaseActivity() {
 
         progressDialog.show()
 
+    }
+
+    private fun dismissProgressDialog() {
+        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+            progressDialog.dismiss()
+        }
     }
 
     // Update the progress bar during the download
