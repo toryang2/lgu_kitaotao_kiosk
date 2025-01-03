@@ -4,6 +4,7 @@ package com.kitaotao.sst
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
+import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.graphics.Color
@@ -19,8 +20,10 @@ import android.os.Looper
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import androidx.annotation.OptIn
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -87,7 +90,7 @@ open class BaseActivity : AppCompatActivity() {
     private val idleRunnable = Runnable {
         if(screensaverEnabled) {
             // Trigger screensaver after timeout
-            val intent = Intent(this, ScreensaverActivity::class.java)
+            val intent = Intent(this, postScreen::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()  // Close the current activity
@@ -106,6 +109,12 @@ open class BaseActivity : AppCompatActivity() {
 
         Configuration.getInstance().userAgentValue = packageName
     }
+//    fun updateProgressSmoothly(progress: Int) {
+//        val animator = ObjectAnimator.ofInt(progressBar, "progress", progressBar.progress, progress)
+//        animator.duration = 1000 // Duration in milliseconds (1 second)
+//        animator.interpolator = AccelerateDecelerateInterpolator() // Smooth transition
+//        animator.start()
+//    }
 
     // Static API key (static value)
     companion object {

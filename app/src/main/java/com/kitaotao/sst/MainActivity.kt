@@ -9,6 +9,7 @@ import android.os.Environment
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.ProgressBar
@@ -16,8 +17,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.kitaotao.sst.network.GitHubService
 import com.kitaotao.sst.office.BidsAndAwardsCommittee
 import com.kitaotao.sst.office.HumanResourceManagementOffice
@@ -48,6 +51,7 @@ import com.kitaotao.sst.office.SBO
 import com.kitaotao.sst.office.SENIOR
 import com.kitaotao.sst.office.TOURISM
 import com.kitaotao.sst.office.TREASURER
+import com.kitaotao.sst.utils.NetworkUtils
 import isDeviceTabletClickPop
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -66,9 +70,15 @@ import java.io.IOException
 
 class MainActivity : BaseActivity() {
 
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
+    private var isSwipeRefresh = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)
 
         addSeasonalBackground()
 
@@ -81,6 +91,20 @@ class MainActivity : BaseActivity() {
 
         // Set up RecyclerView
         setupRecyclerView()
+
+        swipeRefreshLayout.setOnRefreshListener {
+            // Refresh data from the network or other source
+            isSwipeRefresh = true
+            lifecycleScope.launch {
+                try {
+                    checkForUpdates() // Refresh only updates
+                    swipeRefreshLayout.isRefreshing = false // Stop refreshing animation
+                } catch (e: Exception) {
+                    swipeRefreshLayout.isRefreshing = false
+                    Toast.makeText(this@MainActivity, "Error checking for updates: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
 
     }
 
@@ -136,7 +160,6 @@ class MainActivity : BaseActivity() {
 
         val adapter = CardAdapter(items, this)
         recyclerView.adapter = adapter
-
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
@@ -232,7 +255,41 @@ class MainActivity : BaseActivity() {
         stopLockTask()
     }
 
+    fun showNoInternetDialog() {
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("No Internet Connection")
+            .setMessage("Please check your internet connection and try again.")
+            .setPositiveButton("OK") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .show()
+
+        val color = Color.parseColor("#49454F") // Your desired color for the button text
+
+        // Change the text color of the positive button ("OK") ("No")
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(color)
+    }
+
+    fun showNoUpdateDialog() {
+        val dialog = AlertDialog.Builder(this)
+            .setMessage("You are already on the latest version.")
+            .setPositiveButton("OK", null)
+            .show()
+
+        val color = Color.parseColor("#49454F") // Your desired color for the button text
+
+        // Change the text color of the positive button ("OK") ("No")
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(color)
+    }
+
     suspend fun checkForUpdates() {
+        if (!NetworkUtils.isNetworkAvailable(this)) {
+            if (isSwipeRefresh) {
+                showNoInternetDialog()
+            }
+            return
+        }
+
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -248,6 +305,10 @@ class MainActivity : BaseActivity() {
             // Compare the versions to check if the GitHub version is newer
             if (isUpdateRequired(latestVersion, currentVersion)) {
                 showUpdateDialog(latestVersion, release.assets[0].browser_download_url, release.body)
+            } else {
+                if (isSwipeRefresh) {
+                    showNoUpdateDialog()
+                }
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -292,8 +353,36 @@ class MainActivity : BaseActivity() {
         dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(color)
     }
 
+//    private lateinit var progressBar: ProgressBar
+//    private lateinit var percentageText: TextView
+//    private lateinit var progressDialog: AlertDialog
+//    private lateinit var downloadText: TextView
+//
+//    // Call this method to show the progress dialog with a progress bar
+//    private fun showProgressDialog() {
+//        // Check if the dialog is already visible
+//        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+//            return
+//        }
+//
+//        val builder = AlertDialog.Builder(this, R.style.SemiTransparentDialog)
+//        val view = layoutInflater.inflate(R.layout.progress_dialog_layout, null)
+//
+//        progressBar = view.findViewById(R.id.progressBar)
+//        percentageText = view.findViewById(R.id.percentageText)
+//        downloadText = view.findViewById(R.id.dowloading)
+//
+//
+//        builder.setView(view)
+//            .setCancelable(false) // Prevent manual dismissal
+//        progressDialog = builder.create()
+//
+//        progressDialog.show()
+//
+//    }
+    private var downloadCall: Call? = null
+
     private lateinit var progressBar: ProgressBar
-    private lateinit var percentageText: TextView
     private lateinit var progressDialog: AlertDialog
     private lateinit var downloadText: TextView
 
@@ -301,106 +390,189 @@ class MainActivity : BaseActivity() {
     private fun showProgressDialog() {
         // Check if the dialog is already visible
         if (::progressDialog.isInitialized && progressDialog.isShowing) {
-            progressDialog.dismiss() // Dismiss the dialog
-            screensaverEnabled = true // Re-enable screensaver
-            resetIdleTimer() // Restart idle timer
+            return
         }
 
-        screensaverEnabled = false
-
         val builder = AlertDialog.Builder(this, R.style.SemiTransparentDialog)
-        val view = layoutInflater.inflate(R.layout.progress_dialog_layout, null)
+        val view = layoutInflater.inflate(R.layout.download_bar_new, null)
 
         progressBar = view.findViewById(R.id.progressBar)
-        percentageText = view.findViewById(R.id.percentageText)
         downloadText = view.findViewById(R.id.dowloading)
 
+        // Customization for APK installer style
+        downloadText.text = "Preparing download..." // Initial text
+        progressBar.max = 100 // Ensure the progress bar has a max value of 100
 
         builder.setView(view)
-            .setCancelable(false) // Prevent manual dismissal
+            .setCancelable(true) // Prevent manual dismissal
+            .setOnDismissListener {
+                downloadCall?.cancel()
+            }
         progressDialog = builder.create()
 
         progressDialog.show()
 
+        val window = progressDialog.window
+        window?.setLayout(800, ViewGroup.LayoutParams.WRAP_CONTENT)
     }
 
+    // Update progress dynamically
+    private fun updateProgress(progress: Int) {
+        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+            progressBar.progress = progress
+            downloadText.text = if (progress < 100) "Downloading..." else "Download complete!"
+        }
+    }
+
+    // Call this method to dismiss the progress dialog
     private fun dismissProgressDialog() {
         if (::progressDialog.isInitialized && progressDialog.isShowing) {
             progressDialog.dismiss()
         }
+        downloadCall?.cancel()
     }
 
-    // Update the progress bar during the download
     private fun downloadApk(url: String) {
         val client = OkHttpClient()
         val request = Request.Builder().url(url).build()
 
-        client.newCall(request).enqueue(object : Callback {
+        // Store the download call reference
+        downloadCall = client.newCall(request)
+
+        downloadCall?.enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
                 e.printStackTrace()
-                // Handle error on the UI thread if needed
                 runOnUiThread {
-                    if (::progressDialog.isInitialized && progressDialog.isShowing) {
-                        progressDialog.dismiss()
-                    }
+                    dismissProgressDialog()
+                    Toast.makeText(this@MainActivity, "Download failed: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onResponse(call: Call, response: Response) {
                 if (response.isSuccessful) {
                     val file = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "downloadedfile.apk")
-
                     val totalSize = response.body?.contentLength() ?: 0
-                    var downloadedSize: Long = 0
 
-                    // Show the progress dialog
-                    runOnUiThread {
-                        showProgressDialog()
+                    if (totalSize <= 0) {
+                        runOnUiThread {
+                            dismissProgressDialog()
+                            Toast.makeText(this@MainActivity, "Invalid file size", Toast.LENGTH_SHORT).show()
+                        }
+                        return
                     }
 
-                    response.body?.byteStream()?.use { inputStream ->
-                        file.outputStream().use { outputStream ->
-                            val buffer = ByteArray(1024)
-                            var bytesRead: Int
+                    var downloadedSize: Long = 0
+                    runOnUiThread { showProgressDialog() }
 
-                            while (inputStream.read(buffer).also { bytesRead = it } != -1) {
-                                outputStream.write(buffer, 0, bytesRead)
-                                downloadedSize += bytesRead
-                                val progress = (downloadedSize * 100 / totalSize).toInt()
+                    try {
+                        response.body?.byteStream()?.use { inputStream ->
+                            file.outputStream().use { outputStream ->
+                                val buffer = ByteArray(1024)
+                                var bytesRead: Int
 
-                                // Update progress bar and percentage text on the UI thread
-                                runOnUiThread {
-                                    if (progress <= 100) {
-                                        progressBar.progress = progress
-                                        percentageText.text = "$progress%"
-                                    }
+                                while (inputStream.read(buffer).also { bytesRead = it } != -1) {
+                                    outputStream.write(buffer, 0, bytesRead)
+                                    downloadedSize += bytesRead
+                                    val progress = (downloadedSize * 100 / totalSize).toInt()
+
+                                    runOnUiThread { updateProgress(progress) }
                                 }
                             }
                         }
-                    }
 
-                    // Once download is complete, dismiss the dialog
-                    runOnUiThread {
-                        progressBar.visibility = View.GONE
-                        percentageText.visibility = View.GONE
-
-                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
-                            progressDialog.dismiss()
+                        runOnUiThread {
+                            dismissProgressDialog()
+                            Toast.makeText(this@MainActivity, "Download complete!", Toast.LENGTH_SHORT).show()
+                            installApk(file)
                         }
-
-                        installApk(file) // Proceed with APK installation
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        runOnUiThread {
+                            dismissProgressDialog()
+                            Toast.makeText(this@MainActivity, "Error during download: ${e.message}", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 } else {
-                    // Handle unsuccessful response
                     runOnUiThread {
-                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
-                            progressDialog.dismiss()
-                        }
+                        dismissProgressDialog()
+                        Toast.makeText(this@MainActivity, "Server error: ${response.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
         })
     }
+
+//    // Update the progress bar during the download
+//    private fun downloadApk(url: String) {
+//        val client = OkHttpClient()
+//        val request = Request.Builder().url(url).build()
+//
+//        client.newCall(request).enqueue(object : Callback {
+//            override fun onFailure(call: Call, e: IOException) {
+//                e.printStackTrace()
+//                // Handle error on the UI thread if needed
+//                runOnUiThread {
+//                    if (::progressDialog.isInitialized && progressDialog.isShowing) {
+//                        progressDialog.dismiss()
+//                    }
+//                }
+//            }
+//
+//            override fun onResponse(call: Call, response: Response) {
+//                if (response.isSuccessful) {
+//                    val file = File(getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "downloadedfile.apk")
+//
+//                    val totalSize = response.body?.contentLength() ?: 0
+//                    var downloadedSize: Long = 0
+//
+//                    // Show the progress dialog
+//                    runOnUiThread {
+//                        showProgressDialog()
+//                    }
+//
+//                    response.body?.byteStream()?.use { inputStream ->
+//                        file.outputStream().use { outputStream ->
+//                            val buffer = ByteArray(1024)
+//                            var bytesRead: Int
+//
+//                            while (inputStream.read(buffer).also { bytesRead = it } != -1) {
+//                                outputStream.write(buffer, 0, bytesRead)
+//                                downloadedSize += bytesRead
+//                                val progress = (downloadedSize * 100 / totalSize).toInt()
+//
+//                                // Update progress bar and percentage text on the UI thread
+//                                runOnUiThread {
+//                                    if (progress <= 100) {
+//                                        progressBar.progress = progress
+//                                        percentageText.text = "$progress%"
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    // Once download is complete, dismiss the dialog
+//                    runOnUiThread {
+//                        progressBar.visibility = View.GONE
+//                        percentageText.visibility = View.GONE
+//
+//                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+//                            progressDialog.dismiss()
+//                        }
+//
+//                        installApk(file) // Proceed with APK installation
+//                    }
+//                } else {
+//                    // Handle unsuccessful response
+//                    runOnUiThread {
+//                        if (::progressDialog.isInitialized && progressDialog.isShowing) {
+//                            progressDialog.dismiss()
+//                        }
+//                    }
+//                }
+//            }
+//        })
+//    }
 
     private fun installApk(file: File) {
         // Install the APK after download
