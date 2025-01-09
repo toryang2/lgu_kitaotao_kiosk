@@ -163,6 +163,7 @@ dependencies {
     implementation(libs.androidx.leanback)
     implementation(libs.glide)
     implementation(libs.androidx.media3.exoplayer)
+    implementation(libs.androidx.viewfinder.core)
     // More dependencies...
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -88,7 +88,7 @@ class postScreen : AppCompatActivity() {
 
                 val lottieAnimationView = findViewById<LottieAnimationView>(R.id.christmasTreeView)
                 lottieAnimationView.visibility = View.GONE
-                
+
             } else if (currentMonth == 11 && currentDay in 1..31) { //Halloween
                 setContentView(R.layout.activity_post_screen)
 
