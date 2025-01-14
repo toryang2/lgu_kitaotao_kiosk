@@ -6,6 +6,7 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.View
@@ -78,6 +79,13 @@ class MainActivity : BaseActivity() {
             }
         }
 
+    }
+    override fun onResume() {
+        super.onResume()
+
+        // Reflect updated values
+        Log.d("MainActivity", "Idle Timeout: $idleTimeout")
+        Log.d("MainActivity", "Screensaver Enabled: $screensaverEnabled")
     }
 
     private fun setupRecyclerView() {

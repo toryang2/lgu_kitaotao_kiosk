@@ -1,11 +1,17 @@
 package com.kitaotao.sst
 
 import addSeasonalBackground
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.AbsoluteSizeSpan
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +19,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.PopupMenu
+import android.widget.PopupWindow
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -33,12 +41,15 @@ import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import org.codehaus.janino.Java.ThisReference
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import showClickPopAnimation
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
+import android.widget.ListView
+import java.lang.reflect.Field
 
 class about : BaseActivity() {
 
@@ -53,6 +64,110 @@ class about : BaseActivity() {
 
         val githubProfilePicture: ImageView = findViewById(R.id.githubProfilePicture)
         val githubLink: TextView = findViewById(R.id.githubLink)
+
+        val dropDownButton: Button = findViewById(R.id.buttonTimeoutSelect)
+        dropDownButton.text = sharedPreferences.getString("lastSelectedTimeout", "Timeout: Not Set") ?: "Timeout: Not Set"
+
+        dropDownButton.setOnClickListener {
+            val popupMenu = PopupMenu(this, dropDownButton)
+            popupMenu.menu.apply {
+                add("5 Seconds")
+                add("5 Minutes")
+                add("10 Minutes")
+                add("15 Minutes")
+                add("30 Minutes")
+                add("60 Minutes")
+                add("Not Set")
+            }
+
+            // Customize the text size for each menu item
+            for (i in 0 until popupMenu.menu.size()) {
+                val menuItem = popupMenu.menu.getItem(i)
+                val spannableTitle = SpannableString(menuItem.title)
+                spannableTitle.setSpan(
+                    AbsoluteSizeSpan(10, true), // 10sp text size
+                    0,
+                    spannableTitle.length,
+                    Spanned.SPAN_INCLUSIVE_INCLUSIVE
+                )
+                menuItem.title = spannableTitle
+            }
+
+            setPopupMenuWidth(popupMenu, dpToPx(256))
+
+            popupMenu.setOnMenuItemClickListener { menuItem ->
+                val lastSelectedTimeoutText: String
+                when (menuItem.title.toString()) {
+                    "5 Seconds" -> {
+                        updateIdleTimeoutSeconds = true
+                        updateIdleTimeoutMinutes = false
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 0, seconds = 5)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000} seconds"
+                    }
+                    "5 Minutes" -> {
+                        updateIdleTimeoutSeconds = false
+                        updateIdleTimeoutMinutes = true
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 5, seconds = 0)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000 / 60} minutes"
+                    }
+                    "10 Minutes" -> {
+                        updateIdleTimeoutSeconds = false
+                        updateIdleTimeoutMinutes = true
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 10, seconds = 0)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000 / 60} minutes"
+                    }
+                    "15 Minutes" -> {
+                        updateIdleTimeoutSeconds = false
+                        updateIdleTimeoutMinutes = true
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 15, seconds = 0)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000 / 60} minutes"
+                    }
+                    "30 Minutes" -> {
+                        updateIdleTimeoutSeconds = false
+                        updateIdleTimeoutMinutes = true
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 30, seconds = 0)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000 / 60} minutes"
+                    }
+                    "60 Minutes" -> {
+                        updateIdleTimeoutSeconds = false
+                        updateIdleTimeoutMinutes = true
+                        screensaverEnabled = true
+                        updateIdleTimeout(minutes = 60, seconds = 0)
+                        lastSelectedTimeoutText = "Timeout: ${idleTimeout / 1000 / 60} minutes"
+                    }
+                    "Not Set" -> {
+                        screensaverEnabled = false
+                        lastSelectedTimeoutText = "Timeout: Not Set"
+                    }
+                    else -> return@setOnMenuItemClickListener false
+                }
+
+                // Update the text of the dropdown button and save preferences
+                dropDownButton.text = lastSelectedTimeoutText
+                savePreferences(sharedPreferences, lastSelectedTimeoutText)
+
+                // Show a toast with the appropriate message
+                Toast.makeText(
+                    this,
+                    when {
+                        !screensaverEnabled -> "Idle timeout is disabled"
+                        updateIdleTimeoutSeconds -> "Idle timeout set to ${idleTimeout / 1000} seconds"
+                        else -> "Idle timeout set to ${idleTimeout / 1000 / 60} minutes"
+                    },
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                true
+            }
+
+            popupMenu.show()
+        }
+
 
         // Load GitHub Profile Picture using Glide (replace with your GitHub avatar URL)
         Glide.with(this)
@@ -112,6 +227,11 @@ class about : BaseActivity() {
                 Toast.makeText(this, "Password reset to default", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun dpToPx(dp: Int): Int {
+        val density = resources.displayMetrics.density
+        return (dp * density).toInt()
     }
 
     private fun showPasswordConfirmationDialog() {

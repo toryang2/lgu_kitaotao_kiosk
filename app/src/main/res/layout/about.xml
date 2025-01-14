@@ -80,6 +80,26 @@
             app:layout_constraintTop_toBottomOf="@+id/buttonChangePassword" />
 
         <Button
+            android:id="@+id/buttonTimeoutSelect"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Timeout"
+            android:textAlignment="textStart"
+            android:textColor="#6F6F6F"
+            android:textSize="10sp"
+            app:cornerRadius="0dp"
+            app:iconGravity="end"
+            app:iconTint="#6F6F6F"
+            app:layout_constraintEnd_toEndOf="@+id/buttonResetPassword"
+            app:layout_constraintStart_toStartOf="@+id/buttonResetPassword"
+            app:layout_constraintTop_toBottomOf="@+id/buttonResetPassword" />
+
+        <Button
             android:id="@+id/buttonCheckUpdate"
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="256dp"
@@ -122,8 +142,8 @@
             app:iconGravity="end"
             app:iconTint="#6F6F6F"
             app:layout_constraintBottom_toTopOf="@+id/buttonCheckUpdate"
-            app:layout_constraintEnd_toEndOf="@+id/buttonResetPassword"
-            app:layout_constraintStart_toStartOf="@+id/buttonResetPassword" />
+            app:layout_constraintEnd_toEndOf="@+id/buttonTimeoutSelect"
+            app:layout_constraintStart_toStartOf="@+id/buttonTimeoutSelect" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/githubProfilePicture"

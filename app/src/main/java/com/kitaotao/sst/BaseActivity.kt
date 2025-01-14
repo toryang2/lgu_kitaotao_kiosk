@@ -5,7 +5,9 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.DashPathEffect
 import android.graphics.Paint
@@ -19,8 +21,10 @@ import android.os.Looper
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.PopupMenu
 import androidx.annotation.OptIn
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -46,6 +50,8 @@ import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.compass.CompassOverlay
 import java.io.File
+import java.lang.reflect.Field
+import java.lang.reflect.Method
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -53,8 +59,13 @@ import java.net.URL
 open class BaseActivity : AppCompatActivity() {
 
     private var exoPlayer: ExoPlayer? = null
-    var screensaverEnabled = true
-    private val idleTimeout: Long = 600000 // 600,000 ms = 10 minutes
+    protected var idleTimeout: Long = 600000 // Default: 10 minutes
+    protected var updateIdleTimeoutSeconds: Boolean = false
+    protected var updateIdleTimeoutMinutes: Boolean = true
+    protected var screensaverEnabled: Boolean = true
+    val sharedPreferences by lazy {
+        getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
+    }
     private var idleHandler: Handler? = null
     private val idleRunnable = Runnable {
         if(screensaverEnabled) {
@@ -69,6 +80,8 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        loadPreferences()
+
         idleHandler = Handler(Looper.getMainLooper())
         resetIdleTimer()
 
@@ -77,6 +90,56 @@ open class BaseActivity : AppCompatActivity() {
         playAudioForActivity()
 
         Configuration.getInstance().userAgentValue = packageName
+    }
+
+    fun setPopupMenuWidth(popupMenu: PopupMenu, widthPx: Int) {
+        try {
+            val mPopup: Field = PopupMenu::class.java.getDeclaredField("mPopup")
+            mPopup.isAccessible = true
+            val menuPopupHelper = mPopup.get(popupMenu)
+
+            val setWidthMethod: Method = menuPopupHelper.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+            setWidthMethod.isAccessible = true
+            setWidthMethod.invoke(menuPopupHelper, true)
+
+            // Use reflection to set width (field name may vary across Android versions)
+            val popupMenuWidthField: Field = menuPopupHelper.javaClass.getDeclaredField("mMenuPopup")
+            popupMenuWidthField.isAccessible = true
+            val menuPopup = popupMenuWidthField.get(menuPopupHelper)
+
+            val setWidthMethodPopup: Method = menuPopup.javaClass.getDeclaredMethod("setWidth", Int::class.java)
+            setWidthMethodPopup.isAccessible = true
+            setWidthMethodPopup.invoke(menuPopup, widthPx)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    protected fun loadPreferences() {
+        screensaverEnabled = sharedPreferences.getBoolean("screensaverEnabled", true)
+        updateIdleTimeoutSeconds = sharedPreferences.getBoolean("updateIdleTimeoutSeconds", false)
+        updateIdleTimeoutMinutes = sharedPreferences.getBoolean("updateIdleTimeoutMinutes", true)
+        idleTimeout = sharedPreferences.getLong("idleTimeout", 600000)
+    }
+
+    protected fun savePreferences(sharedPreferences: SharedPreferences, lastSelectedTimeoutText: String, dropDownButton: Button? = null) {
+        with(sharedPreferences.edit()) {
+            putBoolean("screensaverEnabled", screensaverEnabled)
+            putBoolean("updateIdleTimeoutSeconds", updateIdleTimeoutSeconds)
+            putBoolean("updateIdleTimeoutMinutes", updateIdleTimeoutMinutes)
+            putLong("idleTimeout", idleTimeout)
+            putString("lastSelectedTimeout", lastSelectedTimeoutText)
+            apply()
+        }
+    }
+
+    protected fun updateIdleTimeout(seconds: Int = 0, minutes: Int = 0, dropDownButton: Button? = null) {
+        idleTimeout = when {
+            updateIdleTimeoutSeconds -> (seconds * 1000).toLong() // Convert seconds to milliseconds
+            updateIdleTimeoutMinutes -> (minutes * 60 * 1000).toLong() // Convert minutes to milliseconds
+            else -> 0L // Default to no timeout if neither is enabled
+        }
+        savePreferences(sharedPreferences, "Timeout: ${if (updateIdleTimeoutSeconds) "$seconds seconds" else "$minutes minutes"}", dropDownButton)
     }
 //    fun updateProgressSmoothly(progress: Int) {
 //        val animator = ObjectAnimator.ofInt(progressBar, "progress", progressBar.progress, progress)
@@ -590,6 +653,7 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        loadPreferences()
         // Reset idle timeout when the activity is resumed
         idleHandler?.removeCallbacks(idleRunnable)
         idleHandler?.postDelayed(idleRunnable, idleTimeout)
