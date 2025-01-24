@@ -12,7 +12,7 @@ This Project is used mainly for the Interactive Displays for LGU Kitaotao
 
 This project is used by the following companies:
 
-- Local Government of Kitaotao
+>**Local Government of Kitaotao**
 ## 🔗 Links
 [![facebook](https://img.shields.io/badge/FACEBOOK-0A66C2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/wowkitaotao/)
 
