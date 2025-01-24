@@ -14,17 +14,6 @@ This project is used by the following companies:
 
 - Local Government of Kitaotao
 ## 🔗 Links
-<!--
 [![facebook](https://img.shields.io/badge/FACEBOOK-0A66C2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/wowkitaotao/)
 
-[![kitakitzKitaotao](https://massokitaotao.net/wp-content/uploads/2025/01/mergeLogo128.png)](https://lgukitaotao.com/) -->
-
-<div align="center">
-  <a href="https://www.facebook.com/wowkitaotao/">
-    <img src="https://img.shields.io/badge/FACEBOOK-0A66C2?style=for-the-badge&logo=facebook&logoColor=white" alt="facebook">
-  </a>
-  <br>
-  <a href="https://lgukitaotao.com/">
-    <img src="https://massokitaotao.net/wp-content/uploads/2025/01/mergeLogo128.png" alt="kitakitzKitaotao">
-  </a>
-</div>
+[![kitakitzKitaotao](https://massokitaotao.net/wp-content/uploads/2025/01/mergeLogo128.png)](https://lgukitaotao.com/)
