@@ -5,7 +5,7 @@ This Project is used mainly for the Interactive Displays for LGU Kitaotao
 
 ## Authors
 
-- [@toryang](https://www.github.com/toryang2) 
+- [@toryang2](https://www.github.com/toryang2) 
 
 
 ## Used By
