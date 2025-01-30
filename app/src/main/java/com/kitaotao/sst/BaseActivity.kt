@@ -19,6 +19,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.TypedValue
+import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
@@ -26,6 +27,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import androidx.annotation.OptIn
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawable
@@ -37,7 +39,10 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DefaultDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
+import br.tiagohm.markdownview.MarkdownView
 import com.kitaotao.sst.office.*
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import org.json.JSONObject
 import org.osmdroid.config.Configuration
 import org.osmdroid.tileprovider.tilesource.OnlineTileSourceBase
@@ -50,6 +55,9 @@ import org.osmdroid.views.overlay.Marker
 import org.osmdroid.views.overlay.Polyline
 import org.osmdroid.views.overlay.compass.CompassOverlay
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
+import java.io.IOException
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 import java.net.HttpURLConnection
@@ -748,5 +756,80 @@ open class BaseActivity : AppCompatActivity() {
                 exoPlayer?.release() // Release resources on error
             }
         })
+    }
+
+    fun showMarkdownDialog(markdownContent: String) {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_markdown, null)
+        val markdownView = dialogView.findViewById<MarkdownView>(R.id.markdownView)
+
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setPositiveButton("Close") { dialog, _ -> dialog.dismiss() }
+            .create()
+
+        dialog.setOnShowListener {
+            val positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+
+            val color = Color.parseColor("#49454F")
+            positiveButton.setTextColor(color)
+        }
+
+        markdownView.loadMarkdown(markdownContent)
+        dialog.show()
+    }
+
+    // Fetch markdown content and manage local cache
+    fun fetchMarkdownFile(url: String, onResult: (String?) -> Unit) {
+        val client = OkHttpClient()
+        val request = Request.Builder().url(url).build()
+
+        Thread {
+            try {
+                // Fetch from the URL
+                val response = client.newCall(request).execute()
+                val remoteMarkdown = response.body?.string()
+
+                if (remoteMarkdown != null) {
+                    val cachedMarkdown = readMarkdownFromFile()
+
+                    if (cachedMarkdown == null || cachedMarkdown != remoteMarkdown) {
+                        // Update the cache if content has changed
+                        saveMarkdownToFile(remoteMarkdown)
+                    }
+                    onResult(remoteMarkdown) // Return the latest content
+                } else {
+                    // Fallback to cache if fetching fails
+                    val cachedMarkdown = readMarkdownFromFile()
+                    onResult(cachedMarkdown)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                // On error, fallback to cache
+                val cachedMarkdown = readMarkdownFromFile()
+                onResult(cachedMarkdown)
+            }
+        }.start()
+    }
+
+    // Save markdown content to local file
+    fun saveMarkdownToFile(content: String) {
+        try {
+            val fileOutputStream: FileOutputStream = openFileOutput("readme.md", MODE_PRIVATE)
+            fileOutputStream.write(content.toByteArray())
+            fileOutputStream.close()
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+    }
+
+    // Read markdown content from local file
+    fun readMarkdownFromFile(): String? {
+        try {
+            val fileInputStream: FileInputStream = openFileInput("readme.md")
+            return fileInputStream.bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        return null
     }
 }

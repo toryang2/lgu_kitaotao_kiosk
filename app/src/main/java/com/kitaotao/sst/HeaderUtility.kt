@@ -145,9 +145,23 @@ fun AppCompatActivity.setDynamicHeader() {
             || this is SENIOR
             || this is TOURISM
             || this is TREASURER
-            || this is MunicipalBusinessProcessingAndLicensingOffice
-            || this is about) {
+            || this is MunicipalBusinessProcessingAndLicensingOffice) {
             it.visibility = View.GONE
+        } else if (this is about) {
+            it.text = "About"
+            it.visibility = View.GONE
+            it.setOnClickListener {
+                // Fetch markdown content and show dialog
+                fetchMarkdownFile("https://raw.githubusercontent.com/toryang2/lgu_kitaotao_kiosk/refs/heads/master/README.md") { markdownContent ->
+                    runOnUiThread {
+                        if (markdownContent != null) {
+                            showMarkdownDialog(markdownContent)
+                        } else {
+                            Toast.makeText(this, "Failed to fetch Markdown file", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+            }
         } else {
             it.setOnClickListener {
                 // Start MainActivity directly without delay

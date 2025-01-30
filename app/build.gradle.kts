@@ -187,4 +187,6 @@ dependencies {
     implementation("com.graphhopper:graphhopper-core:6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
 
+    implementation("com.github.tiagohm:MarkdownView:0.19.0")
+
 }

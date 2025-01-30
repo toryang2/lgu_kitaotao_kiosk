@@ -909,5 +909,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include layout="@layout/header" />
 </androidx.constraintlayout.widget.ConstraintLayout>
