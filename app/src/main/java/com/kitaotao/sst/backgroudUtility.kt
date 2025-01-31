@@ -16,26 +16,31 @@ fun AppCompatActivity.addSeasonalBackground() {
 
 // Add a seasonal background if the device is a TV
     if (isTvDevice()) {
-        when {
-            currentMonth == 12 -> {
-                // Add the Christmas background for December
-                seasonalBackground(R.drawable.christmas_header) // Replace with your Christmas image resource ID
-            }
-            currentMonth == 2 && currentDay in 1..14 -> {
-                // Add the Valentine's Day background for February
-                seasonalBackground(R.drawable.hearts_header)
-            }
-            else -> {
-                // No seasonal background; apply default styling
-                removeSeasonalBackground()
-                setSolidBackgroundColor()
-            }
-        }
-    } else {
-        // For non-TV devices, ensure default styling
         removeSeasonalBackground()
         setSolidBackgroundColor()
     }
+//    {
+//        when {
+//            currentMonth == 12 -> {
+//                // Add the Christmas background for December
+//                seasonalBackground(R.drawable.christmas_header) // Replace with your Christmas image resource ID
+//            }
+//            currentMonth == 2 && currentDay in 1..14 -> {
+//                // Add the Valentine's Day background for February
+//                seasonalBackground(R.drawable.hearts_header)
+//            }
+//            else -> {
+//                // No seasonal background; apply default styling
+//                removeSeasonalBackground()
+//                setSolidBackgroundColor()
+//            }
+//        }
+//    }
+//    else {
+//        // For non-TV devices, ensure default styling
+//        removeSeasonalBackground()
+//        setSolidBackgroundColor()
+//    }
 }
 
 // Extension function to add seasonal background with a solid color below

@@ -10,7 +10,7 @@ import kotlin.random.Random
 class HeartFallView(context: Context, attrs: AttributeSet? = null) : View(context, attrs) {
 
     private val hearts = mutableListOf<Heart>()
-    private val heartCount = 100 // Number of hearts
+    private val heartCount = 50 // Number of hearts
     private val paint = Paint().apply { color = Color.rgb(243, 83, 106) } // Pink color
 
     init {
@@ -57,7 +57,7 @@ class HeartFallView(context: Context, attrs: AttributeSet? = null) : View(contex
         var x: Float = Random.nextFloat() * screenWidth, // Random horizontal position
         var y: Float = Random.nextFloat() * screenHeight, // Random starting vertical position
         var radius: Float = Random.nextFloat() * 10 + 5, // Increased size range (5-15)
-        var speed: Float = Random.nextFloat() * 3 + 2, // Random speed (2-5)
+        var speed: Float = Random.nextFloat() * 1 + (1/2), // Random speed (2-5)
         var rotation: Float = Random.nextFloat() * 360 // Initial random rotation angle (0-360)
     ) {
         fun update(screenHeight: Float) {
