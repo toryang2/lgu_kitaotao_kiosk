@@ -63,7 +63,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="To issue a certified copy of Tax Declaration history of the real property reflecting its Tax Declaration Number, Owner, Total Land Area, Lot Number, Encumbrance &amp; Memoranda from current down to its first property declation."
+                            android:text="To issue a certified copy of Tax Declaration history of the real property reflecting its Tax Declaration Number, Owner, Total Land Area, Lot Number, Encumbrance &amp; Memoranda from current down to its first property declaration."
                             android:textColor="#49454F" />
                     </TableRow>
 
