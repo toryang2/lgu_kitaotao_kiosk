@@ -469,6 +469,9 @@
             android:name=".office.MunicipalBusinessProcessingAndLicensingOffice"
             android:exported="false" />
         <activity
+            android:name=".services.bplo.bplo_service_6"
+            android:exported="false" />
+        <activity
             android:name=".services.bplo.bplo_service_5"
             android:exported="false" />
         <activity

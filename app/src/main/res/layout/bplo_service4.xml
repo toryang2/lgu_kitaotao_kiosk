@@ -49,7 +49,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Issuance of Data Information "
+                            android:text="Issuance of Certification of Business Cessation"
                             android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -63,7 +63,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="This service caters any public / private agencies that data request for whatever legal purposes."
+                            android:text="This service caters to stop / closed business"
                             android:textColor="#49454F" />
                     </TableRow>
 
@@ -155,7 +155,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="G2C - Government to Client\nG2B - Government to Business\nG2G - Government to Government"
+                            android:text="G2C - Government to Client\nG2B - Government to Business"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -186,7 +186,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="All transacting public"
+                            android:text="Business Operators"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -235,7 +235,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Letter Request (1 original copy) or sent thru email"
+                            android:text="1.	Existing Business Permit"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
 
@@ -247,7 +247,64 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Client"
+                            android:text="1.	BPLO Personnel"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc252"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.	MTO Clearance"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc253"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="2.	MTO Personnel"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc258"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_left_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:textColor="#49454F"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tableHeaderDesc259"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.5"
+                            android:background="@drawable/cell_shape_normal_right_notop"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.	Client"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -335,7 +392,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Bring letter request duly signed by the authorized personnel (for walk in) or sent an email siting for the data at\nbplo.05272020@gmail.com"
+                            android:text="1.	Submit the existing business permit"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -347,7 +404,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Business permit &amp; Licensing office will verify business per their database"
+                            android:text="1.1.	Review and answer queries, &amp; endorse to the next step"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -371,7 +428,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="10 minutes"
+                            android:text="5 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -400,7 +457,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	Received documents or acknowledge reply through email or call"
+                            android:text="2. Transact payment\n\n‒ Payment and Release of Official Receipt"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -412,7 +469,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	BPLO Release documents or sent through email"
+                            android:text="2.1.	Issue Official Receipt of Tax Bill"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -424,7 +481,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="None"
+                            android:text="Certificate - ₱100.00"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -436,12 +493,77 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="center|top"
                             android:padding="5sp"
-                            android:text="10 minutes"
+                            android:text="3 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/tableResponsible2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_right"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="@string/mtoCollectorRCC2"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tableClientSteps25"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.	If complied all the requirements Printing and releasing of cessation of business"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableAgencyAction25"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="top|left"
+                            android:padding="5sp"
+                            android:text="3.1.	Approve, print, and release cessation of business duly signed by the Business Permit &amp; Licensing Officer"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableFees25"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="None"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableProcTime25"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/cell_shape_normal_left"
+                            android:gravity="center|top"
+                            android:padding="5sp"
+                            android:text="5 minutes"
+                            android:textColor="#49454F"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tableResponsible25"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -465,7 +587,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3. Accomplish client’s satisfaction survey form and drop it to the feedback box."
+                            android:text="4. Accomplish client’s satisfaction survey form and drop it to the feedback box."
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -477,7 +599,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="3.1. Request client’s satisfaction survey form"
+                            android:text="4.1. Request client’s satisfaction survey form"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
@@ -544,7 +666,7 @@
                             android:background="@drawable/cell_shape_normal_left_bottom"
                             android:gravity="center"
                             android:padding="5sp"
-                            android:text="25 minutes"
+                            android:text="18 minutes"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 

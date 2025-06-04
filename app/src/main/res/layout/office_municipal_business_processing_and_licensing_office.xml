@@ -104,7 +104,7 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Certification of Business Cessation"
+                    android:text="Issuance of Certification of No Business"
                     android:textColor="#49454F" />
 
                 <TextView
@@ -116,11 +116,23 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginRight="16dp"
                     android:gravity="center"
-                    android:text="Issuance of Data Information "
+                    android:text="Issuance of Certification of Business Cessation"
                     android:textColor="#49454F" />
 
                 <TextView
                     android:id="@+id/service_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:text="Issuance of Data Information"
+                    android:textColor="#49454F" />
+
+                <TextView
+                    android:id="@+id/service_6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"

@@ -13,11 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kitaotao.sst.BaseActivity
 import com.kitaotao.sst.R
-import com.kitaotao.sst.services.bplo.bplo_service_1
-import com.kitaotao.sst.services.bplo.bplo_service_2
-import com.kitaotao.sst.services.bplo.bplo_service_3
-import com.kitaotao.sst.services.bplo.bplo_service_4
-import com.kitaotao.sst.services.bplo.bplo_service_5
+import com.kitaotao.sst.services.bplo.*
 import com.kitaotao.sst.setDynamicHeader
 import isDeviceTabletClickPop
 import officeViewChange
@@ -53,6 +49,7 @@ class MunicipalBusinessProcessingAndLicensingOffice : BaseActivity() {
         setClickListener(R.id.service_3, bplo_service_3::class.java)
         setClickListener(R.id.service_4, bplo_service_4::class.java)
         setClickListener(R.id.service_5, bplo_service_5::class.java)
+        setClickListener(R.id.service_6, bplo_service_6::class.java)
 
         videoView = findViewById(R.id.videoView)
         videoUri = Uri.parse("android.resource://${packageName}/raw/kitaotao_1st_floor_model_bplo")

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".services.bplo.bplo_service_5">
+    tools:context=".services.bplo.bplo_service_6">
 
     <!-- FrameLayout positioned at the top -->
     <FrameLayout
@@ -49,7 +49,7 @@
                             android:id="@+id/titleTextService3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Issuance of Data Information "
+                            android:text="Request for Verification of Business Registration"
                             android:textColor="#49454F"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -63,7 +63,7 @@
                             android:id="@+id/titleService1Description"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="This service caters any public / private agencies that data request for whatever legal purposes."
+                            android:text="This service caters any public / private entities that would like to verify business registration for whatever legal purposes."
                             android:textColor="#49454F" />
                     </TableRow>
 
@@ -155,7 +155,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="center|left"
                             android:padding="5sp"
-                            android:text="G2C - Government to Client\nG2B - Government to Business\nG2G - Government to Government"
+                            android:text="G2C - Government to Client\nG2G - Government to Government"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -247,7 +247,7 @@
                             android:background="@drawable/cell_shape_normal_right"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="1.	Client"
+                            android:text="1.	BPLO Personnel\n2.	Client"
                             android:textColor="#49454F"
                             android:textSize="14sp" />
                     </TableRow>
@@ -412,7 +412,7 @@
                             android:background="@drawable/cell_shape_normal_left"
                             android:gravity="top|left"
                             android:padding="5sp"
-                            android:text="2.	BPLO Release documents or sent through email"
+                            android:text="2.1 BPLO Release documents or sent through email"
                             android:textColor="#49454F"
                             android:textSize="12sp" />
 
